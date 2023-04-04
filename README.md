@@ -1,17 +1,17 @@
 # Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+FinCouple é um projeto da disciplina “Trabalho Interdisciplinar: Aplicações Web“ do 1º período de Engenharia de Software da PUC Minas. O objetivo é desenvolver uma solução de gestão financeira facilitada, em formato de aplicação web front-end, para casais (ou duplas de amigos e familiares) que dividem a mesma moradia.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* João Victor Salim Ribeiro Guimarães
+* Luca Ferrari Azalim
+* Pedro Lucas Sousa e Silva
+* Sidney Soares Santos Barbosa
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Roberto Felipe Dias Ferreira da Rocha
+* Simone Alves Nogueira
 
 ## Instruções de utilização
 
