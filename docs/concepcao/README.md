@@ -13,6 +13,8 @@ O tema designado para o projeto da nossa equipe foi “Problemas de gestão fina
 
 # Mapa de Stakeholders
 
+![image](imagens/mapa-stakeholders.png)
+
 # Personas
 
 # Brainstorm
