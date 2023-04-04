@@ -1,5 +1,5 @@
 # Descrição do Problema
-Casais que residem juntos enfrentam uma dificuldade latente de gerir as finanças da casa e os gastos realizados de forma conjunta. A solução mais óbvia, que é a abertura de uma conta conjunta em um banco tradicional, é burocrática e pouco informatizada. Além disso, os bancos digitais em operação no país não oferecem a possibilidade de abertura de conta conjunta, o que impede uma gestão compartilhada das finanças do casal.
+O tema designado para o projeto da nossa equipe foi “Problemas de gestão financeira”. Durante o processo inicial de Design Thinking, decidimos definir o escopo do nosso trabalho para “Problemas de gestão financeira enfrentados por casais que residem juntos”. O objetivo da dinâmica de Design Thinking foi tornar o problema escolhido cada vez mais específico e selecionar uma solução a ser desenvolvida em formato de aplicação web.
 
 # Membros da Equipe
 * João Victor Salim Ribeiro Guimarães
@@ -8,6 +8,8 @@ Casais que residem juntos enfrentam uma dificuldade latente de gerir as finança
 * Sidney Soares Santos Barbosa
 
 # Matriz de Alinhamento CSD
+
+![image](https://user-images.githubusercontent.com/10585881/229930508-eb6f307b-6e88-4c08-8a68-3bf3a888252f.png)
 
 # Mapa de Stakeholders
 
