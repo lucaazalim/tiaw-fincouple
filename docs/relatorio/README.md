@@ -75,7 +75,7 @@ O projeto será uma aplicação web front-end, desenvolvida utilizando as lingua
 
 ## Personas
 
-As personas do projeto foram definidas no processo de [Design Thinking](docs/concepcao).
+As personas do projeto foram definidas no processo de [Design Thinking](/docs/concepcao).
 
 ## Histórias de Usuários
 
