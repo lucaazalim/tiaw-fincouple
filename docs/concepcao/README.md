@@ -1,5 +1,5 @@
 # Descrição do Problema
-O tema designado para o projeto da nossa equipe foi “Problemas de gestão financeira”. Durante o processo inicial de Design Thinking, decidimos definir o escopo do nosso trabalho para “Problemas de gestão financeira enfrentados por casais que residem juntos”. O objetivo da dinâmica de Design Thinking foi tornar o problema escolhido cada vez mais específico e selecionar uma solução a ser desenvolvida em formato de aplicação web.
+O tema designado para o projeto da nossa equipe foi “Problemas de gestão financeira”.
 
 # Membros da Equipe
 * João Victor Salim Ribeiro Guimarães
