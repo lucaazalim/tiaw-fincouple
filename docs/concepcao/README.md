@@ -25,8 +25,10 @@ Diante do objetivo de desenvolver uma solução de gestão financeira direcionad
 
 ![image](imagens/persona-3.png)
 
-# Brainstorm
-
 # Mural de Possibilidades
 
+![image](imagens/mural_possibilidades.png)
+
 # Mapa de Priorização
+
+![image](imagens/mapa_priorizacao.png)

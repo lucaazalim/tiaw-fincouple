@@ -1,27 +1,23 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: FinCouple
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Salim Ribeiro Guimarães
+    given-names: João Victor
+  - family-names: Ferrari Azalim
+    given-names: Luca
+  - family-names: Sousa e Silva
+    given-names: Pedro Lucas
+  - family-names: Soares Santos Barbosa
+    given-names: Sidney
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Felipe Dias Ferreira da Rocha
+    given-names: Roberto
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone
 keywords:
   - 
   - 
