@@ -29,6 +29,13 @@ Engenharia de Software
   - [Histórias de Usuários](#histórias-de-usuários)
   - [Requisitos](#requisitos)
     - [Requisitos Funcionais](#requisitos-funcionais)
+      - [Landing Page](#landing-page)
+      - [Cadastro e Login](#cadastro-e-login)
+      - [Página inicial logada](#página-inicial-logada)
+      - [Categorização](#categorização)
+      - [Gráficos](#gráficos)
+      - [Calendário](#calendário)
+      - [Minha Conta](#minha-conta)
     - [Requisitos não Funcionais](#requisitos-não-funcionais)
   - [Restrições](#restrições)
 - [Projeto de Interface](#projeto-de-interface)
@@ -103,10 +110,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+#### Landing Page
+Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
+#### Cadastro e Login
+O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
+#### Página inicial logada
+Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
+#### Categorização
+Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
+#### Gráficos
+Criação de página estilo “summary” com as seguintes possibilidades de gráficos:
+
+* Gasto total mensal;
+* Gasto total por categoria;
+* Gasto total por indivíduo do casal;
+#### Calendário
+Criação da funcionalidade Calendário, que permitirá o cadastro de gastos recorrentes e exibirá um calendário e notificações com lembretes de pagamento.
+Metas
+O casal poderá definir metas de gasto mensal. A aplicação apresentará alertas quando o total de gastos do mês estiver próximo de atingir o limite estabelecido pela meta. O objetivo é ajudar o casal a controlar os gastos mensais.
+#### Minha Conta
+Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
+
+
 
 
 ### Requisitos não Funcionais
