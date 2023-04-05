@@ -29,14 +29,6 @@ Engenharia de Software
   - [Histórias de Usuários](#histórias-de-usuários)
   - [Requisitos](#requisitos)
     - [Requisitos Funcionais](#requisitos-funcionais)
-      - [Landing Page](#landing-page)
-      - [Cadastro e Login](#cadastro-e-login)
-      - [Página inicial logada](#página-inicial-logada)
-      - [Categorização](#categorização)
-      - [Gráficos](#gráficos)
-      - [Calendário](#calendário)
-      - [Metas](#metas)
-      - [Minha Conta](#minha-conta)
     - [Requisitos não Funcionais](#requisitos-não-funcionais)
   - [Restrições](#restrições)
 - [Projeto de Interface](#projeto-de-interface)
@@ -102,8 +94,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 > recorrentes à essa parte do documento.
 >
 > **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+> * [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
+> * [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
 
@@ -111,37 +103,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-#### Landing Page
-Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
+* **Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
 
-#### Cadastro e Login
-O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
+* **Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
 
-#### Página inicial logada
-Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
+* **Página inicial logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
 
-#### Categorização
-Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
+* **Categorização:** Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
 
-#### Gráficos
-Criação de página estilo “summary” com as seguintes possibilidades de gráficos:
+* **Gráficos:** Criação de página estilo “summary” com as seguintes possibilidades de gráficos:
+  * Gasto total mensal;
+  * Gasto total por categoria;
+  * Gasto total por indivíduo do casal.
 
-* Gasto total mensal;
-* Gasto total por categoria;
-* Gasto total por indivíduo do casal;
+* **Calendário:** Criação da funcionalidade Calendário, que permitirá o cadastro de gastos recorrentes e exibirá um calendário e notificações com lembretes de pagamento.
 
-#### Calendário
-Criação da funcionalidade Calendário, que permitirá o cadastro de gastos recorrentes e exibirá um calendário e notificações com lembretes de pagamento.
+* **Metas:** O casal poderá definir metas de gasto mensal. A aplicação apresentará alertas quando o total de gastos do mês estiver próximo de atingir o limite estabelecido pela meta. O objetivo é ajudar o casal a controlar os gastos mensais.
 
-#### Metas
-O casal poderá definir metas de gasto mensal. A aplicação apresentará alertas quando o total de gastos do mês estiver próximo de atingir o limite estabelecido pela meta. O objetivo é ajudar o casal a controlar os gastos mensais.
-
-#### Minha Conta
-Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
+* **Minha Conta:** Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
 
 ### Requisitos não Funcionais
 
-- O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo;
+* O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo;
 
 ## Restrições
 
@@ -157,8 +140,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > geralmente limitam a solução candidata.
 > 
 > **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+> * [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
+> * [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 
 # Projeto de Interface
@@ -180,9 +163,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > fazer junto com os membros de sua equipe.
 >
 > **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+> * [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
+> * [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
+> * [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 >
 > **Exemplo**:
 > 
@@ -199,10 +182,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > layout de elementos fundamentais na interface.
 > 
 > **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+> * [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
+> * [Figma](https://www.figma.com/)
+> * [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
+> * [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
 > 
 > **Exemplo**:
 > 
@@ -224,10 +207,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > da solução.
 > 
 > **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+> * [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
+> * [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
+> * [Gerência de projetos * Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
+> * [Tutorial Slack](https://slack.com/intl/en-br/)
 
 ## Divisão de Papéis
 
@@ -236,13 +219,13 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > Apresente a divisão de papéis e tarefas entre os membros do grupo.
 >
 > **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+> * [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
+> * [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 
 ## Ferramentas
 
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
+......  COLOQUE AQUI O SEU TEXTO * SIGA O EXEMPLO DA TABELA ABAIXO  ......
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
@@ -257,10 +240,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > 
 > As ferramentas empregadas no projeto são:
 > 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
+> * Editor de código.
+> * Ferramentas de comunicação
+> * Ferramentas de diagramação
+> * Plataforma de hospedagem
 > 
 > O editor de código foi escolhido porque ele possui uma integração com o
 > sistema de versão. As ferramentas de comunicação utilizadas possuem
@@ -268,11 +251,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > diagramas utilizamos essa ferramenta por melhor captar as
 > necessidades da nossa solução.
 > 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+> **Links Úteis * Hospedagem**:
+> * [Getting Started with Heroku](https://devcenter.heroku.com/start)
+> * [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
+> * [GoDady](https://br.godaddy.com/how-to)
+> * [GitHub Pages](https://pages.github.com/)
 
 ## Controle de Versão
 
@@ -288,24 +271,24 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > 
 > O projeto segue a seguinte convenção para o nome de branchs:
 > 
-> - `master`: versão estável já testada do software
-> - `unstable`: versão já testada do software, porém instável
-> - `testing`: versão em testes do software
-> - `dev`: versão de desenvolvimento do software
+> * `master`: versão estável já testada do software
+> * `unstable`: versão já testada do software, porém instável
+> * `testing`: versão em testes do software
+> * `dev`: versão de desenvolvimento do software
 > 
 > Quanto à gerência de issues, o projeto adota a seguinte convenção para
 > etiquetas:
 > 
-> - `bugfix`: uma funcionalidade encontra-se com problemas
-> - `enhancement`: uma funcionalidade precisa ser melhorada
-> - `feature`: uma nova funcionalidade precisa ser introduzida
+> * `bugfix`: uma funcionalidade encontra-se com problemas
+> * `enhancement`: uma funcionalidade precisa ser melhorada
+> * `feature`: uma nova funcionalidade precisa ser introduzida
 >
 > **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
+> * [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
+> * [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
+> * [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
 >
-> **Exemplo - GitHub Feature Branch Workflow**:
+> **Exemplo * GitHub Feature Branch Workflow**:
 >
 > ![Exemplo de Wireframe](images/Github-Workflow.png)
 
@@ -363,9 +346,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > ferramentas utilizadas.
 > 
 > **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+> * [IBM * Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
+> * [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
+> *  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
 
 ## Ferramentas de Testes (Opcional)
 
@@ -374,8 +357,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > Comente sobre as ferramentas de testes utilizadas.
 > 
 > **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+> * [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+> * [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
 
 ## Registros de Testes
 
@@ -395,5 +378,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > no desenvolvimento do trabalho.
 > 
 > **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+> * [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
+> * [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
