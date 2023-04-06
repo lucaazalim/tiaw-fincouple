@@ -23,9 +23,7 @@ O tema designado para o projeto da nossa equipe foi “Problemas de gestão fina
 
 Diante do objetivo de desenvolver uma solução de gestão financeira direcionada para casais ou duplas de amigos, criamos personas compostas por dois indivíduos.
 
-![image](imagens/persona-1.png)
-
-![image](imagens/persona-2.png)
+![image](imagens/personas.png)
 
 # Mural de Possibilidades
 
