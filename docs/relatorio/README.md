@@ -135,7 +135,7 @@ Os protótipos navegáveis podem ser acessados clicando [aqui](https://www.figma
 
 ## Divisão de Papéis
 
-Durante a fase de desenvolvimento do projeto, utilizaremos a ferramenta **Projetos** da plataforma **GitHub** para organizar e distribuir as tarefas do projeto. As tarefas foram divididas em quatro estados (colunas), por onde todas as tarefas devem transitar antes de serem consideradas como concluídas:
+Durante a fase de desenvolvimento, utilizaremos a ferramenta **Projetos** da plataforma **GitHub** para organizar e distribuir as tarefas, que serão divididas em quatro estados (colunas):
 
 * **To Do:** tarefas ainda não iniciadas, mas que já foram criadas e documentadas na ferramenta;
 * **Em Progresso:** tarefas que estão ativamente sendo trabalhadas por algum dos membros da equipe;
