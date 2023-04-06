@@ -1,13 +1,8 @@
 ![image](imagens/header.png)
 
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
-
-FinCouple
-
-`CURSO` 
-
-Engenharia de Software
+**Título do Projeto:** FinCouple: Reinventando a Gestão Financeira Compartilhada
+**Curso:** Engenharia de Software
 
 ## Participantes
 
