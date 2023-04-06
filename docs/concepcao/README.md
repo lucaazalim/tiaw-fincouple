@@ -31,4 +31,6 @@ Diante do objetivo de desenvolver uma solução de gestão financeira direcionad
 
 # Mapa de Priorização
 
-![image](imagens/mapa_priorizacao.png)
+<p align="center">
+    <img src="imagens/mapa_priorizacao.png">
+</p>
