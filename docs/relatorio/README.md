@@ -96,7 +96,7 @@ As informações que se seguem apresentam os requisitos funcionais e não funcio
 
 ### Requisitos Funcionais
 
-1. **Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
+1. **[#1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/1) Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
 
 2. **Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
 
