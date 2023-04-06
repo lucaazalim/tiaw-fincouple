@@ -121,37 +121,15 @@ As informações que se seguem apresentam os requisitos funcionais e não funcio
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+Como demonstrado no fluxo de usuário abaixo, cada requisito funcional dará origem a uma ou mais telas da aplicação.
 
 ## User Flow
 
 ![image](imagens/fluxo_usuario.png)
 
-
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> * [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> * [Figma](https://www.figma.com/)
-> * [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> * [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](imagens/wireframe-example.png)
-
+Link para o Figma
 
 # Metodologia
 
@@ -175,25 +153,24 @@ As informações que se seguem apresentam os requisitos funcionais e não funcio
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Durante a fase de desenvolvimento do projeto, utilizaremos a ferramenta **Projetos** da plataforma **GitHub** para organizar e distribuir as tarefas do projeto. As tarefas foram divididas em quatro estados (colunas), por onde todas as tarefas devem transitar antes de serem consideradas como concluídas:
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> * [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> * [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+* **To Do:** tarefas ainda não iniciadas, mas que já foram criadas e documentadas na ferramenta;
+* **Em Progresso:** tarefas que estão ativamente sendo trabalhadas por algum dos membros da equipe;
+* **Pronto:** tarefas que foram finalizadas, mas que ainda dependem de revisão dos demais membros da equipe;
+* **Revisadas:** tarefas revisadas por todos os membros da equipe e, portanto, totalmente funcionais e concluídas.
 
+As tarefas da fase de desenvolvimento foram criadas e distribuídas aos membros da equipe.
 
 ## Ferramentas
 
 ......  COLOQUE AQUI O SEU TEXTO * SIGA O EXEMPLO DA TABELA ABAIXO  ......
 
-| Ambiente                    | Plataforma        | Link de Acesso                |
-| --------------------------- | ----------------- | ----------------------------- |
-| Processo de Design Thinkgin | Miro              | https://miro.com/XXXXXXX      |
-| Repositório de código       | GitHub            | https://github.com/XXXXXXX    |
-| Hospedagem do site          | Heroku            | https://XXXXXXX.herokuapp.com |
-| Protótipo Interativo        | MavelApp ou Figma | https://figma.com/XXXXXXX     |
+| Ambiente                             | Plataforma                    | Link de Acesso                                                                                          |
+| ------------------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Processo de Design Thinking          | Google Docs e Google Drawings | [Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)            |
+| Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple) |
+| Protótipos Interativos               | Figma                         | Link para o figma                                                                                       |
 
 >
 > Liste as ferramentas empregadas no desenvolvimento do
