@@ -164,37 +164,14 @@ As tarefas da fase de desenvolvimento foram distribuídas aos membros da equipe 
 
 ## Ferramentas
 
-......  COLOQUE AQUI O SEU TEXTO * SIGA O EXEMPLO DA TABELA ABAIXO  ......
+As ferramentas utilizadas durante o processo de concepção e desenvolvimento estão listadas abaixo.
 
-| Ambiente                             | Plataforma                    | Link de Acesso                                                                                          |
-| ------------------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Processo de Design Thinking          | Google Docs e Google Drawings | [Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)            |
-| Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple) |
-| Gerenciamento de Tarefas             | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                       |
-| Protótipos Interativos               | Figma                         | Link para o figma                                                                                       |
-
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> * Editor de código.
-> * Ferramentas de comunicação
-> * Ferramentas de diagramação
-> * Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis * Hospedagem**:
-> * [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> * [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> * [GoDady](https://br.godaddy.com/how-to)
-> * [GitHub Pages](https://pages.github.com/)
+| Finalidade                           | Plataforma                    | Link de Acesso                                                                                                                                                  |
+| ------------------------------------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Processo de Design Thinking          | Google Docs e Google Drawings | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
+| Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple)                                                         |
+| Gerenciamento de Tarefas             | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
+| Protótipos Interativos               | Figma                         | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
 
 ## Controle de Versão
 
