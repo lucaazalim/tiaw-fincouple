@@ -80,11 +80,11 @@ O projeto será uma aplicação web front-end, desenvolvida utilizando as lingua
 
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
 
-![image](/docs/concepcao/imagens/historias_usuario.png)
+![image](imagens/historias_usuario.png)
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+As informações que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 
