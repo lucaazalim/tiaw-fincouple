@@ -13,7 +13,9 @@ O tema designado para o projeto da nossa equipe foi “Problemas de gestão fina
 
 # Mapa de Stakeholders
 
-![image](imagens/mapa-stakeholders.png)
+<p align="center">
+    <img src="imagens/mapa-stakeholders.png">
+</p>
 
 # Entrevistas Qualitativas
 
