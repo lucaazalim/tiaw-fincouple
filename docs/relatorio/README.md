@@ -2,6 +2,7 @@
 
 # Informações do Projeto
 **Título do Projeto:** FinCouple: Reinventando a Gestão Financeira Compartilhada
+
 **Curso:** Engenharia de Software
 
 ## Participantes
