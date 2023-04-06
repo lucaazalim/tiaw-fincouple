@@ -106,11 +106,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 2. **Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
 
-3. **Página inicial logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
+3. **Área logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
 
-4. **Minha Conta:** Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
+4. **Extrato:** A página de extrato deve permitir o registro de gastos e exibir os gastos já cadastrados.
 
-5. **Categorização:** Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
+5. **Categorias:** Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
 
 6. **Gráficos:** Criação de página estilo “summary” com as seguintes possibilidades de gráficos:
 * Gasto total mensal;
@@ -119,7 +119,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 7. **Calendário:** Criação da funcionalidade Calendário, que permitirá o cadastro de gastos recorrentes e exibirá um calendário e notificações com lembretes de pagamento.
 
-8. Lorem ipsum
+8. **Minha Conta:** Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
 
 ### Requisitos não Funcionais
 
@@ -136,21 +136,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ## User Flow
 
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> * [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> * [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> * [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
-> 
-> ![Exemplo de UserFlow](images/userflow.jpg)
+![image](imagens/fluxo_usuario.jpg)
 
 
 ## Wireframes
@@ -170,7 +156,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 > 
 > **Exemplo**:
 > 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+> ![Exemplo de Wireframe](imagens/wireframe-example.png)
 
 
 # Metodologia
@@ -271,7 +257,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 >
 > **Exemplo * GitHub Feature Branch Workflow**:
 >
-> ![Exemplo de Wireframe](images/Github-Workflow.png)
+> ![Exemplo de Wireframe](imagens/Github-Workflow.png)
 
 # **############## SPRINT 1 ACABA AQUI #############**
 
@@ -306,7 +292,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 > 
 > **Exemplo do diagrama de Arquitetura**:
 > 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+> ![Exemplo de Arquitetura](imagens/arquitetura-exemplo.png)
 
 
 # Avaliação da Aplicação
