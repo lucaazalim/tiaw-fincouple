@@ -136,7 +136,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ## User Flow
 
-![image](imagens/fluxo_usuario.jpg)
+![image](imagens/fluxo_usuario.png)
 
 
 ## Wireframes
