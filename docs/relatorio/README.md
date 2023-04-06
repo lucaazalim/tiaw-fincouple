@@ -160,7 +160,7 @@ Durante a fase de desenvolvimento do projeto, utilizaremos a ferramenta **Projet
 * **Pronto:** tarefas que foram finalizadas, mas que ainda dependem de revisão dos demais membros da equipe;
 * **Revisadas:** tarefas revisadas por todos os membros da equipe e, portanto, totalmente funcionais e concluídas.
 
-As tarefas da fase de desenvolvimento foram criadas e distribuídas aos membros da equipe.
+As tarefas da fase de desenvolvimento foram distribuídas aos membros da equipe e podem ser acessadas clicando [aqui](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165).
 
 ## Ferramentas
 
@@ -170,6 +170,7 @@ As tarefas da fase de desenvolvimento foram criadas e distribuídas aos membros 
 | ------------------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------- |
 | Processo de Design Thinking          | Google Docs e Google Drawings | [Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)            |
 | Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple) |
+| Gerenciamento de Tarefas             | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                       |
 | Protótipos Interativos               | Figma                         | Link para o figma                                                                                       |
 
 >
