@@ -70,11 +70,13 @@ O projeto será uma aplicação web front-end, desenvolvida utilizando as lingua
 
 ## Personas
 
+Durante o processo de Design Thinking, foram elaboradas personas em forma de casais, como demonstrado abaixo:
+
 ![image](/docs/concepcao/imagens/personas.png)
 
 ## Histórias de Usuários
 
-Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
+Com base na análise das personas, foram elaboradas as seguintes histórias de usuários:
 
 ![image](imagens/historias_usuario.png)
 
@@ -84,13 +86,15 @@ As informações que se seguem apresentam os requisitos funcionais e não funcio
 
 ### Requisitos Funcionais
 
-1. **[#1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/1) Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e botões de Login e Cadastro.
+Cada requisito funcional possui seu issue com documentações mais detalhadas e completas.
 
-2. **[#2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/2) Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que são solicitadas tanto informações compartilhadas como informações individuais. Contudo, cada indivíduo do casal terá suas próprias informações de login e senha.
+1. **[#1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/1) Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e links para as páginas de Cadastro e Login.
 
-3. **[#3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/3) Área logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, botões para acionamento das funcionalidades e extrato compartilhado de gastos.
+2. **[#2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/2) Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que serão solicitadas tanto informações compartilhadas como informações individuais. Cada indivíduo do casal terá suas próprias informações de login e senha.
 
-4. **[#4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/4) Extrato:** A página de extrato deve permitir o registro de gastos e exibir os gastos já cadastrados.
+3. **[#3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/3) Área logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, links para as demais páginas da aplicação e extrato compartilhado de gastos.
+
+4. **[#4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/4) Extrato:** A página de extrato deve permitir o registro de novos gastos e exibir os gastos já cadastrados.
 
 5. **[#5](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/5) Categorias:** Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
 
@@ -140,7 +144,7 @@ As ferramentas utilizadas durante o processo de concepção e desenvolvimento es
 | ------------------------------------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Processo de Design Thinking          | Google Docs e Google Drawings | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
 | Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple)                                                         |
-| Gerenciamento de Tarefas (KanBan)    | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
+| Gerenciamento de Tarefas (Kanban)    | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
 | Protótipos Interativos               | Figma                         | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
 
 ## Controle de Versão
