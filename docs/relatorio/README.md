@@ -88,22 +88,19 @@ As informações que se seguem apresentam os requisitos funcionais e não funcio
 
 Cada requisito funcional possui seu issue com documentações mais detalhadas e completas.
 
-1. **[#1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/1) Landing Page:** Criação de uma página estática contendo uma breve apresentação da solução e links para as páginas de Cadastro e Login.
+1. **[#1](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/1) Landing Page:** página estática contendo uma breve apresentação da solução e links para as páginas de Cadastro e Login.
 
-2. **[#2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/2) Cadastro e Login:** O cadastro do casal na aplicação será realizado em um mesmo fluxo, em que serão solicitadas tanto informações compartilhadas como informações individuais. Cada indivíduo do casal terá suas próprias informações de login e senha.
+2. **[#2](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/2) Cadastro e Login:** o cadastro do casal na aplicação será realizado em um mesmo fluxo, em que serão solicitadas tanto informações compartilhadas como informações individuais. Cada indivíduo do casal terá suas próprias informações de login e senha.
 
-3. **[#3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/3) Área logada:** Após o login, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal, links para as demais páginas da aplicação e extrato compartilhado de gastos.
+3. **[#3](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/3) Área logada:** quando logado, o usuário verá a tela inicial da aplicação, que exibirá informações de cada indivíduo do casal e links para as demais páginas e funcionalidades da aplicação.
 
-4. **[#4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/4) Extrato:** A página de extrato deve permitir o registro de novos gastos e exibir os gastos já cadastrados.
+4. **[#4](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/4) Extrato:** a página de extrato permitirá visualizar todos os gastos cadastrados, assim como cadastrar novos gastos e editar e apagar gastos já cadastrados. A listagem de gastos deve exibir os atributos mais importantes de cada gasto, como identificação, valor e categoria.
 
-5. **[#5](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/5) Categorias:** Ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. A aplicação terá categorias pré-definidas, mas também a possibilidade de criar categorias personalizadas.
+5. **[#5](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/5) Categorias:** ao registrar um gasto do casal na aplicação, o usuário deverá definir uma categoria para aquele gasto. Por meio da página Categorias, será possível visualizar as categorias cadastradas, criar categorias personalizadas e editar e apagar categorias já existentes.
 
-6. **[#6](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/6) Gráficos:** Criação de página estilo “summary” com as seguintes possibilidades de gráficos:
-* Gasto total mensal;
-* Gasto total por categoria;
-* Gasto total por indivíduo do casal.
+6. **[#6](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/6) Gráficos:** página estilo “summary” repleta de gráficos que permitam uma rápida compreensão da situação das finanças do casal.
 
-7. **[#7](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/7) Calendário:** Criação da funcionalidade Calendário, que permitirá o cadastro de gastos recorrentes e exibirá um calendário e notificações com lembretes de pagamento.
+7. **[#7](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/7) Calendário:** a funcionalidade de Calendário permitirá cadastrar gastos recorrentes e pontuais para receber lembretes de quando eles devem ser pagos. A página inicial da funcionalidade exibirá um calendário contendo as próximas contas a serem pagas.
 
 8. **[#8](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/8) Minha Conta:** Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
 
