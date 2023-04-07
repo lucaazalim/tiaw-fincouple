@@ -39,4 +39,4 @@ Diante do objetivo de desenvolver uma solução de gestão financeira direcionad
     <img src="imagens/mapa_priorizacao.png">
 </p>
 
-Ao fim do processo de Design Thinking, escolhemos trabalhar em uma solução inspirada pela **ideia 6**.
+Ao fim do processo de *Design Thinking*, escolhemos trabalhar em uma solução inspirada pela **ideia 6**.
