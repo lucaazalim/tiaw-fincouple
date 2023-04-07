@@ -118,7 +118,7 @@ Como demonstrado no fluxo de usuário abaixo, cada requisito funcional dará ori
 
 ## Wireframes
 
-Os protótipos navegáveis podem ser acessados clicando [aqui](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56).
+Os protótipos navegáveis atualizados podem ser acessados clicando [aqui](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56).
 
 ![image](imagens/wireframes.png)
 
