@@ -1,4 +1,4 @@
-![image](header.png)
+![image](imagens/header.png)
 
 # FinCouple
 FinCouple é um projeto da disciplina “Trabalho Interdisciplinar: Aplicações Web“ do 1º período de Engenharia de Software da PUC Minas. O objetivo é desenvolver uma solução de gestão financeira facilitada, em formato de aplicação web front-end, para casais (ou duplas de amigos e familiares) que dividem a mesma moradia.
