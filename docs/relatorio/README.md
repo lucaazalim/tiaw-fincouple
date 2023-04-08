@@ -106,7 +106,9 @@ Cada requisito funcional possui seu issue com documentações mais detalhadas e 
 
 ### Requisitos não Funcionais
 
-1. O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo;
+1. A aplicação será desenvolvida com acesso exclusiva via web;
+2. A aplicação será desenvolvida utilizando exclusivamente recursos de front-end;
+3. O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo;
 
 # Projeto de Interface
 
