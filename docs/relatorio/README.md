@@ -126,7 +126,7 @@ Os protótipos navegáveis atualizados podem ser acessados clicando [aqui](https
 
 # Metodologia
 
-Utilizamos o processo de [*Design Thinking*](docs/concepcao/README.md), que, além do preenchimento de diversos canvases, contemplou a realização de sessões de *Brainstorm* para posterior definição de qual seria a solução trabalhada. Após a definição da solução, foram elaborados oito requisitos funcionais, que foram documentados em *Issues* e incluídos em nosso no Projeto do GitHub, exibido em formato de Kanban.
+Utilizamos o processo de [*Design Thinking*](docs/concepcao/README.md), que, além do preenchimento de diversos canvases, contemplou a realização de sessões de *Brainstorm* para posterior definição de qual seria a solução trabalhada. Após a definição da solução, foram elaborados oito requisitos funcionais, que foram documentados em *Issues* e incluídos em nosso no Projeto do GitHub, exibido em formato de Kanban. Foram distribuídos dois requisitos funcionais para cada membro da equipe.
 
 ## Divisão de Papéis
 
