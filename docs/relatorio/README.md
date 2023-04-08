@@ -135,6 +135,8 @@ Durante a fase de desenvolvimento, utilizaremos a ferramenta **Projetos** da pla
 
 As tarefas da fase de desenvolvimento foram distribuídas aos membros da equipe e podem ser acessadas clicando [aqui](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165).
 
+![image](imagens/kanban.png)
+
 ## Ferramentas
 
 As ferramentas utilizadas durante o processo de concepção e desenvolvimento estão listadas abaixo.
