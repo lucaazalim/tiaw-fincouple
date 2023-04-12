@@ -28,6 +28,7 @@
   - [Requisitos](#requisitos)
     - [Requisitos Funcionais](#requisitos-funcionais)
     - [Requisitos não Funcionais](#requisitos-não-funcionais)
+    - [Restrições](#restrições)
 - [Projeto de Interface](#projeto-de-interface)
   - [User Flow](#user-flow)
   - [Wireframes](#wireframes)
@@ -106,9 +107,13 @@ Cada requisito funcional possui seu issue com documentações mais detalhadas e 
 
 ### Requisitos não Funcionais
 
-1. A aplicação será desenvolvida com acesso exclusiva via web;
-2. A aplicação será desenvolvida utilizando exclusivamente recursos de front-end;
-3. O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo;
+1. O layout da aplicação deverá ser responsivo e adaptado a qualquer tamanho de dispositivo.
+
+### Restrições
+
+1. A aplicação será disponibilizada apenas via web;
+2. A aplicação deve utilizar exclusivamente recursos de front-end;
+3. O desenvolvimento da aplicação deve ser finalizado até o final do semestre.
 
 # Projeto de Interface
 
