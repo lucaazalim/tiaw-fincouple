@@ -1,0 +1,33 @@
+$fincouple-orange: var(--fincouple-orange);
+$primary: $fincouple-orange;
+$btn-padding-x: 30px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(fincouple-orange);
+  --bs-btn-border-color: var(fincouple-orange);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{lighten($fincouple-orange, 10%)};
+  --bs-btn-hover-border-color: #{lighten($fincouple-orange, 10%)};
+  --bs-btn-focus-shadow-rgb: var(fincouple-orange);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{lighten($fincouple-orange, 15%)};
+  --bs-btn-active-border-color: #{lighten($fincouple-orange, 15%)};
+}
+
+.btn-outline-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(fincouple-orange);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(fincouple-orange);
+  --bs-btn-hover-color: #{lighten($fincouple-orange, 10%)};
+  --bs-btn-hover-bg: var(--bs-white);
+  --bs-btn-hover-border-color: #{lighten($fincouple-orange, 10%)};
+  --bs-btn-focus-shadow-rgb: var(fincouple-orange);
+  --bs-btn-active-color: #{lighten($fincouple-orange, 15%)};
+  --bs-btn-active-bg: var(--bs-white);
+  --bs-btn-active-border-color: #{lighten($fincouple-orange, 15%)};
+}
