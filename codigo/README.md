@@ -42,6 +42,10 @@ Conteúdo base para páginas da aplicação:
         <h1>Nome da Página</h1>
         <p>Descrição da página</p>
 
+        <!-- Conteúdo da Página -->
+
+    </div>
+
     <div id="footer"></div>
 
 </body>
