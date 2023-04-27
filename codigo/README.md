@@ -1,10 +1,16 @@
 # Anotações
 
 ## Convenções
-- Todo o código deve ser escrito em português, incluindo nomes de variáveis, métodos, ids e classes.
-- Deve-se utilizar o padrão `cammelCase` de nomeação de variáveis e métodos. Com exceção de constantes, que devem ser nomeadas utilizando o padrão `snake_case`.
+- Todo o código deve ser escrito em **português**, incluindo nomes de variáveis, métodos, ids, classes etc;
+- Deve-se utilizar o padrão `cammelCase` de nomeação de variáveis e métodos;
+- A indentação do código deve ser feita usando tabs.
 
-Conteúdo base para páginas da aplicação:
+## Bibliotecas utilizadas
+- Bootstrap 5
+- jQuery
+- FontAwesome
+
+## Conteúdo base para páginas
 
 ``` html
 <!DOCTYPE html>
@@ -52,6 +58,8 @@ Conteúdo base para páginas da aplicação:
 
 </html>
 ```
+
+## Comandos úteis
 
 Comando para aplicar as customizações de CSS ao Boostrap:
 ``` bash
