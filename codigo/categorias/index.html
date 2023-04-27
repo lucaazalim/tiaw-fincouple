@@ -28,31 +28,38 @@
 
     <!-- Modal de criação de categoria-->
 
-    <div class="modal fade" id="criar-categoria-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modal-criar-categoria" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Criar categoria</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
+
                 <div class="modal-body">
-                    <form>
+
+                    <form id="form-criar-categoria">
                         <div class="mb-3">
-                          <label for="nome-da-categoria" class="form-label">Nome</label>
-                          <input type="text" class="form-control" id="nome-da-categoria">
+                            <label for="input-nome-categoria" class="form-label">Nome</label>
+                            <input id="input-nome-categoria" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
-                          <label for="icone-da-categoria" class="form-label">Ícone</label>
-                          <select id="icones-selecionaveis" class="form-select">
-                            <option selected>Escolha um ícone</option>
-                          </select>
+                            <label for="input-icone" class="form-label">Ícone</label>
+                            <select id="input-icone" class="form-select">
+                                <option selected>Escolha um ícone</option>
+                            </select>
                         </div>
-                      </form>
+                    </form>
+
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Criar</button>
+                    <button id="btn-confirmar-criacao" type="submit" class="btn btn-primary"
+                        data-bs-dismiss="modal">Criar</button>
                 </div>
+
             </div>
         </div>
     </div>
@@ -68,7 +75,7 @@
 
         <div class="d-grid gap-2">
             <button id="criar-categoria" class="btn btn-success" type="button" data-bs-toggle="modal"
-                data-bs-target="#criar-categoria-modal">Criar categoria</button>
+                data-bs-target="#modal-criar-categoria">Criar categoria</button>
         </div>
 
         <table class="table mt-3">
@@ -80,14 +87,7 @@
                     <th scope="col">Editar ou Apagar</th>
                 </tr>
             </thead>
-            <tbody id="categorias">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-            </tbody>
+            <tbody id="categorias"></tbody>
         </table>
 
     </div>
@@ -96,6 +96,7 @@
 
 </body>
 
-<script src="script.js"></script>
+<script src="categoria.js"></script>
+<script src="icone.js"></script>
 
 </html>

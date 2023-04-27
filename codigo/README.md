@@ -1,5 +1,9 @@
 # Anotações
 
+## Convenções
+- Todo o código deve ser escrito em português, incluindo nomes de variáveis, métodos, ids e classes.
+- Deve-se utilizar o padrão `cammelCase` de nomeação de variáveis e métodos. Com exceção de constantes, que devem ser nomeadas utilizando o padrão `snake_case`.
+
 Conteúdo base para páginas da aplicação:
 
 ``` html
