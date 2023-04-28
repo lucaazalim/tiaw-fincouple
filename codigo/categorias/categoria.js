@@ -1,42 +1,119 @@
 class Categoria {
-    constructor(nome, icone) {
+    constructor(nome, cor) {
         this.nome = nome;
-        this.icone = icone;
+        this.cor = cor;
     }
 }
 
 var categorias_padrao = [
-    new Categoria("Contas residenciais", "fa-house"),
-    new Categoria("Viagem", "fa-plane"),
-    new Categoria("Assinaturas", "fa-star")
+    new Categoria("Contas residenciais", "#32a852"),
+    new Categoria("Viagem", "#3a32a8"),
+    new Categoria("Assinaturas", "#ffaa00")
 ];
 
 var categorias;
 
-function criarCategoria(...novasCategorias) {
+function criarCategoria(categoria) {
 
-    for (const categoria of novasCategorias) {
+    let id = categorias.size + 1;
+    categoria.id = id;
 
-        let id = categorias.size + 1;
-        categoria.id = id;
+    console.log(`Criando a categoria ${categoria.nome} de ID ${id}...`);
 
-        console.log(`Criando a categoria ${categoria.nome} de ID ${id}...`);
-
-        categorias.set(id, categoria);
-
-    }
+    categorias.set(id.toString(), categoria);
 
     guardarCategorias();
     exibirCategorias();
 
 }
 
-function apagarCategoria(id) {
+function pegarCategoria(id) {
+    return categorias.get(id);
+}
+
+function removerCategoria(id) {
+
+    console.log(`Removendo categoria de ID ${id}...`)
 
     categorias.delete(id);
 
     guardarCategorias();
     exibirCategorias();
+
+}
+
+function guardarCategorias() {
+    localStorage.setItem('categorias', JSON.stringify(Object.fromEntries(categorias)));
+}
+
+function exibirCategorias() {
+
+    $('#categorias').html("");
+
+    for (const [id, categoria] of categorias.entries()) {
+
+        $('#categorias').append(`
+            <tr>
+                <td scope="row">${id}</td>
+                <td>${categoria.nome}</td>
+                <td>
+                    <div style="background-color: ${categoria.cor}; border-radius: 100%; width: 25px; height: 25px;"><br></div>
+                </td>
+                <td colspan="1">
+                    <button id="btn-editar-categoria-${id}" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-editar-categoria">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </td>
+                <td colspan="1">
+                    <button id="btn-remover-categoria-${id}" type="button" class="btn btn-danger">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        `);
+
+        $(`#btn-remover-categoria-${id}`).click(function () {
+
+            console.log("Debug " + id);
+
+            removerCategoria(id);
+
+        });
+
+        $(`#btn-editar-categoria-${id}`).click(function () {
+
+            let categoria = pegarCategoria(id);
+
+            $('#editar-categoria-id').val(categoria.id);
+            $('#input-editar-nome-categoria').val(categoria.nome);
+            $('#input-editar-cor-categoria').val(categoria.cor);
+
+        });
+
+    }
+
+    $(`#btn-confirmar-edicao-categoria`).click(function () {
+
+        let formEditarCategoria = $('#form-editar-categoria')[0];
+
+        if (!formEditarCategoria.checkValidity()) {
+            alert("Preencha o formulário corretamente.");
+            return;
+        }
+
+        let id = $('#editar-categoria-id').val();
+        let nome = $('#input-editar-nome-categoria').val();
+        let cor = $('#input-editar-cor-categoria').val();
+
+        let categoria = pegarCategoria(id);
+
+        categoria.nome = nome;
+        categoria.cor = cor;
+
+        guardarCategorias();
+        exibirCategorias();
+
+    });
 
 }
 
@@ -49,72 +126,30 @@ if (categoriasLocalStorage) {
 } else {
 
     categorias = new Map();
-    criarCategoria(categorias_padrao);
-
-}
-
-function exibirCategorias() {
-
-    $('#categorias').html("");
-
-    for (const [id, categoria] of categorias.entries()) {
-
-        var colunaFuncao = `
-            <button id="btn-editar-categoria-${id}" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
-            <button id="btn-apagar-categoria-${id}" type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-        `;
-
-        $('#categorias').append(`
-            <tr>
-                <td scope="row">${id}</td>
-                <td>${categoria.nome}</td>
-                <td><i class="fa-solid ${categoria.icone}"></i></td>
-                <td>${colunaFuncao}</td>
-            </tr>
-        `);
-
-    }
-
-}
-
-function carregarEventos() {
-
-    $('#btn-confirmar-criacao').click(function () {
-
-        if (!$('#form-criar-categoria')[0].checkValidity()) {
-            alert("Preencha o formulário corretamente.");
-            return;
-        }
-
-        let nome = $('#input-nome-categoria').val();
-        let icone = $('#input-icone').val();
-
-        let categoria = new Categoria(nome, icone);
+    console.log("Criando categorias padrão...");
+    for (const categoria of categorias_padrao) {
         criarCategoria(categoria);
-
-    });
-
-    for (const [id, categoria] of categorias.entries()) {
-
-        $(`#btn-apagar-categoria-${id}`).click(function () {
-
-            apagarCategoria(id);
-    
-        });
-
-        $(`#btn-editar-categoria-${id}`).click(function () {
-
-            // TODO
-    
-        });
-
     }
 
 }
 
-function guardarCategorias() {
-    localStorage.setItem('categorias', JSON.stringify(Object.fromEntries(categorias)));
-}
+$('#btn-confirmar-criacao').click(function () {
+
+    let formCriarCategoria = $('#form-criar-categoria')[0];
+
+    if (!formCriarCategoria.checkValidity()) {
+        alert("Preencha o formulário corretamente.");
+        return;
+    }
+
+    let nome = $('#input-nome-categoria').val();
+    let cor = $('#input-cor-categoria').val();
+
+    let categoria = new Categoria(nome, cor);
+    criarCategoria(categoria);
+
+    formCriarCategoria.reset();
+
+});
 
 exibirCategorias();
-carregarEventos();

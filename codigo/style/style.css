@@ -1,7 +1,13 @@
 :root {
-    --fincouple-orange: #f87000; 
+    --fincouple-orange: #f87000;
 }
 
-html, body {
+html,
+body {
     height: 100%;
+}
+
+.bg-fincouple {
+    background: var(--fincouple-orange);
+    background: linear-gradient(90deg, var(--fincouple-orange) 0%, #f84f00 100%);
 }

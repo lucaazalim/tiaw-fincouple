@@ -3,7 +3,7 @@
 ## Convenções
 - Todo o código deve ser escrito em **português**, incluindo nomes de variáveis, métodos, ids, classes etc;
 - Deve-se utilizar o padrão `cammelCase` de nomeação de variáveis e métodos;
-- A indentação do código deve ser feita usando tabs.
+- A indentação do código deve ser feita usando **tabs**.
 
 ## Bibliotecas utilizadas
 - Bootstrap 5
@@ -63,5 +63,5 @@
 
 Comando para aplicar as customizações de CSS ao Boostrap:
 ``` bash
-sass .\scss\custom.scss custom_bootstrap.css
+sass ./style/custom_bootstrap.scss ./style/custom_bootstrap.css
 ```

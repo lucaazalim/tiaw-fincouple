@@ -45,17 +45,16 @@
                             <input id="input-nome-categoria" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="input-icone" class="form-label">Ícone</label>
-                            <select id="input-icone" class="form-select">
-                                <option selected>Escolha um ícone</option>
-                            </select>
+                            <label for="input-cor-categoria" class="form-label">Cor</label>
+                            <br>
+                            <input id="input-cor-categoria" type="color">
                         </div>
                     </form>
 
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
                     <button id="btn-confirmar-criacao" type="submit" class="btn btn-primary"
                         data-bs-dismiss="modal">Criar</button>
                 </div>
@@ -64,27 +63,65 @@
         </div>
     </div>
 
+    <!-- Modal de edição de categoria-->
+
+    <div class="modal fade" id="modal-editar-categoria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar categoria</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="form-editar-categoria">
+                        <input id="editar-categoria-id" type="hidden" class="form-control">
+                        <div class="mb-3">
+                            <label for="input-editar-nome-categoria" class="form-label">Nome</label>
+                            <input id="input-editar-nome-categoria" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input-editar-cor-categoria" class="form-label">Cor</label>
+                            <br>
+                            <input id="input-editar-cor-categoria" type="color">
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn-confirmar-edicao-categoria" type="submit" class="btn btn-primary"
+                        data-bs-dismiss="modal">Salvar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div id="header"></div>
 
     <div class="container">
 
         <h1>Categorias</h1>
-        <p>Crie e edite as categorias que podem ser usadas para categorizar seus gastos registrados por meio do <a
+        <p>Crie e edite as categorias que podem ser usadas para categorizar seus gastos adicionados por meio do <a
                 href="/extrato">Extrato</a>.</p>
 
         <div class="d-grid gap-2">
-            <button id="criar-categoria" class="btn btn-success" type="button" data-bs-toggle="modal"
+            <button id="criar-categoria" class="btn btn-primary" type="button" data-bs-toggle="modal"
                 data-bs-target="#modal-criar-categoria">Criar categoria</button>
         </div>
 
-        <table class="table mt-3">
+        <table class="table table-striped mt-3">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Ícone</th>
-                    <th scope="col">Editar ou Apagar</th>
+                    <th scope="col" style="width: 10%;">#</th>
+                    <th scope="col" style="width: 30%;">Nome</th>
+                    <th scope="col" style="width: 30%;">Cor</th>
+                    <th scope="col" style="width: 15%;">Editar</th>
+                    <th scope="col" style="width: 15%;">Remover</th>
                 </tr>
             </thead>
             <tbody id="categorias"></tbody>
@@ -97,6 +134,5 @@
 </body>
 
 <script src="categoria.js"></script>
-<script src="icone.js"></script>
 
 </html>

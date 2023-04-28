@@ -22,6 +22,17 @@
     <script src="/script/script.js"></script>
     <link rel="stylesheet" href="/style/style.css">
 
+    <style>
+        #avaliacao-por-pares {
+            border-radius: 25px;
+        }
+
+        #avaliacao-por-pares h1,
+        h5 {
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -29,10 +40,10 @@
     <div id="header"></div>
 
     <div class="container">
-        <div class="row">
-            <h2 class="mb-5">Simplificando a vida financeira<br>de quem <span
-                    style="color: var(--fincouple-orange)">mora junto</span></h2>
 
+        <div class="row">
+            <h2 class="mb-4">Simplificando a vida financeira<br>de quem <span
+                    style="color: var(--fincouple-orange)">mora junto</span></h2>
             <p><i class="fa-solid fa-file-invoice fa-xl mx-2"></i>Todos os seus gastos em um só extrato</p>
             <p><i class="fa-solid fa-list fa-xl mx-2"></i>Categorize seus gastos de forma personalizada</p>
             <p><i class="fa-solid fa-chart-simple fa-xl mx-2"></i>Visualize suas finanças em forma de gráficos
@@ -40,13 +51,25 @@
             <p><i class="fa-solid fa-bell fa-xl mx-2"></i>Não se esqueça mais de pagar as contas da casa</p>
         </div>
 
-        <div class="mb-5">
-            <button type="button" class="btn btn-primary">Crie sua conta</button>
-            <button type="button" class="btn btn-outline-primary">Acessar</button>
+        <div class="row">
+            <div class="mb-5 mt-4">
+                <a href="/cadastro"><button type="button" class="btn btn-primary">Crie sua conta</button></a>
+                <a href="/login"></a><button type="button" class="btn btn-outline-primary">Acessar</button></a>
+            </div>
         </div>
-    </div>
 
-    <div id="footer"></div>
+        <hr>
+
+        <div class="row">
+            <div id="avaliacao-por-pares" class="bg-fincouple">
+                <div class="p-5">
+                    <h1>Veio fazer avaliação por pares?</h1>
+                    <h5>Confira atentamente as orientações de avaliação e teste com carinho! 🧡</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
 
 </body>
 
