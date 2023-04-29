@@ -27,13 +27,7 @@ function criarCategoria(categoria) {
 
 }
 
-function pegarCategoria(id) {
-    return categorias.get(id);
-}
-
 function removerCategoria(id) {
-
-    console.log(`Removendo categoria de ID ${id}...`)
 
     categorias.delete(id);
 
@@ -57,7 +51,7 @@ function exibirCategorias() {
                 <td scope="row">${id}</td>
                 <td>${categoria.nome}</td>
                 <td>
-                    <div style="background-color: ${categoria.cor}; border-radius: 100%; width: 25px; height: 25px;"><br></div>
+                    <div style="background-color: ${categoria.cor}; border-radius: 100%; width: 42px; height: 42px;"><br></div>
                 </td>
                 <td colspan="1">
                     <button id="btn-editar-categoria-${id}" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-editar-categoria">
@@ -74,15 +68,16 @@ function exibirCategorias() {
 
         $(`#btn-remover-categoria-${id}`).click(function () {
 
-            console.log("Debug " + id);
+            let nome = categorias.get(id).nome;
 
             removerCategoria(id);
+            alertar(`Categoria <strong>${nome}</strong> removida com sucesso!`, "warning");
 
         });
 
         $(`#btn-editar-categoria-${id}`).click(function () {
 
-            let categoria = pegarCategoria(id);
+            let categoria = categorias.get(id);
 
             $('#editar-categoria-id').val(categoria.id);
             $('#input-editar-nome-categoria').val(categoria.nome);
@@ -105,7 +100,11 @@ function exibirCategorias() {
         let nome = $('#input-editar-nome-categoria').val();
         let cor = $('#input-editar-cor-categoria').val();
 
-        let categoria = pegarCategoria(id);
+        if(!validarForm(nome, cor, "alerta-editar-categoria")) {
+            return;
+        }
+
+        let categoria = categorias.get(id);
 
         categoria.nome = nome;
         categoria.cor = cor;
@@ -113,9 +112,54 @@ function exibirCategorias() {
         guardarCategorias();
         exibirCategorias();
 
+        $('#modal-editar-categoria').modal('hide');
+
+        alertar(`Categoria <strong>${nome}</strong> salva com sucesso!`, "success");
+
     });
 
 }
+
+function validarForm(nome, cor, idParaAlerta) {
+
+    if(!nome) {
+        alertar(`Informe um <strong>nome</strong> para a categoria.`, "danger", idParaAlerta);
+        return false;
+    }
+
+    if(nome.length > 32) {
+        alertar(`O nome da categoria deve ter até <strong>32 caracteres</strong>.`, "danger", idParaAlerta);
+        return false;
+    }
+
+    return true;
+
+}
+
+$('#btn-confirmar-criacao').click(function (event) {
+
+    let formCriarCategoria = $('#form-criar-categoria')[0];
+
+    if (!formCriarCategoria.checkValidity()) {
+        return;
+    }
+
+    let nome = $('#input-nome-categoria').val();
+    let cor = $('#input-cor-categoria').val();
+
+    if(!validarForm(nome, cor, "alerta-criar-categoria")) {
+        return;
+    }
+
+    let categoria = new Categoria(nome, cor);
+    criarCategoria(categoria);
+
+    formCriarCategoria.reset();
+    $('#modal-criar-categoria').modal('hide');
+
+    alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");
+
+});
 
 var categoriasLocalStorage = JSON.parse(localStorage.getItem('categorias'));
 
@@ -132,24 +176,5 @@ if (categoriasLocalStorage) {
     }
 
 }
-
-$('#btn-confirmar-criacao').click(function () {
-
-    let formCriarCategoria = $('#form-criar-categoria')[0];
-
-    if (!formCriarCategoria.checkValidity()) {
-        alert("Preencha o formulário corretamente.");
-        return;
-    }
-
-    let nome = $('#input-nome-categoria').val();
-    let cor = $('#input-cor-categoria').val();
-
-    let categoria = new Categoria(nome, cor);
-    criarCategoria(categoria);
-
-    formCriarCategoria.reset();
-
-});
 
 exibirCategorias();

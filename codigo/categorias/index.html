@@ -39,6 +39,8 @@
 
                 <div class="modal-body">
 
+                    <div id="alerta-criar-categoria"></div>
+
                     <form id="form-criar-categoria">
                         <div class="mb-3">
                             <label for="input-nome-categoria" class="form-label">Nome</label>
@@ -47,7 +49,7 @@
                         <div class="mb-3">
                             <label for="input-cor-categoria" class="form-label">Cor</label>
                             <br>
-                            <input id="input-cor-categoria" type="color">
+                            <input id="input-cor-categoria" type="color" class="color-picker-fincouple">
                         </div>
                     </form>
 
@@ -55,8 +57,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar-criacao" type="submit" class="btn btn-primary"
-                        data-bs-dismiss="modal">Criar</button>
+                    <button id="btn-confirmar-criacao" type="submit" class="btn btn-primary">Criar</button>
                 </div>
 
             </div>
@@ -76,6 +77,8 @@
 
                 <div class="modal-body">
 
+                    <div id="alerta-editar-categoria"></div>
+
                     <form id="form-editar-categoria">
                         <input id="editar-categoria-id" type="hidden" class="form-control">
                         <div class="mb-3">
@@ -85,7 +88,7 @@
                         <div class="mb-3">
                             <label for="input-editar-cor-categoria" class="form-label">Cor</label>
                             <br>
-                            <input id="input-editar-cor-categoria" type="color">
+                            <input id="input-editar-cor-categoria" type="color" class="color-picker-fincouple">
                         </div>
                     </form>
 
@@ -93,8 +96,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar-edicao-categoria" type="submit" class="btn btn-primary"
-                        data-bs-dismiss="modal">Salvar</button>
+                    <button id="btn-confirmar-edicao-categoria" type="submit" class="btn btn-primary">Salvar</button>
                 </div>
 
             </div>
@@ -109,6 +111,8 @@
         <p>Crie e edite as categorias que podem ser usadas para categorizar seus gastos adicionados por meio do <a
                 href="/extrato">Extrato</a>.</p>
 
+        <div id="alerta"></div>
+
         <div class="d-grid gap-2">
             <button id="criar-categoria" class="btn btn-primary" type="button" data-bs-toggle="modal"
                 data-bs-target="#modal-criar-categoria">Criar categoria</button>
@@ -118,8 +122,8 @@
             <thead>
                 <tr>
                     <th scope="col" style="width: 10%;">#</th>
-                    <th scope="col" style="width: 30%;">Nome</th>
-                    <th scope="col" style="width: 30%;">Cor</th>
+                    <th scope="col" style="width: 40%;">Nome</th>
+                    <th scope="col" style="width: 20%;">Cor</th>
                     <th scope="col" style="width: 15%;">Editar</th>
                     <th scope="col" style="width: 15%;">Remover</th>
                 </tr>
