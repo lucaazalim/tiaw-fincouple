@@ -7,6 +7,13 @@ body {
     height: 100%;
 }
 
+/* Limita a largura do site para torná-lo mais compacto */
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+
 .bg-fincouple {
     background: var(--fincouple-orange);
     background: linear-gradient(90deg, var(--fincouple-orange) 0%, #f84f00 100%);

@@ -24,7 +24,7 @@ function alertar(mensagem, tipo, id = 'alerta', temporaria = true) {
 
     alertPlaceholder.append(wrapper);
 
-    if(temporaria) {
+    if (temporaria) {
         alertTimeout = setTimeout(() => {
             fecharAlerta();
         }, 5000);
@@ -36,7 +36,7 @@ function fecharAlerta() {
 
     var alert = new bootstrap.Alert('#alert');
 
-    if(document.getElementById('alert') != null) {
+    if (document.getElementById('alert') != null) {
         alert.close();
         clearTimeout(alertTimeout);
     }
