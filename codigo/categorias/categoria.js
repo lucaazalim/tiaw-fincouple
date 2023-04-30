@@ -6,9 +6,16 @@ class Categoria {
 }
 
 var categorias_padrao = [
-    new Categoria("Contas residenciais", "#32a852"),
-    new Categoria("Viagem", "#3a32a8"),
-    new Categoria("Assinaturas", "#ffaa00")
+    new Categoria("Animais de Estimação", "#FF8C00"),
+    new Categoria("Assinaturas", "#800080"),
+    new Categoria("Bares e Restaurantes", "#FF0000"),
+    new Categoria("Contas residenciais", "#008000"),
+    new Categoria("Educação", "#0000FF"),
+    new Categoria("Lazer", "#FFFF00"),
+    new Categoria("Mercado", "#FF4500"),
+    new Categoria("Outros", "#808080"),
+    new Categoria("Saúde", "#00BFFF"),
+    new Categoria("Viagem", "#8B4513")
 ];
 
 var categorias;
@@ -48,7 +55,6 @@ function exibirCategorias() {
 
         $('#categorias').append(`
             <tr>
-                <td scope="row">${id}</td>
                 <td>${categoria.nome}</td>
                 <td>
                     <div style="background-color: ${categoria.cor}; border-radius: 100%; width: 42px; height: 42px;"><br></div>

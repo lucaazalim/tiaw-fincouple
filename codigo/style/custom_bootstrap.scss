@@ -6,6 +6,17 @@ $font-size-base: 1.2rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+
+.bg-fincouple {
+    background: var(--fincouple-orange);
+    background: linear-gradient(90deg, var(--fincouple-orange) 0%, #f84f00 100%);
+}
+
 .btn-primary {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
