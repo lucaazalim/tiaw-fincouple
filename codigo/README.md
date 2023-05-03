@@ -5,11 +5,6 @@
 - Deve-se utilizar o padrão `cammelCase` de nomeação de variáveis e métodos;
 - A indentação do código deve ser feita usando **tabs**.
 
-## Bibliotecas utilizadas
-- Bootstrap 5
-- jQuery
-- FontAwesome
-
 ## Conteúdo base para páginas
 
 ``` html

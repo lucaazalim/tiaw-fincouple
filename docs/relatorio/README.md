@@ -165,9 +165,19 @@ A estratégia de Controle de Versão será definida durante a fase de desenvolvi
 
 # Projeto da Solução
 
+Aplicação web front-end para gestão financeira de casais, duplas de amigos e duplas de familiares que residam juntos e dividam a administração das finanças da casa.
+
 ## Tecnologias Utilizadas
+- HTML, CSS e JavaScript
+- Bootstrap 5
+- jQuery 3.6.4
+- FontAwesome 6.4.0
+- SASS (Para customização do Bootstrap)
+- NPM (Gerenciador de Pacotes)
 
 ## Arquitetura da solução
+- Páginas web (HTML, CSS e JavaScript)
+- LocalStorage para armazenamento de dados
 
 # Avaliação da Aplicação
 
