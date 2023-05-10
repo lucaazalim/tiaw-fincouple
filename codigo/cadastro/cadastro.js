@@ -169,7 +169,7 @@ function cadastrar(){
         Erro.setAttribute('style', 'display: none')
         Erro.innerHTML = ''
         setTimeout(()=>{
-            window.location.href='./login   .html'
+            window.location.href='../login'
         },3000)
 } else {
     Erro.setAttribute('style', 'display: block')

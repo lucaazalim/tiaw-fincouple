@@ -41,7 +41,7 @@ function entrar(){
         }
     })
     if(usuario.value == userValid.usuario && senha.value == userValid.senha || usuario1.value == userValid.usuario1 && senha1.value == userValid.senha1){
-        window.location.href='./cadastro.html'
+        window.location.href='../area-logada'
         let token = Math.random().toString(16).substring(2)
         localStorage.setItem('token', token)
     }else{
