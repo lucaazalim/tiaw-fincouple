@@ -1,17 +1,19 @@
-body{
+body {
     background-image: url("cadastro.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-.card{
+
+.card {
     background-color: #ffffff80;
     padding: 30px;
     border-radius: 4%;
     box-shadow: 3px 3px 1px 0px #00000060;
-    width: 400px;
+    width: 500px;
 }
-.label-float input{
+
+.label-float input {
     width: 100%;
     padding: 5px 5px;
     display: inline-block;
@@ -24,16 +26,19 @@ body{
     transition: all .3s ease-out;
     border-radius: 0;
 }
-.label-float{
+
+.label-float {
     position: relative;
     padding-top: 13px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
-.label-float input:focus{
+
+.label-float input:focus {
     border-bottom: 2px solid #4038a0;
 }
-.label-float label{
+
+.label-float label {
     color: #272262;
     pointer-events: none;
     position: absolute;
@@ -42,13 +47,15 @@ body{
     margin-top: 13px;
     transition: all .3s ease-out;
 }
-.label-float input:focus + label,
-.label-float input:valid + label{
+
+.label-float input:focus+label,
+.label-float input:valid+label {
     font-size: 13px;
     margin-top: 0;
     color: #4038a0;
 }
-button{
+
+button {
     background-color: transparent;
     border-color: #272262;
     color: #272262;
@@ -61,22 +68,26 @@ button{
     outline: none;
     transition: all .4s ease-out;
 }
-button:hover{
+
+button:hover {
     background-color: #272262;
     color: #fff;
 }
-.justify-center{
+
+.justify-center {
     display: flex;
     justify-content: center;
 }
-.fa-eye{
+
+.fa-eye {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     color: #272262;
 }
-#Erro{
+
+#Erro {
     text-align: center;
     color: #ff0000;
     background-color: #ffbbbb;
@@ -84,7 +95,8 @@ button:hover{
     border-radius: 4px;
     display: none;
 }
-#Certo{
+
+#Certo {
     text-align: center;
     color: #00bb00;
     background-color: #bbffbe;
