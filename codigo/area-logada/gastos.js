@@ -1,3 +1,5 @@
+
+
 function exibirGastos() {
     const gastos = [
       {nome: "Mercado", valor: 150.00},

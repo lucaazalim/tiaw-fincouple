@@ -1,4 +1,8 @@
 var user = localStorage.getItem('user')
+if(user){
+document.getElementById('user1').innerHTML = user.nome
+};
+
 
 function exibirGastos() {
   const gastos = [
@@ -37,3 +41,5 @@ function categorias(){
       window.location.href = "http://127.0.0.1:5500/categorias/index.html";
   });
 }
+
+
