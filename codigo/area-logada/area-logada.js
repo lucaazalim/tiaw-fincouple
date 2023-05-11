@@ -1,7 +1,11 @@
-var user = localStorage.getItem('user')
-if(user){
+var userjson = localStorage.getItem('user')
+if(userjson){
+  var user = JSON.parse(userjson)
 document.getElementById('user1').innerHTML = user.nome
+var user = JSON.parse(userjson)
+document.getElementById('user2').innerHTML = user.nome1
 };
+
 
 
 function exibirGastos() {
