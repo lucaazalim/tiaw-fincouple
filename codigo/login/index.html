@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/style/custom_bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- FinCouple -->
+    <script src="/script/script.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/login/style.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <h1>Login</h1>
+        <p>Insira seu <b>usuário</b> e <b>senha</b> para entrar na <a href="/index.html"><i><b>FinCouple</b></i></a></p>
+
+        <div class="card">
+            <h1>Login</h1>
+            <div id="Erro"></div>
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder="" required>
+                <label id="usuariolabel" for="usuario">Usuário</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="senha" placeholder="" required>
+                <label id="senhalabel" for="senha">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <div class="justify-center">
+                <button onclick="entrar()">LOGAR</button>
+            </div>
+            <div class="justify-center">
+                <hr>
+            </div>
+            <a href="../cadastro/index.html">Cadastre-se</a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

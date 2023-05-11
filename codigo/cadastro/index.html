@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/style/custom_bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- FinCouple -->
+    <script src="/script/script.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/cadastro/style.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <h1>Cadastro</h1>
+        <p><b>Cadastre-se</b> agora e comece a aproveitar todos os benefícios da nossa plataforma.</p>
+
+        <div class="card">
+            <h1>Crie sua conta</h1>
+            <div id="Erro"></div>
+            <div id="Certo"></div>
+            <div class="label-float">
+                <input type="text" id="nome" placeholder=" " required />
+                <label id="labelnome" for="nome">Nome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="sobrenome" placeholder=" " required />
+                <label id="labelsobrenome" for="sobrenome">Sobrenome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder=" " required />
+                <label id="labelusuario" for="usuario">Usuário</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="senha" placeholder=" " required />
+                <label id="labelsenha" for="senha">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <br>
+            <div class="label-float">
+                <input type="text" id="nome1" placeholder=" " required />
+                <label id="labelnome1" for="nome1">Nome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="sobrenome1" placeholder=" " required />
+                <label id="labelsobrenome1" for="sobrenome1">Sobrenome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="usuario1" placeholder=" " required />
+                <label id="labelusuario1" for="usuario1">Usuário</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="senha1" placeholder=" " required />
+                <label id="labelsenha1" for="senha1">Senha</label>
+                <i class="a fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <br>
+            <div class="label-float">
+                <input type="text" id="apelido" placeholder=" " required />
+                <label id="labelapelido" for="apelido">Apelido</label>
+            </div>
+            <div class="justify-center">
+                <button onclick='cadastrar()'>CADASTRAR</button>
+            </div>
+        </div>
+    </div>
+    <script src="cadastro.js"></script>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>
