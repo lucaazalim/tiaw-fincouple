@@ -1,0 +1,15 @@
+button {
+    font-size: 1.5rem; /* tamanho fixo de fonte */
+    padding: 1em 2em; /* usar unidades de medida relativas */
+    line-height: 1.5;
+    min-height: 120px; /* altura mínima do botão */
+    min-width: 160px; /* largura mínima do botão */
+    aspect-ratio: 4/3; /* proporção de altura e largura */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 25px;
+    line-height: 1.5;
+    width: 160px; /* largura fixa */
+  }
