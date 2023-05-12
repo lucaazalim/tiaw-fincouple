@@ -7,8 +7,10 @@ function exibirLancamentos() {
 
     for (const [id, lancamento] of Extrato.lancamentos.entries()) {
 
-        console.log("Exibindo lançamento: ");
-        console.log(lancamento);
+        // Data
+
+        let splitData = lancamento.data.split("-");
+        let labelData = splitData[2] + "/" + splitData[1] + "/" + splitData[0];
 
         // Categoria
 
@@ -29,7 +31,7 @@ function exibirLancamentos() {
 
         $('#lancamentos').append(`
             <tr>
-            <td>${lancamento.data}</td>
+            <td>${labelData}</td>
                 <td>${lancamento.nome}</td>
                 <td>R$ ${lancamento.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
                 <td>${labelCategoria}</td>
@@ -99,15 +101,19 @@ $(`#btn-confirmar-edicao`).click(function () {
     let id = $('#input-lancamento-id').val();
     let nome = $('#input-nome-lancamento').val();
     let descricao = $('#input-descricao-lancamento').val();
-    let valor = $('#input-valor-lancamento').val();
+    let valor = parseFloat($('#input-valor-lancamento').val());
     let data = $('#input-data-lancamento').val();
-    let categoria = $('#input-categoria-lancamento').val();
+    let categoria = parseInt($('#input-categoria-lancamento').val());
 
     let idAlerta = 'alerta-modal-edicao-lancamento';
 
     if (!nome) {
         alertar(`Informe um <strong>nome</strong> para o lançamento.`, "danger", idAlerta);
         return;
+    }
+
+    if(!descricao) {
+        descricao = null;
     }
 
     if(!valor) {
@@ -120,10 +126,13 @@ $(`#btn-confirmar-edicao`).click(function () {
         let lancamento = Extrato.lancamentos.get(id);
 
         lancamento.nome = nome;
-        lancamento.cor = cor;
+        lancamento.descricao = descricao;
+        lancamento.valor = valor;
+        lancamento.data = data;
+        lancamento.categoria = categoria;
 
         Extrato.guardarLancamentos();
-        Extrato.exibirLancamentos();
+        exibirLancamentos();
 
         alertar(`Lançamento <strong>${nome}</strong> salvo com sucesso!`, "success");
 
