@@ -99,7 +99,7 @@ function validarForm(nome, cor, idParaAlerta) {
 
 }
 
-export function carregarBotoes() {
+function carregarBotoes() {
     $('#btn-confirmar-criacao').click(function (event) {
 
         let formCriarCategoria = $('#form-criar-categoria')[0];
