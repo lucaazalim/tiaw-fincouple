@@ -29,7 +29,7 @@ function exibirCategorias() {
 
         $(`#btn-remover-categoria-${id}`).click(function () {
 
-            let nome = categorias.get(id).nome;
+            let nome = Categorias.categorias.get(id).nome;
 
             Categorias.removerCategoria(id);
             exibirCategorias();
@@ -40,7 +40,7 @@ function exibirCategorias() {
 
         $(`#btn-editar-categoria-${id}`).click(function () {
 
-            let categoria = categorias.get(id);
+            let categoria = Categorias.categorias.get(id);
 
             $('#editar-categoria-id').val(categoria.id);
             $('#input-editar-nome-categoria').val(categoria.nome);
@@ -67,7 +67,7 @@ function exibirCategorias() {
             return;
         }
 
-        let categoria = categorias.get(id);
+        let categoria = Categorias.categorias.get(id);
 
         categoria.nome = nome;
         categoria.cor = cor;
