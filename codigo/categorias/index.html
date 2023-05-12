@@ -26,52 +26,14 @@
 
 <body>
 
-    <!-- Modal de criação de categoria-->
-
-    <div class="modal fade" id="modal-criar-categoria" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Criar categoria</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-
-                <div class="modal-body">
-
-                    <div id="alerta-criar-categoria"></div>
-
-                    <form id="form-criar-categoria">
-                        <div class="mb-3">
-                            <label for="input-nome-categoria" class="form-label">Nome</label>
-                            <input id="input-nome-categoria" type="text" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="input-cor-categoria" class="form-label">Cor</label>
-                            <br>
-                            <input id="input-cor-categoria" type="color" class="color-picker-fincouple">
-                        </div>
-                    </form>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar-criacao" type="submit" class="btn btn-primary">Criar</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <!-- Modal de edição de categoria-->
 
-    <div class="modal fade" id="modal-editar-categoria" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modal-edicao-categoria" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar categoria</h1>
+                    <h1 id="titulo-modal"class="modal-title fs-5"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
 
@@ -79,24 +41,28 @@
 
                     <div id="alerta-editar-categoria"></div>
 
-                    <form id="form-editar-categoria">
-                        <input id="editar-categoria-id" type="hidden" class="form-control">
+                    <form id="form-edicao-categoria">
+
+                        <input id="input-id-categoria" type="hidden" class="form-control">
+
                         <div class="mb-3">
-                            <label for="input-editar-nome-categoria" class="form-label">Nome</label>
-                            <input id="input-editar-nome-categoria" type="text" class="form-control">
+                            <label for="input-nome-categoria" class="form-label">Nome</label>
+                            <input id="input-nome-categoria" type="text" class="form-control" required>
                         </div>
+
                         <div class="mb-3">
-                            <label for="input-editar-cor-categoria" class="form-label">Cor</label>
+                            <label for="input-cor-categoria" class="form-label">Cor</label>
                             <br>
-                            <input id="input-editar-cor-categoria" type="color" class="color-picker-fincouple">
+                            <input id="input-cor-categoria" type="color" class="color-picker-fincouple">
                         </div>
+
                     </form>
 
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar-edicao-categoria" type="submit" class="btn btn-primary">Salvar</button>
+                    <button id="btn-confirmar" type="submit" form="form-edicao-categoria" class="btn btn-primary"></button>
                 </div>
 
             </div>
@@ -117,7 +83,7 @@
 
         <div class="d-grid gap-2">
             <button id="criar-categoria" class="btn btn-primary" type="button" data-bs-toggle="modal"
-                data-bs-target="#modal-criar-categoria"><i class="fa-solid fa-plus"></i> Criar categoria</button>
+                data-bs-target="#modal-edicao-categoria"><i class="fa-solid fa-plus"></i> Criar categoria</button>
         </div>
 
         <table class="table table-striped mt-3">

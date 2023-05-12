@@ -9,7 +9,8 @@ export class Lancamento {
 }
 
 var lancamentos_padrao = [
-    new Lancamento("Conta de luz", null, 300.00, "2023-05-10", 4)
+    new Lancamento("Conta de luz", null, 349.50, "2023-05-09", 4),
+    new Lancamento("Conta de água", null, 68.20, "2023-05-10", 4)
 ];
 
 export var lancamentos;

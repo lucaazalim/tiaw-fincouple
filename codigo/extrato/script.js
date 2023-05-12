@@ -31,7 +31,7 @@ function exibirLancamentos() {
 
         $('#lancamentos').append(`
             <tr>
-            <td>${labelData}</td>
+                <td>${labelData}</td>
                 <td>${lancamento.nome}</td>
                 <td>R$ ${lancamento.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
                 <td>${labelCategoria}</td>
@@ -67,11 +67,11 @@ function exibirLancamentos() {
             $('#input-lancamento-id').val(lancamento.id);
             $('#input-nome-lancamento').val(lancamento.nome);
             $('#input-descricao-lancamento').val(lancamento.descricao);
-            $('#input-valor-lancamento').val(lancamento.valor);
+            $('#input-valor-lancamento').val(lancamento.valor.toFixed(2));
             $('#input-data-lancamento').val(lancamento.data);
             $('#input-categoria-lancamento').val(lancamento.categoria);
 
-            $('#btn-confirmar-edicao').html('Salvar');
+            $('#btn-confirmar').html('Salvar');
 
         });
 
@@ -80,20 +80,20 @@ function exibirLancamentos() {
 }
 
 $('#criar-lancamento').click(function () {
-    
+
     $('#form-edicao-lancamento')[0].reset();
-    
+
     document.getElementById('input-data-lancamento').valueAsDate = new Date();
 
-    $('#btn-confirmar-edicao').html('Criar');
+    $('#btn-confirmar').html('Criar');
 
 });
 
-$(`#btn-confirmar-edicao`).click(function () {
+$(`#btn-confirmar`).click(function () {
 
     let formEdicaoLancamento = $('#form-edicao-lancamento')[0];
 
-    if(!formEdicaoLancamento.checkValidity()) {
+    if (!formEdicaoLancamento.checkValidity()) {
         return;
     }
 
@@ -104,7 +104,7 @@ $(`#btn-confirmar-edicao`).click(function () {
     let data = $('#input-data-lancamento').val();
     let categoria = parseInt($('#input-categoria-lancamento').val());
 
-    if(!descricao) {
+    if (!descricao) {
         descricao = null;
     }
 
@@ -134,12 +134,11 @@ $(`#btn-confirmar-edicao`).click(function () {
 
         exibirLancamentos();
 
-        formEdicaoLancamento.reset();
-
         alertar(`Lancamento <strong>${nome}</strong> criada com sucesso!`, "success");
 
     }
 
+    formEdicaoLancamento.reset();
     $('#modal-edicao-lancamento').modal('hide');
 
 });
