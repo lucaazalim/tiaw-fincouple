@@ -51,7 +51,7 @@ function exibirLancamentos() {
 
         $(`#btn-remover-lancamento-${id}`).click(function () {
 
-            let nome = lancamentos.get(id).nome;
+            let nome = Extrato.lancamentos.get(id).nome;
 
             Extrato.removerLancamento(id);
             exibirLancamentos();
@@ -93,8 +93,7 @@ $(`#btn-confirmar-edicao`).click(function () {
 
     let formEdicaoLancamento = $('#form-edicao-lancamento')[0];
 
-    if (!formEdicaoLancamento.checkValidity()) {
-        alert("Preencha o formulário corretamente.");
+    if(!formEdicaoLancamento.checkValidity()) {
         return;
     }
 
@@ -105,20 +104,8 @@ $(`#btn-confirmar-edicao`).click(function () {
     let data = $('#input-data-lancamento').val();
     let categoria = parseInt($('#input-categoria-lancamento').val());
 
-    let idAlerta = 'alerta-modal-edicao-lancamento';
-
-    if (!nome) {
-        alertar(`Informe um <strong>nome</strong> para o lançamento.`, "danger", idAlerta);
-        return;
-    }
-
     if(!descricao) {
         descricao = null;
-    }
-
-    if(!valor) {
-        alertar(`Informe um <strong>valor</strong> para o lançamento.`, "danger", idAlerta);
-        return;
     }
 
     if (id) {

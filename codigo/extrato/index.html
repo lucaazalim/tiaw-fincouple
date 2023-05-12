@@ -39,13 +39,11 @@
 
                 <div class="modal-body">
 
-                    <div id="alerta-modal-edicao-lancamento"></div>
-
                     <form id="form-edicao-lancamento">
                         <input id="input-lancamento-id" type="hidden" class="form-control">
                         <div class="mb-3">
                             <label for="input-nome-lancamento" class="form-label">Nome</label>
-                            <input id="input-nome-lancamento" type="text" class="form-control">
+                            <input id="input-nome-lancamento" type="text" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="input-descricao-lancamento" class="form-label">Descrição</label>
@@ -53,25 +51,25 @@
                         </div>
                         <div class="mb-3">
                             <label for="input-valor-lancamento" class="form-label">Valor</label>
-                            <input id="input-valor-lancamento" type="number" class="form-control">
+                            <input id="input-valor-lancamento" type="number" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="input-data-lancamento" class="form-label">Data</label>
-                            <input id="input-data-lancamento" type="date" class="form-control">
+                            <input id="input-data-lancamento" type="date" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="input-categoria-lancamento" class="form-label">Categoria</label>
-                            <select id="input-categoria-lancamento" class="form-select">
+                            <select id="input-categoria-lancamento" class="form-select" required>
                                 <option selected>Selecione uma categoria</option>
                             </select>
                         </div>
                     </form>
-
+                    
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar-edicao" type="submit" class="btn btn-primary"></button>
+                    <button id="btn-confirmar-edicao" type="submit" form="form-edicao-lancamento" class="btn btn-primary"></button>
                 </div>
 
             </div>
