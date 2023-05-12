@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Página</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/style/custom_bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- FinCouple -->
+    <script src="/script/script.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+    
+<h1>Minha Conta</h1>
+        <p>Adicione e edite dados pessoais de sua conta.</p>
+        <div id="alerta"></div>
+
+        <!-- Conteúdo da Página -->
+        <style>
+            .foto1, .foto2 {
+                display: inline-block;
+                width: 100%;
+                max-width: 350px;
+                vertical-align: top;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        
+            .foto1 img, .foto2 img {
+                border-radius: 50%;
+                border: 1px solid black;
+            }
+        
+            input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+                display: block;
+                margin: 10px 0;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+        
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bolder;
+            }
+        
+            .container {
+                margin-top: 50px;
+            }
+        
+            @media screen and (min-width: 768px) {
+                .foto1, .foto2 {
+                    width: 45%;
+                    margin-right: 5%;
+                    margin-bottom: 0;
+                    display: inline-block;
+                    text-align: left;
+                    vertical-align: top;
+                }
+        
+                .foto1 {
+                    margin-left: 0;
+                }
+        
+                .foto2 {
+                    margin-right: 0;
+                }
+            }
+            @media screen and (min-width: 768px) {
+    .foto1 {
+        margin-right: 300px;
+    }
+
+    .foto2 {
+        margin-left: 10px;
+    }
+}
+        </style>
+        
+        <div class="container">
+            <div class="foto1">
+                <img id="output1" width="300" height="250" src="imgs/homem.jpg">
+                <br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome"><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha"><br>
+            </div>
+        
+            <div class="foto2">
+                <img id="output2" width="300" height="250" src="imgs/mulher.jpg">
+                <br>
+                <label for="nome1">Nome:</label>
+                <input type="text" id="nome1" name="nome1"><br>
+                <label for="sobrenome1">Sobrenome:</label>
+                <input type="text" id="sobrenome1" name="sobrenome11"><br>
+                <label for="senha1">Senha:</label>
+                <input type="password" id="senha1" name="senha1"><br>
+            </div>
+            <button id="salvar" class="btn btn-primary" type="button">Salvar</button>
+
+
+            
+        </div>
+        
+  
+  
+        
+
+
+
+        <!--FIM DO CONTEUDO DA PAGINA-->
+
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+<script src="script.js"></script>
+
+</html> 
