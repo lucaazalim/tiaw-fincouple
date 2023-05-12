@@ -24,6 +24,8 @@ let validsenha = false
 let senha1 = document.querySelector('#senha1')
 let labelsenha1 = document.querySelector('#labelsenha1')
 let validsenha1 = false
+let apelido = document.querySelector('#apelido')
+let labelapelido = document.querySelector('#labelapelido')
 let Erro = document.querySelector('#Erro')
 let Certo = document.querySelector('#Certo')
 
@@ -147,6 +149,7 @@ btn1.addEventListener('click', () => {
         inputSenha1.setAttribute('type', 'password')
     }
 })
+console.log(apelido.value)
 function cadastrar() {
     if (validnome && validsenha && validsobrenome && validusurario && validnome1 && validsenha1 && validsobrenome1 && validusurario1) {
         let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
@@ -159,11 +162,12 @@ function cadastrar() {
                 nome1: nome1.value,
                 sobrenome1: sobrenome1.value,
                 usuario1: usuario1.value,
-                senha1: senha1.value
+                senha1: senha1.value,
+                apelido: apelido.value
             }
         )
         localStorage.setItem('listaUser', JSON.stringify(listaUser))
-
+        console.log(apelido.value)
         Certo.setAttribute('style', 'display: block')
         Certo.innerHTML = '<strong>Cadastrando usuário... .</strong>'
         Erro.setAttribute('style', 'display: none')
@@ -177,4 +181,34 @@ function cadastrar() {
         Certo.setAttribute('style', 'display: none')
         Certo.innerHTML = ''
     }
+}
+function loadDB() {
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+    const pessoas = (
+        [
+        {
+            "nome": "Leanne",
+            "sobrenome": "Graham",
+            "usuario": "Sincere",
+            "senha": "123456",
+            "nome1": "guilherme",
+            "sobrenome1": "Granada",
+            "usuario1": "Guizinho",
+            "senha1": "123456",
+            "apelido": "L.O.V.E."
+        },
+        {
+            "nome": "Patricia",
+            "sobrenome": "Lebsack",
+            "usuario": "Juliane01",
+            "senha": "123456",
+            "nome1": "Ervin",
+            "sobrenome1": "Howell",
+            "usuario1": "Shanna190",
+            "senha1": "123456",
+            "apelido": "Forever"
+        }
+        ]
+    )
+    localStorage.setItem('listaUser', JSON.stringify(pessoas))
 }
