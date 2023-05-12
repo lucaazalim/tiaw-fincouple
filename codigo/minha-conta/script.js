@@ -13,7 +13,7 @@ $('#salvar').click(function() {
     user.sobrenome=$('#sobrenome').val();
     user.senha=$('#senha').val();
     user.nome1=$('#nome1').val();
-    user.sobrenome1=$('#sobrenome11').val();
+    user.sobrenome1=$('#sobrenome1').val();
     user.senha1=$('#senha1').val();
     localStorage.setItem('user', JSON.stringify(user));
     alertar("Dados da conta salvos com sucesso!", "success");
