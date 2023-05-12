@@ -1,57 +1,12 @@
-class Categoria {
-    constructor(nome, cor) {
-        this.nome = nome;
-        this.cor = cor;
-    }
-}
-
-var categorias_padrao = [
-    new Categoria("Animais de Estimação", "#FF8C00"),
-    new Categoria("Assinaturas", "#800080"),
-    new Categoria("Bares e Restaurantes", "#FF0000"),
-    new Categoria("Contas residenciais", "#008000"),
-    new Categoria("Educação", "#0000FF"),
-    new Categoria("Lazer", "#FFFF00"),
-    new Categoria("Mercado", "#FF4500"),
-    new Categoria("Outros", "#808080"),
-    new Categoria("Saúde", "#00BFFF"),
-    new Categoria("Viagem", "#8B4513")
-];
-
-var categorias;
-
-function criarCategoria(categoria) {
-
-    let id = categorias.size + 1;
-    categoria.id = id;
-
-    console.log(`Criando a categoria ${categoria.nome} de ID ${id}...`);
-
-    categorias.set(id.toString(), categoria);
-
-    guardarCategorias();
-    exibirCategorias();
-
-}
-
-function removerCategoria(id) {
-
-    categorias.delete(id);
-
-    guardarCategorias();
-    exibirCategorias();
-
-}
-
-function guardarCategorias() {
-    localStorage.setItem('categorias', JSON.stringify(Object.fromEntries(categorias)));
-}
+import * as Categorias from './categorias.js';
 
 function exibirCategorias() {
 
+    console.log("Exibindo categorias...");
+
     $('#categorias').html("");
 
-    for (const [id, categoria] of categorias.entries()) {
+    for (const [id, categoria] of Categorias.categorias.entries()) {
 
         $('#categorias').append(`
             <tr>
@@ -76,7 +31,9 @@ function exibirCategorias() {
 
             let nome = categorias.get(id).nome;
 
-            removerCategoria(id);
+            Categorias.removerCategoria(id);
+            exibirCategorias();
+
             alertar(`Categoria <strong>${nome}</strong> removida com sucesso!`, "warning");
 
         });
@@ -106,7 +63,7 @@ function exibirCategorias() {
         let nome = $('#input-editar-nome-categoria').val();
         let cor = $('#input-editar-cor-categoria').val();
 
-        if(!validarForm(nome, cor, "alerta-editar-categoria")) {
+        if (!validarForm(nome, cor, "alerta-editar-categoria")) {
             return;
         }
 
@@ -115,7 +72,7 @@ function exibirCategorias() {
         categoria.nome = nome;
         categoria.cor = cor;
 
-        guardarCategorias();
+        Categorias.guardarCategorias();
         exibirCategorias();
 
         $('#modal-editar-categoria').modal('hide');
@@ -128,12 +85,12 @@ function exibirCategorias() {
 
 function validarForm(nome, cor, idParaAlerta) {
 
-    if(!nome) {
+    if (!nome) {
         alertar(`Informe um <strong>nome</strong> para a categoria.`, "danger", idParaAlerta);
         return false;
     }
 
-    if(nome.length > 32) {
+    if (nome.length > 32) {
         alertar(`O nome da categoria deve ter até <strong>32 caracteres</strong>.`, "danger", idParaAlerta);
         return false;
     }
@@ -142,45 +99,36 @@ function validarForm(nome, cor, idParaAlerta) {
 
 }
 
-$('#btn-confirmar-criacao').click(function (event) {
+export function carregarBotoes() {
+    $('#btn-confirmar-criacao').click(function (event) {
 
-    let formCriarCategoria = $('#form-criar-categoria')[0];
+        let formCriarCategoria = $('#form-criar-categoria')[0];
 
-    if (!formCriarCategoria.checkValidity()) {
-        return;
-    }
+        if (!formCriarCategoria.checkValidity()) {
+            return;
+        }
 
-    let nome = $('#input-nome-categoria').val();
-    let cor = $('#input-cor-categoria').val();
+        let nome = $('#input-nome-categoria').val();
+        let cor = $('#input-cor-categoria').val();
 
-    if(!validarForm(nome, cor, "alerta-criar-categoria")) {
-        return;
-    }
+        if (!validarForm(nome, cor, "alerta-criar-categoria")) {
+            return;
+        }
 
-    let categoria = new Categoria(nome, cor);
-    criarCategoria(categoria);
+        let categoria = new Categorias.Categoria(nome, cor);
 
-    formCriarCategoria.reset();
-    $('#modal-criar-categoria').modal('hide');
+        Categorias.criarCategoria(categoria);
+        exibirCategorias();
 
-    alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");
+        formCriarCategoria.reset();
 
-});
+        $('#modal-criar-categoria').modal('hide');
 
-var categoriasLocalStorage = JSON.parse(localStorage.getItem('categorias'));
+        alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");
 
-if (categoriasLocalStorage) {
-
-    categorias = new Map(Object.entries(categoriasLocalStorage));
-
-} else {
-
-    categorias = new Map();
-    console.log("Criando categorias padrão...");
-    for (const categoria of categorias_padrao) {
-        criarCategoria(categoria);
-    }
-
+    });
 }
 
+Categorias.carregarCategorias();
+carregarBotoes();
 exibirCategorias();

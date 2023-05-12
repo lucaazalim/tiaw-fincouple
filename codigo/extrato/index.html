@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/style/custom_bootstrap.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- FinCouple -->
+    <script src="/script/script.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+
+</head>
+
+<body>
+
+    <!-- Modal de criação e edição de lançamento -->
+
+    <div class="modal fade" id="modal-edicao-lancamento" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Criar lançamento</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div id="alerta-modal-edicao-lancamento"></div>
+
+                    <form id="form-edicao-lancamento">
+                        <input id="input-lancamento-id" type="hidden" class="form-control">
+                        <div class="mb-3">
+                            <label for="input-nome-lancamento" class="form-label">Nome</label>
+                            <input id="input-nome-lancamento" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input-descricao-lancamento" class="form-label">Descrição</label>
+                            <input id="input-descricao-lancamento" type="textarea" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input-valor-lancamento" class="form-label">Valor</label>
+                            <input id="input-valor-lancamento" type="number" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input-data-lancamento" class="form-label">Data</label>
+                            <input id="input-data-lancamento" type="date" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="input-categoria-lancamento" class="form-label">Categoria</label>
+                            <select id="input-categoria-lancamento" class="form-select">
+                                <option selected>Selecione uma categoria</option>
+                            </select>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btn-confirmar-edicao" type="submit" class="btn btn-primary"></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo visível -->
+
+    <div id="header"></div>
+
+    <div class="container">
+
+        <h1>Extrato</h1>
+        <p>Crie e edite as lançamentos.</p>
+
+        <div id="alerta"></div>
+
+        <div class="d-grid gap-2">
+            <button id="criar-lancamento" class="btn btn-primary" type="button" data-bs-toggle="modal"
+                data-bs-target="#modal-edicao-lancamento"><i class="fa-solid fa-plus"></i> Criar lançamento</button>
+        </div>
+
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 15%">Data</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col" style="width: 10%;">Editar</th>
+                    <th scope="col" style="width: 10%;">Remover</th>
+                </tr>
+            </thead>
+            <tbody id="lancamentos"></tbody>
+        </table>
+
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+
+<script type="module" src="script.js"></script>
+
+</html>
