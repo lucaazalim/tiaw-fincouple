@@ -22,6 +22,80 @@
     <script src="/script/script.js"></script>
     <link rel="stylesheet" href="/style/style.css">
 
+    <style>
+        .foto1,
+        .foto2 {
+            display: inline-block;
+            width: 100%;
+            max-width: 350px;
+            vertical-align: top;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .foto1 img,
+        .foto2 img {
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bolder;
+        }
+
+        @media screen and (min-width: 768px) {
+
+            .foto1,
+            .foto2 {
+                width: 45%;
+                margin-right: 5%;
+                margin-bottom: 0;
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .foto1 {
+                margin-left: 0;
+            }
+
+            .foto2 {
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .foto1 {
+                margin-right: 300px;
+            }
+
+            .foto2 {
+                margin-left: 10px;
+            }
+
+            #salvar {
+                float: right
+            }
+
+            ;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -29,79 +103,13 @@
     <div id="header"></div>
 
     <div class="container">
-    
-<h1>Minha Conta</h1>
+
+        <h1>Minha Conta</h1>
         <p>Adicione e edite dados pessoais de sua conta.</p>
         <div id="alerta"></div>
 
         <!-- Conteúdo da Página -->
-        <style>
-            .foto1, .foto2 {
-                display: inline-block;
-                width: 100%;
-                max-width: 350px;
-                vertical-align: top;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-        
-            .foto1 img, .foto2 img {
-                border-radius: 50%;
-                border: 1px solid black;
-            }
-        
-            input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
-                display: block;
-                margin: 10px 0;
-                padding: 5px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                width: 100%;
-            }
-        
-            label {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: bolder;
-            }
-        
-            .container {
-                margin-top: 50px;
-            }
-        
-            @media screen and (min-width: 768px) {
-                .foto1, .foto2 {
-                    width: 45%;
-                    margin-right: 5%;
-                    margin-bottom: 0;
-                    display: inline-block;
-                    text-align: left;
-                    vertical-align: top;
-                }
-        
-                .foto1 {
-                    margin-left: 0;
-                }
-        
-                .foto2 {
-                    margin-right: 0;
-                }
-            }
-            @media screen and (min-width: 768px) {
-    .foto1 {
-        margin-right: 300px;
-    }
 
-    .foto2 {
-        margin-left: 10px;
-    }
-    #salvar {
-        float: right
-    };
-}
-        </style>
-        
         <div class="container text-right">
             <div class="foto1">
                 <img id="output1" width="300" height="250" src="imgs/homem.jpg">
@@ -113,7 +121,7 @@
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha"><br>
             </div>
-        
+
             <div class="foto2">
                 <img id="output2" width="300" height="250" src="imgs/mulher.jpg">
                 <br>
@@ -127,22 +135,15 @@
             <button id="salvar" class="btn btn-primary" type="button">Salvar</button>
 
 
-            
+
         </div>
-        
-  
-  
-        
-
-
-
-        <!--FIM DO CONTEUDO DA PAGINA-->
 
     </div>
 
     <div id="footer"></div>
 
 </body>
+
 <script src="script.js"></script>
 
-</html> 
+</html>
