@@ -1,11 +1,30 @@
 import * as Categorias from '../categorias/categorias.js';
 import * as Extrato from './extrato.js';
 
+function normalizar(str) {
+    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 function exibirLancamentos() {
 
     $('#lancamentos').html("");
 
+    let busca = $('#busca').val();
+
     for (const [id, lancamento] of Extrato.lancamentos.entries()) {
+
+        // Busca
+
+        if (busca) {
+
+            let buscaNormalizada = normalizar(busca);
+            let nomeNormalizado = normalizar(lancamento.nome);
+
+            if (!nomeNormalizado.includes(buscaNormalizada)) {
+                continue;
+            }
+            
+        }
 
         // Data
 
@@ -78,6 +97,12 @@ function exibirLancamentos() {
     }
 
 }
+
+$('#busca').keyup(function () {
+
+    exibirLancamentos();
+
+});
 
 $('#criar-lancamento').click(function () {
 

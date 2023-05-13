@@ -33,7 +33,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h1 id="titulo-modal"class="modal-title fs-5"></h1>
+                    <h1 id="titulo-modal" class="modal-title fs-5"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
 
@@ -62,7 +62,8 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar" type="submit" form="form-edicao-categoria" class="btn btn-primary"></button>
+                    <button id="btn-confirmar" type="submit" form="form-edicao-categoria"
+                        class="btn btn-primary"></button>
                 </div>
 
             </div>
@@ -86,17 +87,19 @@
                 data-bs-target="#modal-edicao-categoria"><i class="fa-solid fa-plus"></i> Criar categoria</button>
         </div>
 
-        <table class="table table-striped mt-3">
-            <thead>
-                <tr>
-                    <th scope="col" style="width: 70%;">Nome</th>
-                    <th scope="col" style="width: 10%;">Cor</th>
-                    <th scope="col" style="width: 10%;">Editar</th>
-                    <th scope="col" style="width: 10%;">Remover</th>
-                </tr>
-            </thead>
-            <tbody id="categorias"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 70%;">Nome</th>
+                        <th scope="col" style="width: 10%;">Cor</th>
+                        <th scope="col" style="width: 10%;">Editar</th>
+                        <th scope="col" style="width: 10%;">Remover</th>
+                    </tr>
+                </thead>
+                <tbody id="categorias"></tbody>
+            </table>
+        </div>
 
     </div>
 

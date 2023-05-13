@@ -65,12 +65,13 @@
                             </select>
                         </div>
                     </form>
-                    
+
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button id="btn-confirmar" type="submit" form="form-edicao-lancamento" class="btn btn-primary"></button>
+                    <button id="btn-confirmar" type="submit" form="form-edicao-lancamento"
+                        class="btn btn-primary"></button>
                 </div>
 
             </div>
@@ -88,24 +89,39 @@
 
         <div id="alerta"></div>
 
-        <div class="d-grid gap-2">
-            <button id="criar-lancamento" class="btn btn-primary" type="button" data-bs-toggle="modal"
-                data-bs-target="#modal-edicao-lancamento"><i class="fa-solid fa-plus"></i> Criar lançamento</button>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="d-grid">
+                    <div class="input-group">
+                        <input id="busca" type="text" class="form-control" placeholder="Filtrar lançamentos pelo nome">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="d-grid mb-2">
+                    <button id="criar-lancamento" class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modal-edicao-lancamento">
+                        <i class="fa-solid fa-plus"></i> Criar lançamento
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <table class="table table-striped mt-3">
-            <thead>
-                <tr>
-                    <th scope="col" style="width: 15%">Data</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col" style="width: 10%;">Editar</th>
-                    <th scope="col" style="width: 10%;">Remover</th>
-                </tr>
-            </thead>
-            <tbody id="lancamentos"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 10%">Data</th>
+                        <th scope="col" style="width: 30%">Nome</th>
+                        <th scope="col" style="width: 15%">Valor</th>
+                        <th scope="col" style="width: 35%">Categoria</th>
+                        <th scope="col" style="width: 10%;">Editar</th>
+                        <th scope="col" style="width: 10%;">Remover</th>
+                    </tr>
+                </thead>
+                <tbody id="lancamentos"></tbody>
+            </table>
+        </div>
 
     </div>
 
