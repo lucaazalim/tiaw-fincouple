@@ -37,13 +37,3 @@ function exibirGastos() {
     listaGastos.appendChild(divGasto);
   });
 }
-
-
-function categorias(){
-  var btnCategorias = document.getElementById("btn-categorias");
-  btnCategorias.addEventListener("click", function() {
-      window.location.href = "http://127.0.0.1:5500/categorias/index.html";
-  });
-}
-
-

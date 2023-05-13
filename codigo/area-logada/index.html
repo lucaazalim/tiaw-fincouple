@@ -3,91 +3,100 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome da Página</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome da Página</title>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="/style/custom_bootstrap.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/style/custom_bootstrap.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- FinCouple -->
-    <script src="/script/script.js"></script>
-    <link rel="stylesheet" href="/style/style.css">
+  <!-- FinCouple -->
+  <script src="/script/script.js"></script>
+  <link rel="stylesheet" href="/style/style.css">
 
-    <!-- Area logada -->
-    <link rel="stylesheet" href="/style/pedro.css">
+  <!-- Area logada -->
+  <link rel="stylesheet" href="/style/pedro.css">
 
 
 </head>
 
-<body >
+<body>
 
-    <div id="header"></div>
+  <div id="header"></div>
 
-    <div class="container">
+  <div class="container">
 
-        <h1>Tela Inicial</h1>
-        
+    <h1>Tela Inicial</h1>
 
-        <!-- Conteúdo da Página -->
-        <div class="row justify-content-center ">
-        <div class="card mb-5 mx-2" style="width: 18rem;">
-          <img src="/img/homem.avif" class="card-img-top" style="width: 100%; height: 12rem; object-fit: cover;">
-            <h5 class="card-title text-center" id="user1">João</h5>
-          </div>
-        
-        
-        <div class="card mb-5 mx-2" style="width: 18rem;">
-          <img src="/img/mulher.jpg" class="card-img-top" style="width: 100%; height: 12rem; object-fit: cover;">
-          <h5 class="card-title text-center" id="user2">Maria</h5>
-          </div>
-        
+
+    <!-- Conteúdo da Página -->
+    <div class="row justify-content-center ">
+      <div class="card mb-5 mx-2" style="width: 18rem;">
+        <img src="/img/homem.avif" class="card-img-top" style="width: 100%; height: 12rem; object-fit: cover;">
+        <h5 class="card-title text-center" id="user1">João</h5>
       </div>
 
 
-
-        <div class="row justify-content-center ">
-            <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-              <button type="button" class="btn btn-primary ">Gráficos</button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-              <button type="button" class="btn btn-primary ">Calendário</button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-              <button type="button" class="btn btn-primary " id="btn-categorias">Categorias</button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-              <button type="button" class="btn btn-primary ">Extrato</button>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-              <button type="button" class="btn btn-primary ">Minha Conta</button>
-            </div>
-        </div>
-        
-        <h1 >Últimos Gastos</h1>
-          <ul id="lista-gastos"></ul>
-          
-            <script src="area-logada.js"></script>             
-              
-              <script >
-                exibirGastos();              
-                categorias();
-              </script>
-
-
+      <div class="card mb-5 mx-2" style="width: 18rem;">
+        <img src="/img/mulher.jpg" class="card-img-top" style="width: 100%; height: 12rem; object-fit: cover;">
+        <h5 class="card-title text-center" id="user2">Maria</h5>
+      </div>
 
     </div>
 
 
-    <div id="footer"></div>
+
+    <div class="row justify-content-center ">
+      <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
+        <a href="/graficos">
+          <button type="button" class="btn btn-primary ">Gráficos</button>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
+        <a href="/calendario">
+          <button type="button" class="btn btn-primary ">Calendário</button>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
+        <a href="/categorias">
+          <button type="button" class="btn btn-primary " id="btn-categorias">Categorias</button>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
+        <a href="/extrato">
+          <button type="button" class="btn btn-primary ">Extrato</button>
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
+        <a href="/minha-conta">
+          <button type="button" class="btn btn-primary ">Minha Conta</button>
+        </a>
+      </div>
+    </div>
+
+    <h1>Últimos Gastos</h1>
+    <ul id="lista-gastos"></ul>
+
+    <script src="area-logada.js"></script>
+
+    <script>
+      exibirGastos();
+    </script>
+
+
+
+  </div>
+
+
+  <div id="footer"></div>
 
 </body>
 
