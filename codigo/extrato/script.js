@@ -11,7 +11,7 @@ function exibirLancamentos() {
 
     let busca = $('#busca').val();
 
-    for (const [id, lancamento] of Extrato.lancamentos.entries()) {
+    for (const [id, lancamento] of [...Extrato.lancamentos.entries()].reverse()) {
 
         // Busca
 
