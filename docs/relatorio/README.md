@@ -103,7 +103,9 @@ Cada requisito funcional possui seu issue com documentações mais detalhadas e 
 
 7. **[#7](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/7) Calendário:** a funcionalidade de Calendário permitirá cadastrar gastos recorrentes e pontuais para receber lembretes de quando eles devem ser pagos. A página inicial da funcionalidade exibirá um calendário contendo as próximas contas a serem pagas.
 
-8. **[#8](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/8) Minha Conta:** Criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
+8. **[#8](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/8) Minha Conta:** criação de uma página para que o usuário possa gerir informações individuais de sua conta, realizar alteração de senha e apagar o cadastro.
+
+9. **[#9](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple/issues/9) Calculadoras:** página que reúne diversos tipos de calculadoras financeiras para uso no dia a dia.
 
 ### Requisitos não Funcionais
 
