@@ -1,9 +1,9 @@
 $(function () {
-    $("#header").load("/includes/header.html");
+    $("#header").load("/assets/includes/header.html");
 });
 
 $(function () {
-    $("#footer").load("/includes/footer.html");
+    $("#footer").load("/assets/includes/footer.html");
 });
 
 // Alert

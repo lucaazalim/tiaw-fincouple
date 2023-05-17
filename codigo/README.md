@@ -25,12 +25,12 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/style/custom_bootstrap.css">
+    <link rel="stylesheet" href="/assets/style/custom_bootstrap.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- FinCouple -->
-    <script src="/script/script.js"></script>
-    <link rel="stylesheet" href="/style/style.css">
+    <script src="/assets/script/script.js"></script>
+    <link rel="stylesheet" href="/assets/style/style.css">
 
 </head>
 
@@ -58,5 +58,5 @@
 
 Comando para aplicar as customizações de CSS ao Boostrap:
 ``` bash
-sass ./style/custom_bootstrap.scss ./style/custom_bootstrap.css
+sass ./style/custom_bootstrap.scss ./assets/style/custom_bootstrap.css
 ```
