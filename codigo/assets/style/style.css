@@ -1,26 +1,38 @@
 :root {
-  --fincouple-orange: #f87000;
+	--fincouple-orange: #f87000;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+	background-color: var(--fincouple-orange);
+	color: white;
+	font-size: 14px;
+	transition: filter 0.3s;
+}
+
+.breadcrumbs:hover {
+	filter: brightness(120%);
 }
 
 /* Color Picker */
 
 .color-picker-fincouple {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100px;
+	height: 50px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .color-picker-fincouple::-webkit-color-swatch {
-  border-radius: 15px;
-  border: none;
+	border-radius: 15px;
+	border: none;
 }
 
 .color-picker-fincouple::-moz-color-swatch {
-  border-radius: 15px;
-  border: none;
+	border-radius: 15px;
+	border: none;
 }

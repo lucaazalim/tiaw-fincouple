@@ -56,7 +56,7 @@ export function guardarLancamentos() {
     localStorage.setItem('extrato', JSON.stringify(Object.fromEntries(lancamentos)));
 }
 
-export function carregarLancamentos() {
+export function carregar() {
 
     let extratoLocalStorage = JSON.parse(localStorage.getItem('extrato'));
 

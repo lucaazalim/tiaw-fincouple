@@ -55,7 +55,7 @@ function exibirCategorias() {
 
 }
 
-Categorias.carregarCategorias();
+Categorias.carregar();
 
 $('#criar-categoria').click(function () {
     

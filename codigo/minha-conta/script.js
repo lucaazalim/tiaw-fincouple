@@ -1,23 +1,45 @@
-var user = JSON.parse(localStorage.getItem('user'))
+import * as Casais from '../cadastro/casais.js';
+import * as Usuarios from '../cadastro/usuarios.js';
+import * as Login from '../login/login.js';
 
-$('#nome').val(user.nome);
-$('#sobrenome').val(user.sobrenome);
-$('#senha').val(user.senha);
-$('#nome1').val(user.nome1);
-$('#sobrenome1').val(user.sobrenome1);
-$('#senha1').val(user.senha1);
+Casais.carregar();
+Usuarios.carregar();
 
-$('#salvar').click(function() {
-    var user = JSON.parse(localStorage.getItem('user'))
-    user.nome=$('#nome').val();
-    user.sobrenome=$('#sobrenome').val();
-    user.senha=$('#senha').val();
-    user.nome1=$('#nome1').val();
-    user.sobrenome1=$('#sobrenome1').val();
-    user.senha1=$('#senha1').val();
-    localStorage.setItem('user', JSON.stringify(user));
-    alertar("Dados da conta salvos com sucesso!", "success");
+let usuarioLogado = Login.usuarioLogado();
+
+$('#nome').val(usuarioLogado.nome);
+$('#sobrenome').val(usuarioLogado.sobrenome);
+$('#senha').val(usuarioLogado.senha);
+
+let casalLogado = Login.casalLogado();
+
+$('#apelido').val(casalLogado.apelido);
+
+$('#btn-salvar').click(function(event) {
+
+    let form = $('#form-minha-conta')[0];
+
+    if(!form.checkValidity()) {
+        return;
+    }
+
+    event.preventDefault();
+
+    let apelido = $('#apelido').val();
+
+    casalLogado.apelido = apelido;
+
+    let nome = $('#nome').val();
+    let sobrenome = $('#sobrenome').val();
+    let senha = $('#senha').val();
+
+    usuarioLogado.nome = nome;
+    usuarioLogado.sobrenome = sobrenome;
+    usuarioLogado.senha = senha;
+
+    Casais.guardar();
+    Usuarios.guardar();
+
+    alertar("Usuário atualizado com sucesso!", "success");
 
 });
-
-

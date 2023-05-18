@@ -22,121 +22,51 @@
     <script src="/assets/script/script.js"></script>
     <link rel="stylesheet" href="/assets/style/style.css">
 
-    <style>
-        .foto1,
-        .foto2 {
-            display: inline-block;
-            width: 100%;
-            max-width: 350px;
-            vertical-align: top;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .foto1 img,
-        .foto2 img {
-            border-radius: 50%;
-            border: 1px solid black;
-        }
-
-        input[type="text"],
-        input[type="password"],
-        input[type="email"],
-        input[type="tel"] {
-            display: block;
-            margin: 10px 0;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bolder;
-        }
-
-        @media screen and (min-width: 768px) {
-
-            .foto1,
-            .foto2 {
-                width: 45%;
-                margin-right: 5%;
-                margin-bottom: 0;
-                display: inline-block;
-                text-align: left;
-                vertical-align: top;
-            }
-
-            .foto1 {
-                margin-left: 0;
-            }
-
-            .foto2 {
-                margin-right: 0;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            .foto1 {
-                margin-right: 300px;
-            }
-
-            .foto2 {
-                margin-left: 10px;
-            }
-
-            #salvar {
-                float: right
-            }
-
-            ;
-        }
-    </style>
-
 </head>
 
 <body>
 
     <div id="header"></div>
 
-    <div class="container">
+    <div class="container" style="max-width: 500px;">
+
+        <div id="breadcrumbs" class="mb-3"></div>
 
         <h1>Minha Conta</h1>
-        <p>Edite dados pessoais da sua conta.</p>
-        <div id="alerta"></div>
+        <p>Edite os dados pessoais da sua conta.</p>
 
         <!-- Conteúdo da Página -->
 
-        <div class="container text-right">
-            <div class="foto1">
-                <img id="output1" width="300" height="250" src="/assets/imgs/homem.jpg">
-                <br>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome"><br>
-                <label for="sobrenome">Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome"><br>
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha"><br>
-            </div>
-
-            <div class="foto2">
-                <img id="output2" width="300" height="250" src="/assets/imgs/mulher.jpg">
-                <br>
-                <label for="nome1">Nome:</label>
-                <input type="text" id="nome1" name="nome1"><br>
-                <label for="sobrenome1">Sobrenome:</label>
-                <input type="text" id="sobrenome1" name="sobrenome11"><br>
-                <label for="senha1">Senha:</label>
-                <input type="password" id="senha1" name="senha1"><br>
-            </div>
-            <button id="salvar" class="btn btn-primary" type="button">Salvar</button>
-
-
-
+        <div class="text-center m-5">
+            <img height="250" src="/assets/img/homem.png" style="border-radius: 50%;">
         </div>
+
+        <div id="alerta"></div>
+
+        <form id="form-minha-conta">
+
+            <div class="mb-3">
+                <label for="apelido">Apelido do casal:</label>
+                <input type="text" class="form-control" id="apelido" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nome">Name:</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" class="form-control" id="sobrenome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" required>
+            </div>
+
+            <button id="btn-salvar" type="submit" class="btn btn-primary">Salvar</button>
+        </form>
 
     </div>
 

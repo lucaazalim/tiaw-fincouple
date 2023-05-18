@@ -3,6 +3,10 @@ $(function () {
 });
 
 $(function () {
+    $("#breadcrumbs").load("/assets/includes/breadcrumbs.html");
+});
+
+$(function () {
     $("#footer").load("/assets/includes/footer.html");
 });
 

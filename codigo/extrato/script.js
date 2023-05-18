@@ -168,8 +168,8 @@ $(`#btn-confirmar`).click(function () {
 
 });
 
-Categorias.carregarCategorias();
-Extrato.carregarLancamentos();
+Categorias.carregar();
+Extrato.carregar();
 exibirLancamentos();
 
 for (const [id, categoria] of Categorias.categorias.entries()) {

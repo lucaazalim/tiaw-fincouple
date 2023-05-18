@@ -6,7 +6,7 @@ export function usuarioLogado() {
 
     // Gambiarra para haver sempre um usuário logado por padrão para facilitar avaliação por pares
     if(!usuarioLogado) {
-        return '1';
+        usuarioLogado = '1';
     }
 
     return Usuarios.usuarios.get(usuarioLogado);
@@ -21,7 +21,7 @@ export function casalLogado() {
 
     // Gambiarra para haver sempre um usuário logado por padrão para facilitar avaliação por pares
     if(!casalLogado) {
-        return '1';
+        casalLogado = '1';
     }
 
     return Casais.casais.get(casalLogado);

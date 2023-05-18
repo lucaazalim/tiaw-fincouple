@@ -2,6 +2,8 @@ import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from '../login/login.js';
 
+// Dados dos usuários
+
 Casais.carregar();
 Usuarios.carregar();
 
@@ -12,35 +14,51 @@ let usuario2 = Usuarios.usuarios.get(casalLogado.userId2);
 $('#usuario-1').html(usuario1.nome + " " + usuario1.sobrenome);
 $('#usuario-2').html(usuario2.nome + " " + usuario2.sobrenome);
 
+// Últimos lançamentos
 
+import * as Categorias from '../categorias/categorias.js';
+import * as Extrato from '../extrato/extrato.js';
 
-// Carregar gastos
+Categorias.carregar();
+Extrato.carregar();
 
-const gastos = [
-	{ nome: "Mercado", valor: 150.00 },
-	{ nome: "Netflix", valor: 49.90 },
-	{ nome: "Gasolina", valor: 200.00 },
-];
+let limit = 10;
 
-const listaGastos = document.getElementById("lista-gastos");
+for (const [id, lancamento] of [...Extrato.lancamentos.entries()].reverse()) {
 
-gastos.forEach((gasto) => {
-	const divGasto = document.createElement("div");
-	divGasto.classList.add("card", "my-2", "p-2");
-	divGasto.style.fontSize = "24px";
-	divGasto.style.color = "#f87000";
-	divGasto.style.fontWeight = "bold";
+	if(limit-- <= 0) {
+		break;
+	}
 
-	const divNome = document.createElement("div");
-	divNome.innerText = gasto.nome;
-	divNome.style.fontWeight = "bold";
+	// Data
 
-	const divValor = document.createElement("div");
-	divValor.innerText = `R$ ${gasto.valor.toFixed(2)}`;
-	divValor.style.color = "black";
+	let splitData = lancamento.data.split("-");
+	let labelData = splitData[2] + "/" + splitData[1] + "/" + splitData[0];
 
-	divGasto.appendChild(divNome);
-	divGasto.appendChild(divValor);
-	listaGastos.appendChild(divGasto);
-});
+	// Categoria
 
+	let categoria = Categorias.categorias.get(lancamento.categoria.toString());
+
+	let corCategoria;
+	let nomeCategoria;
+
+	if (categoria) {
+		corCategoria = categoria.cor;
+		nomeCategoria = categoria.nome;
+	} else {
+		corCategoria = '#3d3d3d';
+		nomeCategoria = 'Indefinida';
+	}
+
+	let labelCategoria = `<i class="fa-solid fa-circle" style="color: ${corCategoria}"></i> ${nomeCategoria}`
+
+	$('#lancamentos').append(`
+		<tr>
+			<td>${labelData}</td>
+			<td>${lancamento.nome}</td>
+			<td>R$ ${lancamento.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+			<td>${labelCategoria}</td>
+		</tr>
+	`);
+
+}
