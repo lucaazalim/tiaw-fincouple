@@ -2,9 +2,6 @@ import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from '../login/login.js';
 
-Casais.carregar();
-Usuarios.carregar();
-
 let usuarioLogado = Login.usuarioLogado();
 
 $('#nome').val(usuarioLogado.nome);
@@ -40,6 +37,6 @@ $('#btn-salvar').click(function(event) {
     Casais.guardar();
     Usuarios.guardar();
 
-    alertar("Usuário atualizado com sucesso!", "success");
+    Alerta.alertar("Usuário atualizado com sucesso!", "success");
 
 });

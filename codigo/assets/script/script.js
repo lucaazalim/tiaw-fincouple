@@ -1,5 +1,49 @@
+import * as Usuarios from '../../cadastro/usuarios.js';
+import * as Login from '../../login/login.js';
+
+Usuarios.carregar();
+
+let usuarioLogado = Login.usuarioLogado();
+
 $(function () {
-    $("#header").load("/assets/includes/header.html");
+
+    let headerHtml = '';
+
+    headerHtml += `
+        <header>
+            <nav class="navbar bg-fincouple mb-5">
+                <div class="container">
+
+                    <a class="navbar-brand" href="/">
+                        <img src="/assets/img/logo.png" alt="FinCouple" width="200px">
+                    </a>
+    `;
+
+    if (usuarioLogado) {
+        headerHtml += `
+            <a href="/area-logada" class="text-decoration-none">
+                <div class="row">
+                    <div class="col">
+                        <p id="nome-usuario-header" class="mx-3 fw-bold">
+                            ${usuarioLogado.usuario}
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle">
+                    </div>
+                </div>
+            </a>
+        `;
+    }
+
+    headerHtml += `
+                </div>
+            </nav>
+        </header>
+    `;
+
+    $("#header").html(headerHtml);
+
 });
 
 $(function () {
@@ -9,40 +53,3 @@ $(function () {
 $(function () {
     $("#footer").load("/assets/includes/footer.html");
 });
-
-// Alert
-
-function alertar(mensagem, tipo, id = 'alerta', temporaria = true) {
-
-    fecharAlerta();
-
-    var alertPlaceholder = document.getElementById(id);
-    var wrapper = document.createElement('div');
-
-    wrapper.innerHTML = [
-        `<div id="alert" class="alert alert-${tipo} alert-dismissible" role="alert">`,
-        `   <div>${mensagem}</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-    ].join('');
-
-    alertPlaceholder.append(wrapper);
-
-    if (temporaria) {
-        alertTimeout = setTimeout(() => {
-            fecharAlerta();
-        }, 5000);
-    }
-
-}
-
-function fecharAlerta() {
-
-    var alert = new bootstrap.Alert('#alert');
-
-    if (document.getElementById('alert') != null) {
-        alert.close();
-        clearTimeout(alertTimeout);
-    }
-
-}

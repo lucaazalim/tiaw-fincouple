@@ -58,6 +58,10 @@ export function guardarLancamentos() {
 
 export function carregar() {
 
+    if(lancamentos) {
+        return;
+    }
+
     let extratoLocalStorage = JSON.parse(localStorage.getItem('extrato'));
 
     if (extratoLocalStorage) {
@@ -75,3 +79,5 @@ export function carregar() {
     }
 
 }
+
+carregar();

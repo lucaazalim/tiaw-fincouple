@@ -1,26 +1,26 @@
+import * as Alerta from '../assets/script/alerta.js';
 import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from '../login/login.js';
 
 // Dados dos usuários
 
-Casais.carregar();
-Usuarios.carregar();
-
 let casalLogado = Login.casalLogado();
+
 let usuario1 = Usuarios.usuarios.get(casalLogado.userId1);
-let usuario2 = Usuarios.usuarios.get(casalLogado.userId2);
 
 $('#usuario-1').html(usuario1.nome + " " + usuario1.sobrenome);
+$('#foto-usuario-1').attr('src', usuario1.foto);
+
+let usuario2 = Usuarios.usuarios.get(casalLogado.userId2);
+
 $('#usuario-2').html(usuario2.nome + " " + usuario2.sobrenome);
+$('#foto-usuario-2').attr('src', usuario2.foto);
 
 // Últimos lançamentos
 
 import * as Categorias from '../categorias/categorias.js';
 import * as Extrato from '../extrato/extrato.js';
-
-Categorias.carregar();
-Extrato.carregar();
 
 let limit = 10;
 

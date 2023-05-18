@@ -1,3 +1,4 @@
+import * as Alerta from '../assets/script/alerta.js';
 import * as Categorias from '../categorias/categorias.js';
 import * as Extrato from './extrato.js';
 
@@ -75,7 +76,7 @@ function exibirLancamentos() {
             Extrato.removerLancamento(id);
             exibirLancamentos();
 
-            alertar(`Lançamento <strong>${nome}</strong> removida com sucesso!`, "warning");
+            Alerta.alertar(`Lançamento <strong>${nome}</strong> removida com sucesso!`, "warning");
 
         });
 
@@ -146,7 +147,7 @@ $(`#btn-confirmar`).click(function () {
         Extrato.guardarLancamentos();
         exibirLancamentos();
 
-        alertar(`Lançamento <strong>${nome}</strong> salvo com sucesso!`, "success");
+        Alerta.alertar(`Lançamento <strong>${nome}</strong> salvo com sucesso!`, "success");
 
     } else {
 
@@ -159,7 +160,7 @@ $(`#btn-confirmar`).click(function () {
 
         exibirLancamentos();
 
-        alertar(`Lancamento <strong>${nome}</strong> criada com sucesso!`, "success");
+        Alerta.alertar(`Lancamento <strong>${nome}</strong> criada com sucesso!`, "success");
 
     }
 
@@ -168,8 +169,6 @@ $(`#btn-confirmar`).click(function () {
 
 });
 
-Categorias.carregar();
-Extrato.carregar();
 exibirLancamentos();
 
 for (const [id, categoria] of Categorias.categorias.entries()) {

@@ -1,9 +1,10 @@
 export class Usuario {
-    constructor(nome, sobrenome, usuario, senha, casalId) {
+    constructor(nome, sobrenome, usuario, senha, foto, casalId) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.usuario = usuario;
         this.senha = senha;
+        this.foto = foto;
         this.casalId = casalId;
     }
 }
@@ -11,8 +12,8 @@ export class Usuario {
 export var usuarios;
 
 const usuarios_padrao = [
-    new Usuario("João", "Silva", "joaosilva", "123", '1'),
-    new Usuario("Maria", "Silva", "mariasilva", "123", '1')
+    new Usuario('João', 'Silva', 'joaosilva', '123', '/assets/img/homem.png', '1'),
+    new Usuario('Maria', 'Silva', 'mariasilva', '123', '/assets/img/mulher.png', '1')
 ];
 
 export function buscarPorUsuario(usuario) {
@@ -47,6 +48,10 @@ export function guardar() {
 
 export function carregar() {
 
+    if (usuarios) {
+        return;
+    }
+
     console.log("Carregando usuarios...");
 
     let usuariosLocalStorage = JSON.parse(localStorage.getItem('usuarios'));
@@ -66,3 +71,5 @@ export function carregar() {
     }
 
 }
+
+carregar();

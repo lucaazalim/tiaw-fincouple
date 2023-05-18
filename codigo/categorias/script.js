@@ -1,3 +1,4 @@
+import * as Alerta from '../assets/script/alerta.js';
 import * as Categorias from './categorias.js';
 
 function exibirCategorias() {
@@ -34,7 +35,7 @@ function exibirCategorias() {
             Categorias.removerCategoria(id);
             exibirCategorias();
 
-            alertar(`Categoria <strong>${nome}</strong> removida com sucesso!`, "warning");
+            Alerta.alertar(`Categoria <strong>${nome}</strong> removida com sucesso!`, "warning");
 
         });
 
@@ -55,8 +56,6 @@ function exibirCategorias() {
 
 }
 
-Categorias.carregar();
-
 $('#criar-categoria').click(function () {
     
     $('#form-edicao-categoria')[0].reset();
@@ -73,6 +72,8 @@ $('#btn-confirmar').click(function (event) {
         return;
     }
 
+    event.preventDefault();
+
     let id = $('#input-id-categoria').val();
     let nome = $('#input-nome-categoria').val();
     let cor = $('#input-cor-categoria').val();
@@ -80,7 +81,7 @@ $('#btn-confirmar').click(function (event) {
     let idAlerta = 'alerta-editar-categoria';
 
     if (nome.length > 32) {
-        alertar(`O nome da categoria deve ter até <strong>32 caracteres</strong>.`, "danger", idAlerta);
+        Alerta.alertar(`O nome da categoria deve ter até <strong>32 caracteres</strong>.`, "danger", idAlerta);
         return false;
     }
 
@@ -94,7 +95,7 @@ $('#btn-confirmar').click(function (event) {
         Categorias.guardarCategorias();
         exibirCategorias();
 
-        alertar(`Categoria <strong>${nome}</strong> salva com sucesso!`, "success");
+        Alerta.alertar(`Categoria <strong>${nome}</strong> salva com sucesso!`, "success");
 
     } else {
 
@@ -103,7 +104,7 @@ $('#btn-confirmar').click(function (event) {
         Categorias.criarCategoria(categoria);
         exibirCategorias();
 
-        alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");
+        Alerta.alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");
 
     }
 

@@ -32,6 +32,10 @@ export function guardar() {
 
 export function carregar() {
 
+    if (casais) {
+        return;
+    }
+
     console.log("Carregando casais...");
 
     let casaisLocalStorage = JSON.parse(localStorage.getItem('casais'));
@@ -51,3 +55,5 @@ export function carregar() {
     }
 
 }
+
+carregar();

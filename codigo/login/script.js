@@ -1,9 +1,7 @@
+import * as Alerta from '../assets/script/alerta.js';
 import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from './login.js';
-
-Casais.carregar();
-Usuarios.carregar();
 
 $('#btn-entrar').click(function (event) {
 
@@ -21,12 +19,12 @@ $('#btn-entrar').click(function (event) {
     let user = Usuarios.buscarPorUsuario(usuario);
 
     if(!user) {
-        alertar("Usuário não encontrado!", "danger");
+        Alerta.alertar("Usuário não encontrado!", "danger");
         return;
     }
 
     if(user.senha != senha) {
-        alertar("Senha incorreta!", "danger");
+        Alerta.alertar("Senha incorreta!", "danger");
         return;
     }
 

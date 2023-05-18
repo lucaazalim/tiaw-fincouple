@@ -29,7 +29,7 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- FinCouple -->
-    <script src="/assets/script/script.js"></script>
+    <script type="module" src="/assets/script/script.js"></script>
     <link rel="stylesheet" href="/assets/style/style.css">
 
 </head>

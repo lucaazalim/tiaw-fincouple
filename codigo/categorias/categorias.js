@@ -46,6 +46,10 @@ export function guardarCategorias() {
 
 export function carregar() {
 
+    if (categorias) {
+        return;
+    }
+
     console.log("Carregando categorias...");
 
     let categoriasLocalStorage = JSON.parse(localStorage.getItem('categorias'));
@@ -65,3 +69,5 @@ export function carregar() {
     }
 
 }
+
+carregar();
