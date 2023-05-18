@@ -20,6 +20,7 @@ $(function () {
     `;
 
     if (usuarioLogado) {
+
         headerHtml += `
             <a href="/area-logada" class="text-decoration-none">
                 <div class="row">
@@ -34,6 +35,7 @@ $(function () {
                 </div>
             </a>
         `;
+        
     }
 
     headerHtml += `
