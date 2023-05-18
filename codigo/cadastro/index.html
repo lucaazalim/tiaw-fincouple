@@ -25,65 +25,68 @@
 
 </head>
 
-<body onload="loadDB()">
+<body>
 
     <div id="header"></div>
 
-    <div class="container">
+    <div class="container" style="max-width: 800px;">
 
         <h1>Cadastro</h1>
-        <p><b>Cadastre-se</b> agora e comece a aproveitar todos os benefícios da nossa plataforma.</p>
+        <p>Cadastre-se agora e comece a aproveitar todos os benefícios da nossa plataforma.</p>
 
-        <div class="card">
-            <h1>Crie sua conta</h1>
-            <div id="Erro"></div>
-            <div id="Certo"></div>
-            <div class="label-float">
-                <input type="text" id="nome" placeholder=" " required />
-                <label id="labelnome" for="nome">Nome</label>
+        <div id="alerta"></div>
+
+        <form id="form-cadastro">
+            <div class="row">
+                <div class="mb-3 p-4 bg-light border">
+                    <label for="apelido">Apelido do casal</label>
+                    <input type="text" class="form-control" id="apelido" name="apelido" required>
+                </div>
+                <div class="col-sm-12 col-md-6 p-4 bg-light border">
+                    <h2>Primeira pessoa</h2>
+                    <div class="mb-3">
+                        <label for="nome-1">Nome</label>
+                        <input type="text" class="form-control" id="nome-1" name="nome-1" placeholder="João" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sobrenome-1">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome-1" name="sobrenome-1" placeholder="Silva" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario-1">Usuário</label>
+                        <input type="text" class="form-control" id="usuario-1" name="usuario-1" placeholder="joaosilva" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha-1">Senha</label>
+                        <input type="password" class="form-control" id="senha-1" name="senha-1" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 p-4 bg-light border">
+                    <h2>Segunda pessoa</h2>
+                    <div class="mb-3">
+                        <label for="nome-2">Nome</label>
+                        <input type="text" class="form-control" id="nome-2" name="nome-2" placeholder="Maria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sobrenome-2">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome-2" name="sobrenome-2" placeholder="Silva" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="usuario-2">Usuário</label>
+                        <input type="text" class="form-control" id="usuario-2" name="usuario-2" placeholder="mariasilva" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha-2">Senha</label>
+                        <input type="password" class="form-control" id="senha-2" name="senha-2" required>
+                    </div>
+                </div>
             </div>
-            <div class="label-float">
-                <input type="text" id="sobrenome" placeholder=" " required />
-                <label id="labelsobrenome" for="sobrenome">Sobrenome</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="usuario" placeholder=" " required />
-                <label id="labelusuario" for="usuario">Usuário</label>
-            </div>
-            <div class="label-float">
-                <input type="password" id="senha" placeholder=" " required />
-                <label id="labelsenha" for="senha">Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-            <br>
-            <div class="label-float">
-                <input type="text" id="nome1" placeholder=" " required />
-                <label id="labelnome1" for="nome1">Nome</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="sobrenome1" placeholder=" " required />
-                <label id="labelsobrenome1" for="sobrenome1">Sobrenome</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="usuario1" placeholder=" " required />
-                <label id="labelusuario1" for="usuario1">Usuário</label>
-            </div>
-            <div class="label-float">
-                <input type="password" id="senha1" placeholder=" " required />
-                <label id="labelsenha1" for="senha1">Senha</label>
-                <i class="a fa fa-eye" aria-hidden="true"></i>
-            </div>
-            <br>
-            <div class="label-float">
-                <input type="text" id="apelido" placeholder=" " required />
-                <label id="labelapelido" for="apelido">Apelido</label>
-            </div>
-            <div class="justify-center">
-                <button onclick='cadastrar()'>CADASTRAR</button>
-            </div>
-        </div>
+            <button id="cadastrar" type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+        </form>
+
     </div>
-    <script src="cadastro.js"></script>
+
+    <script type="module" src="script.js"></script>
 
     <div id="footer"></div>
 

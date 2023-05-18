@@ -21,7 +21,6 @@
     <!-- FinCouple -->
     <script src="/assets/script/script.js"></script>
     <link rel="stylesheet" href="/assets/style/style.css">
-    <link rel="stylesheet" href="/login/style.css">
 
 </head>
 
@@ -29,33 +28,30 @@
 
     <div id="header"></div>
 
-    <div class="container">
+    <div class="container" style="max-width: 500px;">
 
         <h1>Login</h1>
-        <p>Insira seu <b>usuário</b> e <b>senha</b> para entrar na <a href="/index.html"><i><b>FinCouple</b></i></a></p>
+        <p>Faça login para acessar a área logada.</p>
 
-        <div class="card">
-            <h1>Login</h1>
-            <div id="Erro"></div>
-            <div class="label-float">
-                <input type="text" id="usuario" placeholder="" required>
-                <label id="usuariolabel" for="usuario">Usuário</label>
+        <div id="alerta"></div>
+
+        <form id="form-login">
+
+            <div class="mb-3">
+                <label for="usuario">Usuário</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" required>
             </div>
-            <div class="label-float">
-                <input type="password" id="senha" placeholder="" required>
-                <label id="senhalabel" for="senha">Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
+
+            <div class="mb-3">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
             </div>
-            <div class="justify-center">
-                <button onclick="entrar()">LOGAR</button>
-            </div>
-            <div class="justify-center">
-                <hr>
-            </div>
-            <a href="../cadastro/index.html">Cadastre-se</a>
-        </div>
+
+            <button id="btn-entrar" type="submit" class="btn btn-primary">Entrar</button>
+
     </div>
-    <script src="login.js"></script>
+
+    <script type="module" src="script.js"></script>
 
     <div id="footer"></div>
 

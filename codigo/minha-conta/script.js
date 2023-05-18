@@ -1,5 +1,5 @@
-console.log("teste")
 var user = JSON.parse(localStorage.getItem('user'))
+
 $('#nome').val(user.nome);
 $('#sobrenome').val(user.sobrenome);
 $('#senha').val(user.senha);
