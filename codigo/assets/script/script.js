@@ -1,13 +1,28 @@
-import * as Usuarios from '../../cadastro/usuarios.js';
 import * as Login from '../../login/login.js';
 
-let usuarioLogado = Login.usuarioLogado();
+carregarFavicon();
+carregarHeader();
+carregarBreadcrumbs();
+carregarFooter();
 
-$(function () {
+function carregarFavicon() {
 
-    let headerHtml = '';
+    let link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+    link.href = '/assets/img/favicon.png?v=1';
 
-    headerHtml += `
+}
+
+function carregarHeader() {
+
+    let usuarioLogado = Login.usuarioLogado();
+
+    $(function () {
+
+        let headerHtml = '';
+
+        headerHtml += `
         <header>
             <nav class="navbar bg-fincouple mb-5">
                 <div class="container">
@@ -17,9 +32,9 @@ $(function () {
                     </a>
     `;
 
-    if (usuarioLogado) {
+        if (usuarioLogado) {
 
-        headerHtml += `
+            headerHtml += `
             <a href="/area-logada" class="text-decoration-none">
                 <div class="row">
                     <div class="col d-flex align-items-center">
@@ -33,23 +48,29 @@ $(function () {
                 </div>
             </a>
         `;
-        
-    }
 
-    headerHtml += `
+        }
+
+        headerHtml += `
                 </div>
             </nav>
         </header>
     `;
 
-    $("#header").html(headerHtml);
+        $("#header").html(headerHtml);
 
-});
+    });
 
-$(function () {
-    $("#breadcrumbs").load("/assets/includes/breadcrumbs.html");
-});
+}
 
-$(function () {
-    $("#footer").load("/assets/includes/footer.html");
-});
+function carregarBreadcrumbs() {
+    $(function () {
+        $("#breadcrumbs").load("/assets/includes/breadcrumbs.html");
+    });
+}
+
+function carregarFooter() {
+    $(function () {
+        $("#footer").load("/assets/includes/footer.html");
+    });
+}
