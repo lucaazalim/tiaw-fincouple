@@ -4,6 +4,7 @@ import * as Login from '../login/login.js';
 
 let usuarioLogado = Login.usuarioLogado();
 
+$('#foto').attr('src', usuarioLogado.foto);
 $('#nome').val(usuarioLogado.nome);
 $('#sobrenome').val(usuarioLogado.sobrenome);
 $('#senha').val(usuarioLogado.senha);
