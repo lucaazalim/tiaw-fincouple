@@ -9,13 +9,15 @@ let casalLogado = Login.casalLogado();
 
 let usuario1 = Usuarios.usuarios.get(casalLogado.userId1);
 
-$('#usuario-1').html(usuario1.nome + " " + usuario1.sobrenome);
 $('#foto-usuario-1').attr('src', usuario1.foto);
+$('#nome-1').html(usuario1.nome + " " + usuario1.sobrenome);
+$('#usuario-1').html(usuario1.usuario);
 
 let usuario2 = Usuarios.usuarios.get(casalLogado.userId2);
 
-$('#usuario-2').html(usuario2.nome + " " + usuario2.sobrenome);
+$('#nome-2').html(usuario2.nome + " " + usuario2.sobrenome);
 $('#foto-usuario-2').attr('src', usuario2.foto);
+$('#usuario-2').html(usuario2.usuario);
 
 // Últimos lançamentos
 

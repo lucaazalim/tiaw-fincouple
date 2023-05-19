@@ -32,17 +32,16 @@
     <div class="container" style="max-width: 800px;">
 
         <h1>Cadastro</h1>
-        <p>Cadastre-se agora e comece a aproveitar todos os benefícios da nossa plataforma.</p>
+        <p>Cadastre os dois usuários que irão gerir suas finanças <b>juntos</b>.</p>
 
         <div id="alerta"></div>
 
         <form id="form-cadastro">
-            <div class="row">
-                <div class="mb-3 p-4 bg-light border">
-                    <label for="apelido">Apelido do casal</label>
-                    <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Amores" required>
-                </div>
-                <div class="col-sm-12 col-md-6 p-4 bg-light border">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Apelido do casal" required>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between gap-4">
+                <div class="col p-4 bg-light border" style="min-width: 300px;">
                     <h2>Primeira pessoa</h2>
                     <div class="mb-3">
                         <label for="nome-1">Nome</label>
@@ -50,18 +49,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="sobrenome-1">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome-1" name="sobrenome-1" placeholder="Silva" required>
+                        <input type="text" class="form-control" id="sobrenome-1" name="sobrenome-1" placeholder="Silva"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="usuario-1">Usuário</label>
-                        <input type="text" class="form-control" id="usuario-1" name="usuario-1" placeholder="joaosilva" required>
+                        <input type="text" class="form-control" id="usuario-1" name="usuario-1" placeholder="joaosilva"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="senha-1">Senha</label>
                         <input type="password" class="form-control" id="senha-1" name="senha-1" required>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 p-4 bg-light border">
+                <div class="col p-4 border bg-light border" style="min-width: 300px;">
                     <h2>Segunda pessoa</h2>
                     <div class="mb-3">
                         <label for="nome-2">Nome</label>
@@ -69,11 +70,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="sobrenome-2">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome-2" name="sobrenome-2" placeholder="Silva" required>
+                        <input type="text" class="form-control" id="sobrenome-2" name="sobrenome-2" placeholder="Silva"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="usuario-2">Usuário</label>
-                        <input type="text" class="form-control" id="usuario-2" name="usuario-2" placeholder="mariasilva" required>
+                        <input type="text" class="form-control" id="usuario-2" name="usuario-2" placeholder="mariasilva"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="senha-2">Senha</label>

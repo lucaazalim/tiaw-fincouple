@@ -40,56 +40,51 @@
 		<div class="row mb-5">
 			<div class="col-sm-12 col-md-6 text-center">
 				<img id="foto-usuario-1" height="250" class="foto mb-3">
-				<h3 id="usuario-1"></h3>
+				<h3 id="nome-1"></h3>
+				<h6 id="usuario-1" class="text-muted"></h6>
 			</div>
 			<div class="col-sm-12 col-md-6 text-center">
 				<img id="foto-usuario-2" height="250" class="foto mb-3">
-				<h3 id="usuario-2"></h3>
+				<h3 id="nome-2"></h3>
+				<h6 id="usuario-2" class="text-muted"></h6>
 			</div>
 		</div>
 
-		<div id="funcionalidades" class="row justify-content-center mb-5">
-			<div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-				<a href="/extrato">
-					<button type="button" class="btn btn-primary ">Extrato</button>
-				</a>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-				<a href="/categorias">
-					<button type="button" class="btn btn-primary " id="btn-categorias">Categorias</button>
-				</a>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-				<a href="/graficos">
-					<button type="button" class="btn btn-primary ">Gráficos</button>
-				</a>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-				<a href="/calendario">
-					<button type="button" class="btn btn-primary ">Calendário</button>
-				</a>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 d-flex justify-content-center mb-2 mx-2">
-				<a href="/minha-conta">
-					<button type="button" class="btn btn-primary ">Minha Conta</button>
-				</a>
-			</div>
+		<div id="funcionalidades" class="d-flex justify-content-xl-between justify-content-center flex-wrap gap-2 mb-5">
+			<a href="/extrato">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-list"></i><br>Extrato</button>
+			</a>
+			<a href="/categorias">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-tag"></i><br>Categorias</button>
+			</a>
+			<a href="/graficos">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-chart-simple"></i><br>Gráficos</button>
+			</a>
+			<a href="/calendario">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-calendar"></i><br>Calendário</button>
+			</a>
+			<a href="/calendario">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-calculator"></i><br>Calculadoras</button>
+			</a>
+			<a href="/minha-conta">
+				<button type="button" class="btn btn-primary"><i class="fa-solid fa-user"></i><br>Minha Conta</button>
+			</a>
 		</div>
 
-		<h1>Últimos Gastos</h1>
+		<h2>Últimos lançamentos</h2>
 		<div class="table-responsive">
-            <table class="table table-striped mt-3">
-                <thead>
-                    <tr>
-                        <th scope="col" style="width: 10%">Data</th>
-                        <th scope="col" style="width: 35%">Nome</th>
-                        <th scope="col" style="width: 25%">Valor</th>
-                        <th scope="col" style="width: 30%">Categoria</th>
-                    </tr>
-                </thead>
-                <tbody id="lancamentos"></tbody>
-            </table>
-        </div>
+			<table class="table table-striped mt-3">
+				<thead>
+					<tr>
+						<th scope="col" style="width: 10%">Data</th>
+						<th scope="col" style="width: 35%">Nome</th>
+						<th scope="col" style="width: 25%">Valor</th>
+						<th scope="col" style="width: 30%">Categoria</th>
+					</tr>
+				</thead>
+				<tbody id="lancamentos"></tbody>
+			</table>
+		</div>
 
 	</div>
 

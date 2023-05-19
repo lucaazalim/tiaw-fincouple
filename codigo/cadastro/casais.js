@@ -30,7 +30,7 @@ export function guardar() {
 }
 
 
-export function carregar() {
+function carregar() {
 
     if (casais) {
         return;

@@ -46,7 +46,7 @@ export function guardar() {
 }
 
 
-export function carregar() {
+function carregar() {
 
     if (usuarios) {
         return;

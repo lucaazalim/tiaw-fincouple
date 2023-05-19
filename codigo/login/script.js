@@ -30,6 +30,8 @@ $('#btn-entrar').click(function (event) {
 
     Login.definirCasalLogado(user.casalId);
     Login.definirUsuarioLogado(user.id);
+
+    console.log(user.id);
     
     window.location.href = '../area-logada';
 

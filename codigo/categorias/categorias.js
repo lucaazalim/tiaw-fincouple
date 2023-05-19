@@ -44,7 +44,7 @@ export function guardarCategorias() {
     localStorage.setItem('categorias', JSON.stringify(Object.fromEntries(categorias)));
 }
 
-export function carregar() {
+function carregar() {
 
     if (categorias) {
         return;

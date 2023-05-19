@@ -1,8 +1,6 @@
 import * as Usuarios from '../../cadastro/usuarios.js';
 import * as Login from '../../login/login.js';
 
-Usuarios.carregar();
-
 let usuarioLogado = Login.usuarioLogado();
 
 $(function () {
@@ -24,12 +22,12 @@ $(function () {
         headerHtml += `
             <a href="/area-logada" class="text-decoration-none">
                 <div class="row">
-                    <div class="col">
-                        <p id="nome-usuario-header" class="mx-3 fw-bold">
+                    <div class="col d-flex align-items-center">
+                        <span id="nome-usuario-header" class="fw-bold">
                             ${usuarioLogado.usuario}
-                        </p>
+                        </span>
                     </div>
-                    <div class="col">
+                    <div class="col ps-0">
                         <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle">
                     </div>
                 </div>

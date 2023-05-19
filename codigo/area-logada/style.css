@@ -4,5 +4,8 @@
 
 #funcionalidades .btn {
     height: 100px;
-    width: 150px;
+}
+
+#funcionalidades i {
+    font-size: 20px;
 }

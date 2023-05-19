@@ -56,7 +56,7 @@ export function guardarLancamentos() {
     localStorage.setItem('extrato', JSON.stringify(Object.fromEntries(lancamentos)));
 }
 
-export function carregar() {
+function carregar() {
 
     if(lancamentos) {
         return;

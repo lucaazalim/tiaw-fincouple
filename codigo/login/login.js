@@ -2,7 +2,7 @@ import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 
 export function usuarioLogado() {
-    
+
     let usuarioLogado = localStorage.getItem('usuario_logado');
     return Usuarios.usuarios.get(usuarioLogado);
 
@@ -10,6 +10,7 @@ export function usuarioLogado() {
 
 export function definirUsuarioLogado(usuarioId) {
     localStorage.setItem('usuario_logado', usuarioId);
+    console.log("Definindo usuário logado: " + usuarioId);
 }
 
 export function casalLogado() {
@@ -24,5 +25,10 @@ export function definirCasalLogado(casalId) {
 }
 
 // Gambiarra para haver sempre um usuário logado por padrão para facilitar avaliação por pares
-definirUsuarioLogado('1');
-definirCasalLogado('1');
+if (!usuarioLogado()) {
+    definirUsuarioLogado('1');
+}
+
+if (!casalLogado()) {
+    definirCasalLogado('1');
+}
