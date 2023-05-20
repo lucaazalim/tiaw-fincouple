@@ -61,7 +61,7 @@ export function criar(lancamento) {
 
 export function remover(id) {
 
-    let map = categorias();
+    let map = lancamentos();
     map.delete(id);
     guardar(map);
 
