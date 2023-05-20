@@ -17,30 +17,45 @@ $('#cadastrar').click(function (event) {
     let apelido = $('#apelido').val();
 
     let usuarios = [null, null];
-    let casal = new Casais.Casal(apelido, null, null);
-
-    Casais.criar(casal);
 
     for (let i = 0; i < usuarios.length; i++) {
 
+        let foto = '/assets/img/homem-2.png'; // TODO
         let nome = $(`#nome-${i + 1}`).val();
         let sobrenome = $(`#sobrenome-${i + 1}`).val();
         let usuario = $(`#usuario-${i + 1}`).val().toLowerCase();
         let senha = $(`#senha-${i + 1}`).val();
-        let foto = '/assets/img/homem-2.png'; // TODO
 
-        if (!usuario_regex.test(usuario)) {
-            Alerta.alertar(`O usuário <b>${usuario}</b> é inválido. Insira um usuário de 4 a 16 caracteres, utilizando apenas letras, números e "_".`, 'danger');
+        usuarios[i] = new Usuarios.Usuario(nome, sobrenome, usuario, senha, foto, null);
+
+    }
+
+    for(let i = 0; i < usuarios.length; i++) {
+
+        let usuario = usuarios[i];
+
+        if (!usuario_regex.test(usuario.usuario)) {
+            Alerta.alertar(`O usuário <b>${usuario.usuario}</b> é inválido. Insira um usuário de 4 a 16 caracteres, utilizando apenas letras, números e "_".`, 'danger');
             return;
         }
 
-        if (Usuarios.buscarPorUsuario(usuario)) {
-            Alerta.alertar(`O usuário <b>${usuario}</b> já existe!`, 'danger');
+        if (Usuarios.buscarPorUsuario(usuario.usuario)) {
+            Alerta.alertar(`O usuário <b>${usuario.usuario}</b> já existe!`, 'danger');
             return;
         }
 
-        usuarios[i] = new Usuarios.Usuario(nome, sobrenome, usuario, senha, foto, casal.id);
-        Usuarios.criar(usuarios[i]);
+    }
+
+    let casal = new Casais.Casal(apelido, null, null);
+
+    Casais.criar(casal);
+
+    for(let i = 0; i < usuarios.length; i++) {
+
+        let usuario = usuarios[i];
+
+        usuario.casalId = casal.id;
+        Usuarios.criar(usuario);
 
     }
 
