@@ -23,38 +23,38 @@ function carregarHeader() {
         let headerHtml = '';
 
         headerHtml += `
-        <header>
-            <nav class="navbar bg-fincouple mb-5">
-                <div class="container">
+            <header>
+                <nav class="navbar bg-fincouple mb-5">
+                    <div class="container">
 
-                    <a class="navbar-brand" href="/">
-                        <img src="/assets/img/logo.png" alt="FinCouple" width="200px">
-                    </a>
+                        <a class="navbar-brand" href="/">
+                            <img src="/assets/img/logo.png" alt="FinCouple" width="200px">
+                        </a>
     `;
 
         if (usuarioLogado) {
 
             headerHtml += `
-            <a href="/area-logada" class="text-decoration-none">
-                <div class="row">
-                    <div class="col d-flex align-items-center">
-                        <span id="nome-usuario-header" class="fw-bold">
-                            ${usuarioLogado.usuario}
-                        </span>
+                <a href="/area-logada" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col d-flex align-items-center">
+                            <span id="nome-usuario-header" class="fw-bold">
+                                ${usuarioLogado.usuario}
+                            </span>
+                        </div>
+                        <div class="col ps-0">
+                            <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle">
+                        </div>
                     </div>
-                    <div class="col ps-0">
-                        <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle">
-                    </div>
-                </div>
-            </a>
+                </a>
         `;
 
         }
 
         headerHtml += `
-                </div>
-            </nav>
-        </header>
+                    </div>
+                </nav>
+            </header>
     `;
 
         $("#header").html(headerHtml);
