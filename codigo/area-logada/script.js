@@ -26,7 +26,7 @@ import * as Extrato from '../extrato/extrato.js';
 
 let limit = 10;
 
-for (const [id, lancamento] of [...Extrato.lancamentos.entries()].reverse()) {
+for (const [id, lancamento] of [...Extrato.lancamentos().entries()].reverse()) {
 
 	if(limit-- <= 0) {
 		break;
@@ -39,7 +39,7 @@ for (const [id, lancamento] of [...Extrato.lancamentos.entries()].reverse()) {
 
 	// Categoria
 
-	let categoria = Categorias.categorias.get(lancamento.categoria.toString());
+	let categoria = Categorias.categorias().get(lancamento.categoria.toString());
 
 	let corCategoria;
 	let nomeCategoria;

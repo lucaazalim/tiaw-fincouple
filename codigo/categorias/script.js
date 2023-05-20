@@ -7,7 +7,7 @@ function exibirCategorias() {
 
     $('#categorias').html("");
 
-    for (const [id, categoria] of Categorias.categorias.entries()) {
+    for (const [id, categoria] of Categorias.categorias().entries()) {
 
         $('#categorias').append(`
             <tr>
@@ -30,9 +30,9 @@ function exibirCategorias() {
 
         $(`#btn-remover-categoria-${id}`).click(function () {
 
-            let nome = Categorias.categorias.get(id).nome;
+            let nome = Categorias.categorias().get(id).nome;
 
-            Categorias.removerCategoria(id);
+            Categorias.remover(id);
             exibirCategorias();
 
             Alerta.alertar(`Categoria <strong>${nome}</strong> removida com sucesso!`, "warning");
@@ -41,7 +41,7 @@ function exibirCategorias() {
 
         $(`#btn-editar-categoria-${id}`).click(function () {
 
-            let categoria = Categorias.categorias.get(id);
+            let categoria = Categorias.categorias().get(id);
 
             $('#input-id-categoria').val(categoria.id);
             $('#input-nome-categoria').val(categoria.nome);
@@ -87,12 +87,12 @@ $('#btn-confirmar').click(function (event) {
 
     if (id) {
 
-        let categoria = Categorias.categorias.get(id);
+        let categoria = Categorias.categorias().get(id);
 
         categoria.nome = nome;
         categoria.cor = cor;
 
-        Categorias.guardarCategorias();
+        Categorias.guardar();
         exibirCategorias();
 
         Alerta.alertar(`Categoria <strong>${nome}</strong> salva com sucesso!`, "success");
@@ -101,7 +101,7 @@ $('#btn-confirmar').click(function (event) {
 
         let categoria = new Categorias.Categoria(nome, cor);
 
-        Categorias.criarCategoria(categoria);
+        Categorias.criar(categoria);
         exibirCategorias();
 
         Alerta.alertar(`Categoria <strong>${nome}</strong> criada com sucesso!`, "success");

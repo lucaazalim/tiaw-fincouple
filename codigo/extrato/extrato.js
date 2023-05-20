@@ -1,3 +1,5 @@
+import * as Login from '../login/login.js';
+
 export class Lancamento {
     constructor(nome, descricao, valor, data, categoria) {
         this.nome = nome;
@@ -30,54 +32,51 @@ var lancamentos_padrao = [
     new Lancamento("Roupas", null, 200.00, "2023-05-20", 8)
 ];
 
-export var lancamentos;
+function chaveLocalStorage() {
+    let casalLogado = Login.casalLogado();
+    return 'extrato_' + casalLogado.id;
+}
 
-export function criarLancamento(lancamento) {
+export function lancamentos() {
+    
+    let json = localStorage.getItem(chaveLocalStorage());
+    let map = json ? new Map(Object.entries(JSON.parse(json))) : new Map();
+    return map;
 
-    let id = lancamentos.size + 1;
+}
+
+export function criar(lancamento) {
+
+    let map = lancamentos();
+    let id = map.size + 1;
+    
     lancamento.id = id;
 
-    console.log(`Criando a lançamento ${lancamento.nome} de ID ${id}...`);
+    console.log(`Criando o lançamento ${lancamento.nome} de ID ${id}...`);
 
-    lancamentos.set(id.toString(), lancamento);
-
-    guardarLancamentos();
-
-}
-
-export function removerLancamento(id) {
-
-    lancamentos.delete(id);
-    guardarLancamentos();
+    map.set(id.toString(), lancamento);
+    guardar(map);
 
 }
 
-export function guardarLancamentos() {
-    localStorage.setItem('extrato', JSON.stringify(Object.fromEntries(lancamentos)));
+export function remover(id) {
+
+    let map = categorias();
+    map.delete(id);
+    guardar(map);
+
 }
 
-function carregar() {
+export function guardar(map) {
+    localStorage.setItem(chaveLocalStorage(), JSON.stringify(Object.fromEntries(map)));
+}
 
-    if(lancamentos) {
-        return;
+if(!localStorage.getItem(chaveLocalStorage())) {
+
+    console.log("Criando lançamentos padrão...");
+
+    for (const lancamento of lancamentos_padrao) {
+        criar(lancamento);
     }
-
-    let extratoLocalStorage = JSON.parse(localStorage.getItem('extrato'));
-
-    if (extratoLocalStorage) {
-
-        lancamentos = new Map(Object.entries(extratoLocalStorage));
-
-    } else {
-
-        lancamentos = new Map();
-
-        for (const lancamento of lancamentos_padrao) {
-            criarLancamento(lancamento);
-        }
-
-    }
-
+    
 }
-
-carregar();

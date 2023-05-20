@@ -12,7 +12,7 @@ function exibirLancamentos() {
 
     let busca = $('#busca').val();
 
-    for (const [id, lancamento] of [...Extrato.lancamentos.entries()].reverse()) {
+    for (const [id, lancamento] of [...Extrato.lancamentos().entries()].reverse()) {
 
         // Busca
 
@@ -34,7 +34,7 @@ function exibirLancamentos() {
 
         // Categoria
 
-        let categoria = Categorias.categorias.get(lancamento.categoria.toString());
+        let categoria = Categorias.categorias().get(lancamento.categoria.toString());
 
         let corCategoria;
         let nomeCategoria;
@@ -71,9 +71,9 @@ function exibirLancamentos() {
 
         $(`#btn-remover-lancamento-${id}`).click(function () {
 
-            let nome = Extrato.lancamentos.get(id).nome;
+            let nome = Extrato.lancamentos().get(id).nome;
 
-            Extrato.removerLancamento(id);
+            Extrato.remover(id);
             exibirLancamentos();
 
             Alerta.alertar(`Lançamento <strong>${nome}</strong> removida com sucesso!`, "warning");
@@ -82,7 +82,7 @@ function exibirLancamentos() {
 
         $(`#btn-editar-lancamento-${id}`).click(function () {
 
-            let lancamento = Extrato.lancamentos.get(id);
+            let lancamento = Extrato.lancamentos().get(id);
 
             $('#input-lancamento-id').val(lancamento.id);
             $('#input-nome-lancamento').val(lancamento.nome);
@@ -136,7 +136,7 @@ $(`#btn-confirmar`).click(function () {
 
     if (id) {
 
-        let lancamento = Extrato.lancamentos.get(id);
+        let lancamento = Extrato.lancamentos().get(id);
 
         lancamento.nome = nome;
         lancamento.descricao = descricao;
@@ -144,7 +144,7 @@ $(`#btn-confirmar`).click(function () {
         lancamento.data = data;
         lancamento.categoria = categoria;
 
-        Extrato.guardarLancamentos();
+        Extrato.guardar();
         exibirLancamentos();
 
         Alerta.alertar(`Lançamento <strong>${nome}</strong> salvo com sucesso!`, "success");
@@ -156,7 +156,7 @@ $(`#btn-confirmar`).click(function () {
         console.log("Criando lançamento: ");
         console.log(lancamento);
 
-        Extrato.criarLancamento(lancamento);
+        Extrato.criar(lancamento);
 
         exibirLancamentos();
 
@@ -171,7 +171,7 @@ $(`#btn-confirmar`).click(function () {
 
 exibirLancamentos();
 
-for (const [id, categoria] of Categorias.categorias.entries()) {
+for (const [id, categoria] of Categorias.categorias().entries()) {
 
     $('#input-categoria-lancamento').append(`<option value="${id}">${categoria.nome}</option>`);
 

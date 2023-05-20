@@ -1,3 +1,5 @@
+import * as Login from '../login/login.js';
+
 export class Categoria {
     constructor(nome, cor) {
         this.nome = nome;
@@ -18,56 +20,51 @@ var categorias_padrao = [
     new Categoria("Viagem", "#8B4513")
 ];
 
-export var categorias;
+function chaveLocalStorage() {
+    let casalLogado = Login.casalLogado();
+    return 'categorias_' + casalLogado.id;
+}
 
-export function criarCategoria(categoria) {
+export function categorias() {
+    
+    let json = localStorage.getItem(chaveLocalStorage());
+    let map = json ? new Map(Object.entries(JSON.parse(json))) : new Map();
+    return map;
 
-    let id = categorias.size + 1;
+}
+
+export function criar(categoria) {
+
+    let map = categorias();
+    let id = map.size + 1;
+    
     categoria.id = id;
 
     console.log(`Criando a categoria ${categoria.nome} de ID ${id}...`);
 
-    categorias.set(id.toString(), categoria);
-
-    guardarCategorias();
-
-}
-
-export function removerCategoria(id) {
-
-    categorias.delete(id);
-    guardarCategorias();
+    map.set(id.toString(), categoria);
+    guardar(map);
 
 }
 
-export function guardarCategorias() {
-    localStorage.setItem('categorias', JSON.stringify(Object.fromEntries(categorias)));
+export function remover(id) {
+
+    let map = categorias();
+    map.delete(id);
+    guardar(map);
+
 }
 
-function carregar() {
+export function guardar(map) {
+    localStorage.setItem(chaveLocalStorage(), JSON.stringify(Object.fromEntries(map)));
+}
 
-    if (categorias) {
-        return;
+if(!localStorage.getItem(chaveLocalStorage())) {
+
+    console.log("Criando categorias padrão...");
+
+    for (const categoria of categorias_padrao) {
+        criar(categoria);
     }
-
-    console.log("Carregando categorias...");
-
-    let categoriasLocalStorage = JSON.parse(localStorage.getItem('categorias'));
-
-    if (categoriasLocalStorage) {
-
-        categorias = new Map(Object.entries(categoriasLocalStorage));
-
-    } else {
-
-        categorias = new Map();
-
-        for (const categoria of categorias_padrao) {
-            criarCategoria(categoria);
-        }
-
-    }
-
+    
 }
-
-carregar();
