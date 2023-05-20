@@ -160,7 +160,7 @@ $(`#btn-confirmar`).click(function () {
 
         exibirLancamentos();
 
-        Alerta.alertar(`Lancamento <strong>${nome}</strong> criada com sucesso!`, "success");
+        Alerta.alertar(`Lançamento <strong>${nome}</strong> criada com sucesso!`, "success");
 
     }
 
