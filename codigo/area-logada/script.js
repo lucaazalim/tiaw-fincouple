@@ -1,5 +1,3 @@
-import * as Alerta from '../assets/script/alerta.js';
-import * as Casais from '../cadastro/casais.js';
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from '../login/login.js';
 
