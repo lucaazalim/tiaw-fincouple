@@ -87,12 +87,13 @@ $('#btn-confirmar').click(function (event) {
 
     if (id) {
 
-        let categoria = Categorias.categorias().get(id);
+        let categorias = Categorias.categorias();
+        let categoria = categorias.get(id);
 
         categoria.nome = nome;
         categoria.cor = cor;
 
-        Categorias.guardar();
+        Categorias.guardar(categorias);
         exibirCategorias();
 
         Alerta.alertar(`Categoria <strong>${nome}</strong> salva com sucesso!`, "success");

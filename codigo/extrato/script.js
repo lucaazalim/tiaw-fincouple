@@ -6,7 +6,7 @@ function normalizar(str) {
     return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-function exibirLancamentos() {
+function exibir() {
 
     $('#lancamentos').html("");
 
@@ -74,7 +74,7 @@ function exibirLancamentos() {
             let nome = Extrato.lancamentos().get(id).nome;
 
             Extrato.remover(id);
-            exibirLancamentos();
+            exibir();
 
             Alerta.alertar(`Lançamento <strong>${nome}</strong> removida com sucesso!`, "warning");
 
@@ -101,7 +101,7 @@ function exibirLancamentos() {
 
 $('#busca').keyup(function () {
 
-    exibirLancamentos();
+    exibir();
 
 });
 
@@ -123,6 +123,8 @@ $(`#btn-confirmar`).click(function () {
         return;
     }
 
+    event.preventDefault();
+
     let id = $('#input-lancamento-id').val();
     let nome = $('#input-nome-lancamento').val();
     let descricao = $('#input-descricao-lancamento').val();
@@ -136,7 +138,8 @@ $(`#btn-confirmar`).click(function () {
 
     if (id) {
 
-        let lancamento = Extrato.lancamentos().get(id);
+        let lancamentos = Extrato.lancamentos();
+        let lancamento = lancamentos.get(id);
 
         lancamento.nome = nome;
         lancamento.descricao = descricao;
@@ -144,8 +147,8 @@ $(`#btn-confirmar`).click(function () {
         lancamento.data = data;
         lancamento.categoria = categoria;
 
-        Extrato.guardar();
-        exibirLancamentos();
+        Extrato.guardar(lancamentos);
+        exibir();
 
         Alerta.alertar(`Lançamento <strong>${nome}</strong> salvo com sucesso!`, "success");
 
@@ -158,7 +161,7 @@ $(`#btn-confirmar`).click(function () {
 
         Extrato.criar(lancamento);
 
-        exibirLancamentos();
+        exibir();
 
         Alerta.alertar(`Lançamento <strong>${nome}</strong> criada com sucesso!`, "success");
 
@@ -169,7 +172,7 @@ $(`#btn-confirmar`).click(function () {
 
 });
 
-exibirLancamentos();
+exibir();
 
 for (const [id, categoria] of Categorias.categorias().entries()) {
 
