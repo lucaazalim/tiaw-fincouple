@@ -92,7 +92,7 @@ body {
     left: calc(50% - 175px);
     position: absolute;
     font-family: sans-serif;
-    color: var (--fincouple=orange);
+    color: #ad6b2d;
   }
   #eventTitleInput {
     padding: 10px;
