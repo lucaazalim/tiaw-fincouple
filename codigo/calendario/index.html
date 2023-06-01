@@ -21,6 +21,7 @@
     <!-- FinCouple -->
     <script type="module" src="/assets/script/script.js"></script>
     <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -32,14 +33,61 @@
 
         <div id="breadcrumbs" class="mb-3"></div>
 
-        <h1>Cakendário</h1>
+        <h1>Calendário</h1>
         <p>Organize e planeje sua vida financeira.</p>
+
         <!-- Conteúdo da Página -->
 
     </div>
+  
+  <div id="container">
+    <div id="header">
+      <div id="meses"></div>
+      <div>
+        <button id="anterior">Anterior</button>
+        <button id="proximo">Próximo</button>
+      </div>
+    </div>
+
+    <div id="diadesemana">
+      <div>Domingo</div>
+      <div>Segunda</div>
+      <div>Terça</div>
+      <div>Quarta</div>
+      <div>Quinta</div>
+      <div>Sexta</div>
+      <div>Sábado</div>
+    </div>
+
+    <div id="calendar"></div>
+  </div>
+
+  <div id="newEventModal">
+    <h2>Novo Evento</h2>
+
+    <input id="eventTitleInput" placeholder="Evento" />
+
+    <button id="salvar">Salvar</button>
+    <button id="cancelar">Cancelar</button>
+  </div>
+
+  <div id="deleteEventModal">
+    <h2>Evento</h2>
+
+    <p id="eventText"></p>
+
+    <button id="deletar">Deletar</button>
+    <button id="fechar">Fechar</button>
+  </div>
+
+  <div id="modalBackDrop"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
 
     <div id="footer"></div>
 
 </body>
-<script type="module" src="script.js"></script>
+
 </html>
