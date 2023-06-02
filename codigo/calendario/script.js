@@ -51,33 +51,47 @@ function load() {
 
   calendar.innerHTML = '';
 
-  for(let i = 1; i <= paddingDays + daysInMonth; i++) {
-    const daySquare = document.createElement('div');
-    daySquare.classList.add('day');
+  let row = document.createElement('div');
+  row.classList.add('row');
 
-    const dayString = `${month + 1}/${i - paddingDays}/${year}`;
+  let dayCount = 1;
+  for(let i = 1; i <= 6; i++) {
+    for (let j = 0; j < 7; j++) {
+      const daySquare = document.createElement('div');
+      daySquare.classList.add('day');
 
-    if (i > paddingDays) {
-      daySquare.innerText = i - paddingDays;
-      const eventForDay = events.find(e => e.date === dayString);
+      if (i === 1 && j < paddingDays) {
+        daySquare.classList.add('padding');
+      } else if (dayCount <= daysInMonth) {
+        daySquare.innerText = dayCount;
+        const dayString = `${month + 1}/${dayCount}/${year}`;
+        const eventForDay = events.find(e => e.date === dayString);
 
-      if (i - paddingDays === day && nav === 0) {
-        daySquare.id = 'currentDay';
+        if (dayCount === day && nav === 0) {
+          daySquare.id = 'currentDay';
+        }
+
+        if (eventForDay) {
+          const eventDiv = document.createElement('div');
+          eventDiv.classList.add('event');
+          eventDiv.innerText = eventForDay.title;
+          daySquare.appendChild(eventDiv);
+        }
+
+        daySquare.addEventListener('click', () => openModal(dayString));
+        dayCount++;
       }
 
-      if (eventForDay) {
-        const eventDiv = document.createElement('div');
-        eventDiv.classList.add('event');
-        eventDiv.innerText = eventForDay.title;
-        daySquare.appendChild(eventDiv);
-      }
-
-      daySquare.addEventListener('click', () => openModal(dayString));
-    } else {
-      daySquare.classList.add('padding');
+      row.appendChild(daySquare);
     }
 
-    calendar.appendChild(daySquare);    
+    calendar.appendChild(row);
+    row = document.createElement('div');
+    row.classList.add('row');
+
+    if (dayCount > daysInMonth) {
+      break;
+    }
   }
 }
 
