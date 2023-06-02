@@ -3,90 +3,90 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calendario</title>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/style/custom_bootstrap.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="/assets/style/custom_bootstrap.css">
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- FinCouple -->
-    <script type="module" src="/assets/script/script.js"></script>
-    <link rel="stylesheet" href="/assets/style/style.css">
-    <link rel="stylesheet" href="style.css">
+	<!-- FinCouple -->
+	<script type="module" src="/assets/script/script.js"></script>
+	<link rel="stylesheet" href="/assets/style/style.css">
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <div id="header"></div>
+	<div id="header"></div>
 
-    <div class="container" style="max-width: 500px;">
+	<div class="container">
 
-        <div id="breadcrumbs" class="mb-3"></div>
+		<div id="breadcrumbs" class="mb-3"></div>
 
-        <h1>Calendário</h1>
-        <p>Organize e planeje sua vida financeira.</p>
+		<h1>Calendário</h1>
+		<p>Organize e planeje sua vida financeira.</p>
 
-        <!-- Conteúdo da Página -->
+		<!-- Conteúdo da Página -->
 
-    </div>
-  
-  <div id="container">
-    <div id="header">
-      <div id="meses"></div>
-      <div>
-        <button id="anterior">Anterior</button>
-        <button id="proximo">Próximo</button>
-      </div>
-    </div>
+		<div id="calendario">
 
-    <div id="diadesemana">
-      <div>Domingo</div>
-      <div>Segunda</div>
-      <div>Terça</div>
-      <div>Quarta</div>
-      <div>Quinta</div>
-      <div>Sexta</div>
-      <div>Sábado</div>
-    </div>
+			<div id="cabecalho">
+				<div id="meses"></div>
+				<div>
+					<button class="btn btn-primary" id="anterior"><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+					<button class="btn btn-primary" id="proximo">Próximo <i class="fa-solid fa-arrow-right"></i></button>
+				</div>
+			</div>
 
-    <div id="calendar"></div>
-  </div>
+			<div id="diadesemana" class="d-flex fw-bold">
+				<div>Domingo</div>
+				<div>Segunda</div>
+				<div>Terça</div>
+				<div>Quarta</div>
+				<div>Quinta</div>
+				<div>Sexta</div>
+				<div>Sábado</div>
+			</div>
 
-  <div id="newEventModal">
-    <h2>Novo Evento</h2>
+			<div id="calendar"></div>
 
-    <input id="eventTitleInput" placeholder="Evento" />
+			<div id="newEventModal">
+				<h2>Novo Evento</h2>
 
-    <button id="salvar">Salvar</button>
-    <button id="cancelar">Cancelar</button>
-  </div>
+				<input class="form-control mb-3" id="eventTitleInput" placeholder="Evento" />
 
-  <div id="deleteEventModal">
-    <h2>Evento</h2>
+				<button class="btn btn-primary" id="salvar">Salvar</button>
+				<button class="btn btn-outline-primary" id="cancelar">Cancelar</button>
+			</div>
 
-    <p id="eventText"></p>
+			<div id="deleteEventModal">
+				<h2>Evento</h2>
 
-    <button id="deletar">Deletar</button>
-    <button id="fechar">Fechar</button>
-  </div>
+				<p id="eventText"></p>
 
-  <div id="modalBackDrop"></div>
+				<button class="btn btn-primary" id="deletar">Deletar</button>
+				<button class="btn btn-outline-primary" id="fechar">Fechar</button>
+			</div>
 
-  <script src="./script.js"></script>
-</body>
-</html>
+			<div id="modalBackDrop"></div>
 
-    <div id="footer"></div>
+		</div>
+
+	</div>
+
+	<script src="./script.js"></script>
+
+	<div id="footer"></div>
 
 </body>
 
