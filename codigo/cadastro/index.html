@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/86ad24bcb9.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/style/custom_bootstrap.css">
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="/assets/style/custom_bootstrap.css">
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- FinCouple -->
-    <script type="module" src="/assets/script/script.js"></script>
-    <link rel="stylesheet" href="/assets/style/style.css">
-    <link rel="stylesheet" href="/cadastro/style.css">
+        <!-- FinCouple -->
+        <script type="module" src="/assets/script/script.js"></script>
+        <link rel="stylesheet" href="/assets/style/style.css">
+        <link rel="stylesheet" href="/cadastro/style.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div id="header"></div>
+        <div id="header"></div>
 
-    <div class="container" style="max-width: 800px;">
+        <div class="container" style="max-width: 800px;">
 
-        <h1>Cadastro</h1>
-        <p>Cadastre os dois usuários que irão gerir suas finanças <b>juntos</b>.</p>
+            <h1>Cadastro</h1>
+            <p>Cadastre os dois usuários que irão gerir suas finanças <b>juntos</b>.</p>
 
-        <div id="alerta"></div>
+            <div id="alerta"></div>
 
-        <form id="form-cadastro">
-            <div class="mb-3">
-                <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Apelido do casal"
-                    required>
-            </div>
-            <div class="d-flex flex-wrap justify-content-between gap-4">
-                <div class="col p-4 bg-light border" style="min-width: 300px;">
-                    <h2>Primeira pessoa</h2>
-                    <div class="mb-3">
-                        <label for="foto-1" class="form-label">Foto</label>
-                        <input type="file" class="form-control" id="foto-1" accept="image/*">
+            <form id="form-cadastro">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Apelido do casal"
+                        required>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between gap-4">
+                    <div class="col p-4 bg-light border" style="min-width: 300px;">
+                        <h2>Primeira pessoa</h2>
+                        <div class="mb-3">
+                            <label for="foto-1" class="form-label">Foto</label>
+                            <input type="file" class="form-control" id="foto-1" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome-1">Nome</label>
+                            <input type="text" class="form-control" id="nome-1" name="nome-1" placeholder="João" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sobrenome-1">Sobrenome</label>
+                            <input type="text" class="form-control" id="sobrenome-1" name="sobrenome-1" placeholder="Silva"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="usuario-1">Usuário</label>
+                            <input type="text" class="form-control" id="usuario-1" name="usuario-1" placeholder="joaosilva"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha-1">Senha</label>
+                            <input type="password" class="form-control" id="senha-1" name="senha-1" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="nome-1">Nome</label>
-                        <input type="text" class="form-control" id="nome-1" name="nome-1" placeholder="João" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="sobrenome-1">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome-1" name="sobrenome-1" placeholder="Silva"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="usuario-1">Usuário</label>
-                        <input type="text" class="form-control" id="usuario-1" name="usuario-1" placeholder="joaosilva"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="senha-1">Senha</label>
-                        <input type="password" class="form-control" id="senha-1" name="senha-1" required>
+                    <div class="col p-4 border bg-light border" style="min-width: 300px;">
+                        <h2>Segunda pessoa</h2>
+                        <div class="mb-3">
+                            <label for="foto-2" class="form-label">Foto</label>
+                            <input type="file" class="form-control" id="foto-2" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome-2">Nome</label>
+                            <input type="text" class="form-control" id="nome-2" name="nome-2" placeholder="Maria" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sobrenome-2">Sobrenome</label>
+                            <input type="text" class="form-control" id="sobrenome-2" name="sobrenome-2" placeholder="Silva"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="usuario-2">Usuário</label>
+                            <input type="text" class="form-control" id="usuario-2" name="usuario-2" placeholder="mariasilva"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha-2">Senha</label>
+                            <input type="password" class="form-control" id="senha-2" name="senha-2" required>
+                        </div>
                     </div>
                 </div>
-                <div class="col p-4 border bg-light border" style="min-width: 300px;">
-                    <h2>Segunda pessoa</h2>
-                    <div class="mb-3">
-                        <label for="foto-2" class="form-label">Foto</label>
-                        <input type="file" class="form-control" id="foto-2" accept="image/*">
-                    </div>
-                    <div class="mb-3">
-                        <label for="nome-2">Nome</label>
-                        <input type="text" class="form-control" id="nome-2" name="nome-2" placeholder="Maria" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="sobrenome-2">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome-2" name="sobrenome-2" placeholder="Silva"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="usuario-2">Usuário</label>
-                        <input type="text" class="form-control" id="usuario-2" name="usuario-2" placeholder="mariasilva"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="senha-2">Senha</label>
-                        <input type="password" class="form-control" id="senha-2" name="senha-2" required>
-                    </div>
+                <div class="d-grid">
+                    <button id="cadastrar" type="submit" class="btn btn-primary mt-3">
+                        <i class="fa-solid fa-check"></i> Cadastrar
+                    </button>
                 </div>
-            </div>
-            <div class="d-grid">
-                <button id="cadastrar" type="submit" class="btn btn-primary mt-3">
-                    <i class="fa-solid fa-check"></i> Cadastrar
-                </button>
-            </div>
-        </form>
+            </form>
 
-    </div>
+        </div>
 
-    <script type="module" src="script.js"></script>
+        <script type="module" src="script.js"></script>
 
-    <div id="footer"></div>
+        <div id="footer"></div>
 
-</body>
+    </body>
 
 </html>
