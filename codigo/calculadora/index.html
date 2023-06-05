@@ -23,346 +23,357 @@
 
     </head>
 
-    <body class="container">
-        <div class="accordion accordion-flush mb-5 border" id="accordionFlushExample">
-            <div class="accordion-item">
-                <h2 class="acao-botao accordion-header" id="um">
-                    <button class="accordion-button collapse d-block w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-                        <strong>Calculadora de Juros Compostos</strong></button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="juros accordion-body">
-                        <div class="row mx-auto" style="max-width: 800px;">
-                            <form id="form-juros" class="panel ads-after shadow-sm bg-white rounded">
-                                <div class="d-flex flex-wrap">
-                                    <div class="row mx-auto w-100 p-4 bg-light border bg-dark text-white mt-3" style="min-width: 300px;">
-                                        <div class="small-12 medium-6 large-4 cell col-4">
-                                            <label>Montante</label>
-                                            <div class="input-group">
-                                                <input id="montante" type="tel" class="form-control fix-reset panel__input" placeholder="R$ 0,00" aria-describedby="sizing-addon1" required="">
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-6 large-4 cell col-4">
-                                            <label>Taxa de juros</label>
-                                            <div class="input-group">
-                                                <input id="juros" type="tel" class="form-control fix-reset panel__input" placeholder="% 0,00" aria-describedby="sizing-addon2">
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-12 large-4 cell col-4">
-                                            <label>Prazo</label>
-                                            <div class="input-group">
-                                                <input id="prazo" type="number" class="form-control fix-reset panel__input" placeholder="0" required="">
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                                <div class="mb-3 p-4 border bg-white" style="min-width: 300px;">
-                                    <div class="row d-flex justify-content-between">
-                                        <div class="col-6">
-                                            <div class="emprestimo border-bottom">
-                                                <h3>Empréstimo</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="juros-totais border-bottom">
-                                                <h3>Juros Totias</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="montante-total border-bottom">
-                                                <h3>Montante Total</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                        </div>                        
-                                    </div>
-                                    <div class="button-action mt-3">
-                                        <button type="submit" id="btnSend" class="btn btn-warning">Calcular</button>
-                                        <button type="button" class="btn btn-outline-warning button hollow reset">Limpar</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="acao-botao accordion-header" id="dois">
-                    <button class="accordion-button collapsed d-block w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        <strong>Calculadora de Ferias</strong></button>
-                </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="ferias accordion-body">
-                        <div class="row mx-auto" style="max-width: 800px;">
-                            <form id="form-ferias" class="panel ads-after shadow-sm bg-white rounded">
-                                <div class="d-flex flex-wrap justify-content">
-                                    <div class="col-6 p-4 bg-light border bg-dark text-white mt-3"
-                                        style="min-width: 300px;">
-                                        <div class="small-12 medium-6 large-4 cell">
-                                            <label>Salário bruto</label>
-                                            <div class="input-group">
-                                                <input id="salario-bruto" type="tel"
-                                                    class="form-control fix-reset panel__input" placeholder="R$ 0,00"
-                                                    aria-describedby="sizing-addon1" required="">
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-6 large-4 cell">
-                                            <label>Média de hora extra (Opcional)</label>
-                                            <div class="input-group">
-                                                <input id="media-hora-extra" type="tel"
-                                                    class="form-control fix-reset panel__input" placeholder="R$ 0,00"
-                                                    aria-describedby="sizing-addon2">
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-12 large-4 cell">
-                                            <label>Número de dependentes</label>
-                                            <div class="input-group">
-                                                <input id="numero-dependentes" type="number"
-                                                    class="form-control fix-reset panel__input" placeholder="0" required="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 p-4 bg-light border bg-dark text-white mt-3"
-                                        style="min-width: 300px;">
-                                        <div class="small-12 medium-6 large-4 cell">
-                                            <label class="control-label">Dias de férias:</label>
-                                            <div class="input-group">
-                                                <input id="dias-ferias" type="number"
-                                                    class="form-control fix-reset panel__input" placeholder="0" required="">
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-6 large-4 cell">
-                                            <label class="control-label">Abono pecuniário (Vende 1/3)</label>
-                                            <div class="input-group">
-                                                <select id="abono-pecuniario" class="form-control fix-reset panel__input"
-                                                    required="">
-                                                    <option value="1">Não</option>
-                                                    <option value="2">Sim</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="small-12 medium-12 large-4 cell">
-                                            <label>Adiantar 1ª parcela 13º:</label>
-                                            <div class="input-group">
-                                                <select id="adiantamento-parcela-decimo"
-                                                    class="form-control fix-reset panel__input" required="">
-                                                    <option value="1">Não</option>
-                                                    <option value="2">Sim</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3 p-4 border bg-white" style="min-width: 300px;">
-                                    <div class="row d-flex justify-content-between">
-                                        <div class="col-6">
-                                            <div class="valoe-ferias border-bottom">
-                                                <h3>Valor das Férias</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="valoe-dependente border-bottom">
-                                                <h3>Valor de Dependentes</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="valor-total border-bottom">
-                                                <h3>Valor Total</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="valor-pecuniario border-bottom">
-                                                <h3>Valor do Abono Pecuniário</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="valor-terceiro border-bottom">
-                                                <h3>Valor do 13º Adiantado</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                            <div class="media-horas border-bottom">
-                                                <h3>Média de Horas Extras</h3>
-                                                <div class="value">$0.00</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="button-action mt-3">
-                                        <a><button type="submit" id="btnSend" class="btn btn-warning">Calcular</button></a>
-                                        <button type="button"
-                                            class="btn btn-outline-warning button hollow reset">Limpar</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="acao-botao accordion-header" id="tres">
-                    <button class="accordion-button collapsed d-block  w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <strong>Calculadora de Investimentos</strong>
-                    </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="investimentos accordion-body">
-                        <div class="row mx-auto" style="max-width: 800px;">
-                            <form id="form-investments" class="panel after-ads shadow-sm bg-white rounded">
-                                <div class="d-flex flex-wrap justify-content-between">
-                                    <div class="p-4 bg-light border d-inline-flex bg-dark text-white mt-3" style="min-width: 300px;">
-                                        <div class="row">
-                                            <div class="bg-light border-bottom d-inline-flex bg-dark text-white justify-content-between" style="min-width: 300px;">
-                                                <div class="small-12 medium-6 large-6 cell col-6 pb-1">
-                                                    <div>
-                                                        <label class="tip">Tipo de investimento<i class="help icon-help-circled-1"></i>
-                                                            <!--<div class="tiptext tip-bottom">O simulador separa os investimentos em dois tipos baseado no critério de tributação. Enquanto as LCIs e LCAs são isentas de imposto de renda, os demais ativos seguem a tabela regressiva.</div>-->
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix last d-inline mr-2">
-                                                        <label>
-                                                            <input type="radio" class="switch-input fix_lc" name="investment-type" id="form-investment-cdb-lc" value="cdb-lc" checked="">
-                                                            <label class="switch-paddle" for="form-investment-cdb-lc"></label>
-                                                            <span>CDB/LC/Títulos públicos/Debêntures</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix d-inline mr-2">
-                                                        <label>
-                                                            <input type="radio" class="switch-input" name="investment-type" id="form-investment-lci-lca" value="lci-lca" checked="">
-                                                            <label class="switch-paddle" for="form-investment-lci-lca"></label>
-                                                            <span>LCI/LCA</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix">
-                                                        <label>
-                                                            <input type="radio" class="switch-input" name="investment-type" id="form-investment-tesouro" value="tesouro" checked="">
-                                                            <label class="switch-paddle" for="form-investment-tesouro"></label>
-                                                            <span>Tesouro</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="small-12 medium-6 large-6 cell col-5">
-                                                    <div>
-                                                        <label class="tip">É PRÉ fixado ou PÓS fixado?<i class="help icon-help-circled-1"></i>
-                                                            <!--<div class="tiptext tip-bottom">Os títulos prefixados rendem de acordo com uma taxa fixa, os pós-fixados de acordo com uma porcentagem do CDI, e o IPCA de acordo com uma taxa fixa mais (+) o IPCA.</div>-->
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix d-inline mr-3">
-                                                        <label>
-                                                            <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-pre" value="pre" checked="">
-                                                            <label class="switch-paddle" for="form-fixed-type-pre"></label>
-                                                            <span>PRÉ</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix d-inline mr-3">
-                                                        <label>
-                                                            <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-pos"value="pos" checked="">
-                                                            <label class="switch-paddle" for="form-fixed-type-pos"></label>
-                                                            <span>PÓS</span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="switch tiny fix last d-inline">
-                                                        <label>
-                                                            <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-ipca" value="ipca" checked="">
-                                                            <label class="switch-paddle" for="form-fixed-type-ipca"></label>
-                                                            <span>IPCA</span>
-                                                        </label>
-                                                    </div>
+    <body>
+
+        <div id="header"></div>
+
+        <div class="container">
+
+            <h1>Calculadora</h1>
+            <p>Potencialize seu planejamento financeiro com nossas calculadoras e alcance resultados que atendam às suas metas e necessidades.</p>
+
+            <div class="accordion accordion-flush mb-5 border" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="acao-botao accordion-header" id="um">
+                        <button class="accordion-button collapse d-block w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                            <strong>Calculadora de Juros Compostos</strong></button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="juros accordion-body">
+                            <div class="row mx-auto" style="max-width: 800px;">
+                                <form id="form-juros" class="panel ads-after shadow-sm bg-white rounded">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="row mx-auto w-100 p-4 bg-light border bg-dark text-white mt-3" style="min-width: 300px;">
+                                            <div class="small-12 medium-6 large-4 cell col-4">
+                                                <label>Montante</label>
+                                                <div class="input-group">
+                                                    <input id="montante" type="tel" class="form-control fix-reset panel__input" placeholder="R$ 0,00" aria-describedby="sizing-addon1" required="">
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="small-12 medium-6 large-6 cell col-3 pt-2">
-                                                    <label>Investimento inicial</label>
-                                                    <div class="input-group">
-                                                        <input id="form-invest-initial-investment" type="tel" class="form-control fix-reset panel__input req" placeholder="R$0,00" aria-describedby="sizing-addon1" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="small-12 medium-6 large-6 cell col-3 pt-2">
-                                                    <label>Investimento mensal</label>
-                                                    <div class="input-group">                      
-                                                        <input id="form-invest-month-investment" type="tel" class="form-control fix-reset" placeholder="R$0,00" aria-describedby="sizing-addon1">
-                                                    </div>
-                                                </div>
-                                                <div class="small-12 medium-6 large-6 cell col-3 pt-2">
-                                                    <label>Prazo</label>
-                                                    <div class="input-group">
-                                                        <input id="form-invest-periodo" type="number" class="form-control fix-reset panel__input req" placeholder="0" aria-describedby="sizing-addon2" required="">
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Anos</button>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><button class="dropdown-item" type="button">Anos</button></li>
-                                                                    <li><button class="dropdown-item" type="button">Meses</button></li>                                             
-                                                                </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="small-12 medium-6 large-6 cell col-3 pt-2">
-                                                    <div>
-                                                        <label class="tip">Rentabilidade<i class="help icon-help-circled-1"></i>
-                                                            <!--<div class="tiptext tip-bottom">Se você escolheu prefixada, coloque a taxa que você estima que seu título vai render durante todo o período. Se colocou pós-fixada, coloque a porcentagem do CDI que seu título rende. Se colocou IPCA, você sabe que o título rende IPCA + taxa prefixada, então coloque quanto você estima que será esta taxa prefixada.
-                                                            </div>-->
-                                                        </label>
-                                                    </div>
-                                                    <div class="input-group">                                                   
-                                                        <input id="form-invest-profitability" type="tel" class="form-control fix-reset center panel__input req" placeholder="%0,00" aria-describedby="sizing-addon1" required="">
-                                                        <!--<span class="input-group-label" id="ifPos">CDI</span>-->
-                                                        <div class="input-group-button" id="ifDefault">
-                                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anual</button>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><button class="dropdown-item" type="button">Anual</button></li>
-                                                                    <li><button class="dropdown-item" type="button">Mensal</button></li>                                                     
-                                                                </ul>
-                                                        </div>
-                                                    </div>
-                                                    <!--<div id="spanIPCA">
-                                                        <small>*Valor do IPCA considerado <span id="valueIPCA">7.17</span>% + valor acima</small>
-                                                    </div>
-                                                    <div id="spanPOS">
-                                                        <small>*Valor de CDI considerado <span id="valuePOS">13.65</span>%</small>
-                                                    </div>-->
+                                            <div class="small-12 medium-6 large-4 cell col-4">
+                                                <label>Taxa de juros</label>
+                                                <div class="input-group">
+                                                    <input id="juros" type="tel" class="form-control fix-reset panel__input" placeholder="% 0,00" aria-describedby="sizing-addon2">
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div class="small-12 medium-12 large-4 cell col-4">
+                                                <label>Prazo</label>
+                                                <div class="input-group">
+                                                    <input id="prazo" type="number" class="form-control fix-reset panel__input" placeholder="0" required="">
+                                                </div>
+                                            </div>
+                                        </div>                                
                                     </div>
-                                    <div class="mb-3 p-4 border bg-white w-100" style="min-width: 300px;">
+                                    <div class="mb-3 p-4 border bg-white" style="min-width: 300px;">
                                         <div class="row d-flex justify-content-between">
                                             <div class="col-6">
-                                                <div class="valor-bruto border-bottom">
-                                                    <h3>Valor Total Bruto</h3>
+                                                <div class="emprestimo border-bottom">
+                                                    <h3>Empréstimo</h3>
                                                     <div class="value">$0.00</div>
                                                 </div>
-                                                <div class="valor-investido border-bottom">
-                                                    <h3>Valor Investido</h3>
+                                                <div class="juros-totais border-bottom">
+                                                    <h3>Juros Totias</h3>
                                                     <div class="value">$0.00</div>
                                                 </div>
-                                                <div class="valor-juros border-bottom">
-                                                    <h3>Valor em Juros</h3>
+                                                <div class="montante-total border-bottom">
+                                                    <h3>Montante Total</h3>
                                                     <div class="value">$0.00</div>
                                                 </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="imposto-rentabilidade border-bottom">
-                                                    <h3>Imposto de Rentabilidade</h3>
-                                                    <div class="value">$0.00</div>
-                                                </div>
-                                                <div class="valor-imposto border-bottom">
-                                                    <h3>Valor Pago em Imposto</h3>
-                                                    <div class="value">$0.00</div>
-                                                </div>
-                                                <div class="valor-liquido border-bottom">
-                                                    <h3>Valor Total Líguido</h3>
-                                                    <div class="value">$0.00</div>
-                                                </div>
-                                            </div>
+                                            </div>                        
                                         </div>
-                                        <div class="button-action print mt-3">
-                                            <button type="submit" class="btn btn-warning" id="btnSend">Calcular</button>
+                                        <div class="button-action mt-3">
+                                            <button type="submit" id="btnSend" class="btn btn-warning">Calcular</button>
                                             <button type="button" class="btn btn-outline-warning button hollow reset">Limpar</button>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="accordion-item">
+                    <h2 class="acao-botao accordion-header" id="dois">
+                        <button class="accordion-button collapsed d-block w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <strong>Calculadora de Ferias</strong></button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="ferias accordion-body">
+                            <div class="row mx-auto" style="max-width: 800px;">
+                                <form id="form-ferias" class="panel ads-after shadow-sm bg-white rounded">
+                                    <div class="d-flex flex-wrap justify-content">
+                                        <div class="col-6 p-4 bg-light border bg-dark text-white mt-3"
+                                            style="min-width: 300px;">
+                                            <div class="small-12 medium-6 large-4 cell">
+                                                <label>Salário bruto</label>
+                                                <div class="input-group">
+                                                    <input id="salario-bruto" type="tel"
+                                                        class="form-control fix-reset panel__input" placeholder="R$ 0,00"
+                                                        aria-describedby="sizing-addon1" required="">
+                                                </div>
+                                            </div>
+                                            <div class="small-12 medium-6 large-4 cell">
+                                                <label>Média de hora extra (Opcional)</label>
+                                                <div class="input-group">
+                                                    <input id="media-hora-extra" type="tel"
+                                                        class="form-control fix-reset panel__input" placeholder="R$ 0,00"
+                                                        aria-describedby="sizing-addon2">
+                                                </div>
+                                            </div>
+                                            <div class="small-12 medium-12 large-4 cell">
+                                                <label>Número de dependentes</label>
+                                                <div class="input-group">
+                                                    <input id="numero-dependentes" type="number"
+                                                        class="form-control fix-reset panel__input" placeholder="0" required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-4 bg-light border bg-dark text-white mt-3"
+                                            style="min-width: 300px;">
+                                            <div class="small-12 medium-6 large-4 cell">
+                                                <label class="control-label">Dias de férias:</label>
+                                                <div class="input-group">
+                                                    <input id="dias-ferias" type="number"
+                                                        class="form-control fix-reset panel__input" placeholder="0" required="">
+                                                </div>
+                                            </div>
+                                            <div class="small-12 medium-6 large-4 cell">
+                                                <label class="control-label">Abono pecuniário (Vende 1/3)</label>
+                                                <div class="input-group">
+                                                    <select id="abono-pecuniario" class="form-control fix-reset panel__input"
+                                                        required="">
+                                                        <option value="1">Não</option>
+                                                        <option value="2">Sim</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="small-12 medium-12 large-4 cell">
+                                                <label>Adiantar 1ª parcela 13º:</label>
+                                                <div class="input-group">
+                                                    <select id="adiantamento-parcela-decimo"
+                                                        class="form-control fix-reset panel__input" required="">
+                                                        <option value="1">Não</option>
+                                                        <option value="2">Sim</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 p-4 border bg-white" style="min-width: 300px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-6">
+                                                <div class="valoe-ferias border-bottom">
+                                                    <h3>Valor das Férias</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                                <div class="valoe-dependente border-bottom">
+                                                    <h3>Valor de Dependentes</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                                <div class="valor-total border-bottom">
+                                                    <h3>Valor Total</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="valor-pecuniario border-bottom">
+                                                    <h3>Valor do Abono Pecuniário</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                                <div class="valor-terceiro border-bottom">
+                                                    <h3>Valor do 13º Adiantado</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                                <div class="media-horas border-bottom">
+                                                    <h3>Média de Horas Extras</h3>
+                                                    <div class="value">$0.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-action mt-3">
+                                            <a><button type="submit" id="btnSend" class="btn btn-warning">Calcular</button></a>
+                                            <button type="button"
+                                                class="btn btn-outline-warning button hollow reset">Limpar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="acao-botao accordion-header" id="tres">
+                        <button class="accordion-button collapsed d-block  w-100 text-left pt-3 pb-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <strong>Calculadora de Investimentos</strong>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="investimentos accordion-body">
+                            <div class="row mx-auto" style="max-width: 800px;">
+                                <form id="form-investments" class="panel after-ads shadow-sm bg-white rounded">
+                                    <div class="d-flex flex-wrap justify-content-between">
+                                        <div class="p-4 bg-light border d-inline-flex bg-dark text-white mt-3" style="min-width: 300px;">
+                                            <div class="row">
+                                                <div class="bg-light border-bottom d-inline-flex bg-dark text-white justify-content-between" style="min-width: 300px;">
+                                                    <div class="small-12 medium-6 large-6 cell col-6 pb-1">
+                                                        <div>
+                                                            <label class="tip">Tipo de investimento<i class="help icon-help-circled-1"></i>
+                                                                <!--<div class="tiptext tip-bottom">O simulador separa os investimentos em dois tipos baseado no critério de tributação. Enquanto as LCIs e LCAs são isentas de imposto de renda, os demais ativos seguem a tabela regressiva.</div>-->
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix last d-inline mr-2">
+                                                            <label>
+                                                                <input type="radio" class="switch-input fix_lc" name="investment-type" id="form-investment-cdb-lc" value="cdb-lc" checked="">
+                                                                <label class="switch-paddle" for="form-investment-cdb-lc"></label>
+                                                                <span>CDB/LC/Títulos públicos/Debêntures</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix d-inline mr-2">
+                                                            <label>
+                                                                <input type="radio" class="switch-input" name="investment-type" id="form-investment-lci-lca" value="lci-lca" checked="">
+                                                                <label class="switch-paddle" for="form-investment-lci-lca"></label>
+                                                                <span>LCI/LCA</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix">
+                                                            <label>
+                                                                <input type="radio" class="switch-input" name="investment-type" id="form-investment-tesouro" value="tesouro" checked="">
+                                                                <label class="switch-paddle" for="form-investment-tesouro"></label>
+                                                                <span>Tesouro</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 medium-6 large-6 cell col-5">
+                                                        <div>
+                                                            <label class="tip">É PRÉ fixado ou PÓS fixado?<i class="help icon-help-circled-1"></i>
+                                                                <!--<div class="tiptext tip-bottom">Os títulos prefixados rendem de acordo com uma taxa fixa, os pós-fixados de acordo com uma porcentagem do CDI, e o IPCA de acordo com uma taxa fixa mais (+) o IPCA.</div>-->
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix d-inline mr-3">
+                                                            <label>
+                                                                <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-pre" value="pre" checked="">
+                                                                <label class="switch-paddle" for="form-fixed-type-pre"></label>
+                                                                <span>PRÉ</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix d-inline mr-3">
+                                                            <label>
+                                                                <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-pos"value="pos" checked="">
+                                                                <label class="switch-paddle" for="form-fixed-type-pos"></label>
+                                                                <span>PÓS</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="switch tiny fix last d-inline">
+                                                            <label>
+                                                                <input type="radio" class="switch-input" name="investment-fixed-type" id="form-fixed-type-ipca" value="ipca" checked="">
+                                                                <label class="switch-paddle" for="form-fixed-type-ipca"></label>
+                                                                <span>IPCA</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 medium-6 large-6 cell col-3 pt-2">
+                                                        <label>Investimento inicial</label>
+                                                        <div class="input-group">
+                                                            <input id="form-invest-initial-investment" type="tel" class="form-control fix-reset panel__input req" placeholder="R$0,00" aria-describedby="sizing-addon1" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 medium-6 large-6 cell col-3 pt-2">
+                                                        <label>Investimento mensal</label>
+                                                        <div class="input-group">                      
+                                                            <input id="form-invest-month-investment" type="tel" class="form-control fix-reset" placeholder="R$0,00" aria-describedby="sizing-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 medium-6 large-6 cell col-3 pt-2">
+                                                        <label>Prazo</label>
+                                                        <div class="input-group">
+                                                            <input id="form-invest-periodo" type="number" class="form-control fix-reset panel__input req" placeholder="0" aria-describedby="sizing-addon2" required="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Anos</button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><button class="dropdown-item" type="button">Anos</button></li>
+                                                                        <li><button class="dropdown-item" type="button">Meses</button></li>                                             
+                                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 medium-6 large-6 cell col-3 pt-2">
+                                                        <div>
+                                                            <label class="tip">Rentabilidade<i class="help icon-help-circled-1"></i>
+                                                                <!--<div class="tiptext tip-bottom">Se você escolheu prefixada, coloque a taxa que você estima que seu título vai render durante todo o período. Se colocou pós-fixada, coloque a porcentagem do CDI que seu título rende. Se colocou IPCA, você sabe que o título rende IPCA + taxa prefixada, então coloque quanto você estima que será esta taxa prefixada.
+                                                                </div>-->
+                                                            </label>
+                                                        </div>
+                                                        <div class="input-group">                                                   
+                                                            <input id="form-invest-profitability" type="tel" class="form-control fix-reset center panel__input req" placeholder="%0,00" aria-describedby="sizing-addon1" required="">
+                                                            <!--<span class="input-group-label" id="ifPos">CDI</span>-->
+                                                            <div class="input-group-button" id="ifDefault">
+                                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anual</button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><button class="dropdown-item" type="button">Anual</button></li>
+                                                                        <li><button class="dropdown-item" type="button">Mensal</button></li>                                                     
+                                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!--<div id="spanIPCA">
+                                                            <small>*Valor do IPCA considerado <span id="valueIPCA">7.17</span>% + valor acima</small>
+                                                        </div>
+                                                        <div id="spanPOS">
+                                                            <small>*Valor de CDI considerado <span id="valuePOS">13.65</span>%</small>
+                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 p-4 border bg-white w-100" style="min-width: 300px;">
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-6">
+                                                    <div class="valor-bruto border-bottom">
+                                                        <h3>Valor Total Bruto</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                    <div class="valor-investido border-bottom">
+                                                        <h3>Valor Investido</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                    <div class="valor-juros border-bottom">
+                                                        <h3>Valor em Juros</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="imposto-rentabilidade border-bottom">
+                                                        <h3>Imposto de Rentabilidade</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                    <div class="valor-imposto border-bottom">
+                                                        <h3>Valor Pago em Imposto</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                    <div class="valor-liquido border-bottom">
+                                                        <h3>Valor Total Líguido</h3>
+                                                        <div class="value">$0.00</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="button-action print mt-3">
+                                                <button type="submit" class="btn btn-warning" id="btnSend">Calcular</button>
+                                                <button type="button" class="btn btn-outline-warning button hollow reset">Limpar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"crossorigin="anonymous"></script>
         <script src="main.js"></script>
+
+        <div id="footer"></div>
+
     </body>
 </html>
