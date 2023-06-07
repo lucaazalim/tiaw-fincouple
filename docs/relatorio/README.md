@@ -41,7 +41,6 @@
   - [Arquitetura da solução](#arquitetura-da-solução)
 - [Avaliação da Aplicação](#avaliação-da-aplicação)
   - [Plano de Testes](#plano-de-testes)
-  - [Ferramentas de Testes (Opcional)](#ferramentas-de-testes-opcional)
   - [Registros de Testes](#registros-de-testes)
 - [Referências](#referências)
 
@@ -184,8 +183,6 @@ Aplicação web front-end para gestão financeira de casais, duplas de amigos e 
 # Avaliação da Aplicação
 
 ## Plano de Testes
-
-## Ferramentas de Testes (Opcional)
 
 ## Registros de Testes
 
