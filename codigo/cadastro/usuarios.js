@@ -1,3 +1,5 @@
+import * as Avatar from '../assets/script/avatar.js';
+
 export class Usuario {
     constructor(nome, sobrenome, usuario, senha, foto, casalId) {
         this.nome = nome;
@@ -12,8 +14,8 @@ export class Usuario {
 export var usuarios;
 
 const usuarios_padrao = [
-    new Usuario('João', 'Silva', 'joaosilva', '123', '/assets/img/homem.png', '1'),
-    new Usuario('Maria', 'Silva', 'mariasilva', '123', '/assets/img/mulher.png', '1')
+    new Usuario('João', 'Silva', 'joaosilva', '123', Avatar.avatarAleatorio('joaosilva'), '1'),
+    new Usuario('Maria', 'Silva', 'mariasilva', '123', Avatar.avatarAleatorio('mariasilva'), '1')
 ];
 
 export function buscarPorUsuario(usuario) {

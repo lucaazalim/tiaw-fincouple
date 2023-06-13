@@ -43,7 +43,7 @@ function carregarHeader() {
                             </span>
                         </div>
                         <div class="col ps-0">
-                            <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle">
+                            <img src="${usuarioLogado.foto}" width="50px" height="50px" class="rounded-circle foto">
                         </div>
                     </div>
                 </a>

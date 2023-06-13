@@ -1,6 +1,7 @@
 import * as Alerta from '../assets/script/alerta.js';
 import * as Casais from './casais.js';
 import * as Usuarios from './usuarios.js';
+import * as Avatar from '../assets/script/avatar.js';
 
 const usuario_regex = /^[a-zA-Z0-9_]{4,16}$/;
 
@@ -20,11 +21,12 @@ $('#cadastrar').click(function (event) {
 
     for (let i = 0; i < usuarios.length; i++) {
 
-        let foto = '/assets/img/homem-2.png'; // TODO
         let nome = $(`#nome-${i + 1}`).val();
         let sobrenome = $(`#sobrenome-${i + 1}`).val();
         let usuario = $(`#usuario-${i + 1}`).val().toLowerCase();
         let senha = $(`#senha-${i + 1}`).val();
+
+        let foto = Avatar.avatarAleatorio(usuario); // TODO
 
         usuarios[i] = new Usuarios.Usuario(nome, sobrenome, usuario, senha, foto, null);
 
