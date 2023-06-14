@@ -9,19 +9,17 @@ let cores = [];
 let valores = [];
 
 for (const categoria of Categorias.categorias().values()) {
+  let valor = 0;
 
-	let valor = 0;
+  for (const lancamento of Extrato.lancamentos().values()) {
+    if (lancamento.categoria == categoria.id) {
+      valor += lancamento.valor;
+    }
+  }
 
-	for(const lancamento of Extrato.lancamentos().values()) {
-		if(lancamento.categoria == categoria.id) {
-			valor += lancamento.valor;
-		}
-	}
-
-	categorias.push(categoria.nome);
+  categorias.push(categoria.nome);
   cores.push(categoria.cor);
-	valores.push(valor);
-	
+  valores.push(valor);
 }
 
 new Chart(ctx1, {
@@ -30,7 +28,7 @@ new Chart(ctx1, {
     labels: [...Categorias.categorias().values()].map((c) => c.nome),
     datasets: [
       {
-        label: "R$ ",
+        label: "R$",
         data: valores,
         borderWidth: 1,
         backgroundColor: cores,
@@ -45,11 +43,18 @@ new Chart(ctx2, {
     labels: [...Categorias.categorias().values()].map((c) => c.nome),
     datasets: [
       {
-        label: "R$ ",
+        label: "R$",
         data: valores,
         borderWidth: 1,
         backgroundColor: cores,
       },
     ],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
   },
 });
