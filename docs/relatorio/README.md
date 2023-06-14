@@ -180,10 +180,4 @@ Aplicação web front-end para gestão financeira de casais, duplas de amigos e 
 - Páginas web (HTML, CSS e JavaScript)
 - LocalStorage para armazenamento de dados
 
-# Avaliação da Aplicação
-
-## Plano de Testes
-
-## Registros de Testes
-
 # Referências
