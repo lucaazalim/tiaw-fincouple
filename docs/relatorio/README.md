@@ -39,9 +39,6 @@
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
-- [Avaliação da Aplicação](#avaliação-da-aplicação)
-  - [Plano de Testes](#plano-de-testes)
-  - [Registros de Testes](#registros-de-testes)
 - [Referências](#referências)
 
 # Introdução
