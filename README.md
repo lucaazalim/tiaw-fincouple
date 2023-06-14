@@ -17,4 +17,4 @@ FinCouple é um projeto da disciplina “Trabalho Interdisciplinar: Aplicações
 
 ## Instruções de utilização
 
-O projeto pode ser acessado por meio ![deste link](https://tiaw-fincouple.lucaazalim.repl.co/).
+O projeto pode ser acessado por meio [deste link](https://tiaw-fincouple.lucaazalim.repl.co/).
