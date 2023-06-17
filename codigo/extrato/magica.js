@@ -1,29 +1,45 @@
-import * as Categorias from '../categorias/categorias.js';
+import * as Categorias from "../categorias/categorias.js";
 
-$('#magica-categoria-lancamento').click(function () {
+const iconeMagica = '<i class="fa-solid fa-wand-magic-sparkles"></i>';
 
-    let nome = $('#input-nome-lancamento').val();
+let carregando = false;
+let botao = $("#magica-categoria-lancamento");
 
-    if(!nome) {
-        return;
-    }
+botao.html(iconeMagica);
 
-    let body = {
-        "nome": $('#input-nome-lancamento').val(),
-        "categorias": Object.fromEntries(Categorias.categorias())
-    }
+$("#magica-categoria-lancamento").click(function () {
 
-    fetch('https://tiaw-fincouple-api.lucaazalim.repl.co/magica-categoria-lancamento', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-      $('#input-categoria-lancamento').val(data);
-    });
+	let nome = $("#input-nome-lancamento").val();
+
+	if (!nome || carregando) {
+		return;
+	}
+
+	botao.html(
+		'<div class="spinner-border spinner-border-sm" role="status"></div>'
+	);
+	carregando = true;
+
+	let body = {
+		nome: $("#input-nome-lancamento").val(),
+		categorias: Object.fromEntries(Categorias.categorias()),
+	};
+
+	fetch(
+		"https://tiaw-fincouple-api.lucaazalim.repl.co/magica-categoria-lancamento",
+		{
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(body),
+		}
+	)
+		.then((response) => response.json())
+		.then((data) => {
+			$("#input-categoria-lancamento").val(data);
+			botao.html(iconeMagica);
+			carregando = false;
+		});
 
 });
