@@ -49,6 +49,7 @@ $("#magica-categoria-lancamento").click(function () {
 
 			botao.html(iconeMagica);
 			botao.prop("disabled", false);
+			
 			carregando = false;
 
 		});
