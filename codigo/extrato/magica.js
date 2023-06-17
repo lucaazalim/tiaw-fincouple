@@ -22,6 +22,7 @@ $("#magica-categoria-lancamento").click(function () {
 	botao.html(
 		'<div class="spinner-border spinner-border-sm" role="status"></div>'
 	);
+	botao.prop("disabled", true);
 
 	carregando = true;
 
@@ -47,6 +48,7 @@ $("#magica-categoria-lancamento").click(function () {
 			inputCategoria.prop("disabled", false);
 
 			botao.html(iconeMagica);
+			botao.prop("disabled", false);
 			carregando = false;
 
 		});
