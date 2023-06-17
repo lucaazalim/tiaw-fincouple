@@ -1,4 +1,3 @@
-import * as Alerta from '../assets/script/alerta.js';
 import * as Categorias from "../categorias/categorias.js";
 
 const iconeMagica = '<i class="fa-solid fa-wand-magic-sparkles"></i>';
@@ -16,13 +15,18 @@ $("#magica-categoria-lancamento").click(function () {
 		return;
 	}
 
+	let inputCategoria = $("#input-categoria-lancamento");
+
+	inputCategoria.prop("disabled", true);
+
 	botao.html(
 		'<div class="spinner-border spinner-border-sm" role="status"></div>'
 	);
+
 	carregando = true;
 
 	let body = {
-		nome: $("#input-nome-lancamento").val(),
+		nome: nome,
 		categorias: Object.fromEntries(Categorias.categorias()),
 	};
 
@@ -39,11 +43,11 @@ $("#magica-categoria-lancamento").click(function () {
 		.then((response) => response.json())
 		.then((data) => {
 
-			$("#input-categoria-lancamento").val(data);
+			inputCategoria.val(data);
+			inputCategoria.prop("disabled", false);
+
 			botao.html(iconeMagica);
 			carregando = false;
-
-            Alerta.alertar(`Categoria identificada com base no nome do lançamento.`, 'success', 'modal-alerta');
 
 		});
 
