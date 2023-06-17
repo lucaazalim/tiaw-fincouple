@@ -1,3 +1,4 @@
+import * as Alerta from '../assets/script/alerta.js';
 import * as Categorias from "../categorias/categorias.js";
 
 const iconeMagica = '<i class="fa-solid fa-wand-magic-sparkles"></i>';
@@ -37,9 +38,13 @@ $("#magica-categoria-lancamento").click(function () {
 	)
 		.then((response) => response.json())
 		.then((data) => {
+
 			$("#input-categoria-lancamento").val(data);
 			botao.html(iconeMagica);
 			carregando = false;
+
+            Alerta.alertar(`Categoria identificada com base no nome do lançamento.`, 'success', 'modal-alerta');
+
 		});
 
 });
