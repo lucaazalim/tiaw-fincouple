@@ -163,7 +163,7 @@ A estratégia de Controle de Versão será definida durante a fase de desenvolvi
 
 # Projeto da Solução
 
-Aplicação web front-end para gestão financeira de casais, duplas de amigos e duplas de familiares que residam juntos e dividem a administração das finanças da casa.
+Aplicativo de gestão financeira compartilhada para casais, duplas de amigos e duplas de familiares que residem juntos e dividem a administração das finanças da casa.
 
 ## Tecnologias Utilizadas
 - HTML, CSS e JavaScript
