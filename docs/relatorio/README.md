@@ -178,3 +178,4 @@ Aplicação web front-end para gestão financeira de casais, duplas de amigos e 
 - LocalStorage para armazenamento de dados
 
 # Referências
+- AMARO, M. **Dinheiro x amor: como casais podem organizar as finanças com “DRs financeiras” sem afetar a relação?** Disponível em: <https://www.infomoney.com.br/minhas-financas/planejamento-financeiro-como-organizar-as-financas-do-casal/>. Acesso em: 21 jun. 2023.
