@@ -37,6 +37,19 @@
         }
     </style>
 
+    <script type="module">
+
+        import * as Login from "/login/login.js";
+        let usuarioLogado = Login.usuarioLogado();
+
+        if (usuarioLogado) {
+            $(document).ready(function () {
+                $("#botoes-login").addClass("d-none");
+            });
+        }
+
+    </script>
+
 </head>
 
 <body>
@@ -58,7 +71,7 @@
                 </p>
                 <p><i class="fa-solid fa-bell fa-xl mx-2"></i>Não se esqueça de pagar as contas da casa</p>
 
-                <div class="mb-5 mt-4">
+                <div id="botoes-login" class="mb-5 mt-4">
                     <a href="/cadastro"><button type="button" class="btn btn-primary">Crie sua conta</button></a>
                     <a href="/login"><button type="button" class="btn btn-outline-primary">Acessar</button></a>
                 </div>

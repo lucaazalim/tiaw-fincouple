@@ -1,6 +1,11 @@
 import * as Usuarios from '../cadastro/usuarios.js';
 import * as Login from '../login/login.js';
 
+// Botão de sair
+$('#sair').click(function() {
+	Login.deslogar();
+});
+
 // Dados dos usuários
 
 let casalLogado = Login.casalLogado();

@@ -24,11 +24,16 @@ export function definirCasalLogado(casalId) {
     localStorage.setItem('casal_logado', casalId);
 }
 
+export function deslogar() {
+    localStorage.removeItem('usuario_logado');
+    localStorage.removeItem('casal_logado');
+}
+
 // Gambiarra para haver sempre um usuário logado por padrão para facilitar avaliação por pares
-if (!usuarioLogado()) {
+/*if (!usuarioLogado()) {
     definirUsuarioLogado('1');
 }
 
 if (!casalLogado()) {
     definirCasalLogado('1');
-}
+}*/
