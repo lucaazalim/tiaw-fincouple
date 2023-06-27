@@ -171,7 +171,7 @@ Aplicativo de gestão financeira compartilhada para casais, duplas de amigos e d
 | ---------------------- | --------------------------------------------------------------------- |
 | HTML, CSS e JavaScript | Estruturar e estilizar páginas web da aplicação.                      |
 | Bootstrap 5            | Facilitar o desenvolvimento de interfaces responsivas e estilizadas.  |
-| jQuery 3.6.4           | Simplificar e manipulação e interação com elementos do HTML.          |
+| jQuery 3.6.4           | Simplificar a manipulação e interação com elementos do HTML.          |
 | FontAwesome 6.4.0      | Adicionar ícones vetorizados que melhoram a usabilidade da aplicação. |
 | SASS                   | Customizar os componentes disponibilizados pelo Bootstrap.            |
 | NPM                    | Gerenciar dependências da aplicação.                                  |
