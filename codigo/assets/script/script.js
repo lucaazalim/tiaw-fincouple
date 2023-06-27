@@ -1,5 +1,20 @@
 import * as Login from '../../login/login.js';
 
+let usuarioLogado = Login.usuarioLogado();
+let paginasDeAcessoDeslogado = ["/", "/cadastro/", "/login/"];
+
+if (usuarioLogado) {
+    // Caso o usuário esteja logado e esteja acessando uma página de acesso deslogado, redireciona para a home
+    if (paginasDeAcessoDeslogado.includes(window.location.pathname)) {
+        window.location.href = "/area-logada";
+    }
+} else {
+    // Caso o usuário não esteja logado e esteja acessando uma página de acesso logado, redireciona para o login
+    if (!paginasDeAcessoDeslogado.includes(window.location.pathname)) {
+        window.location.href = "/login/";
+    }
+}
+
 carregarFavicon();
 carregarHeader();
 carregarBreadcrumbs();
