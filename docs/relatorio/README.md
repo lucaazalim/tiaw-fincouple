@@ -166,12 +166,18 @@ A estratégia de Controle de Versão será definida durante a fase de desenvolvi
 Aplicativo de gestão financeira compartilhada para casais, duplas de amigos e duplas de familiares que residem juntos e dividem a administração das finanças da casa.
 
 ## Tecnologias Utilizadas
-- HTML, CSS e JavaScript
-- Bootstrap 5
-- jQuery 3.6.4
-- FontAwesome 6.4.0
-- SASS (Para customização do Bootstrap)
-- NPM (Gerenciador de Pacotes)
+
+| Tecnologia             | Finalidade                                                                |
+|------------------------|---------------------------------------------------------------------------|
+| HTML, CSS e JavaScript | Estruturar e estilizar páginas web da aplicação.                          |
+| Bootstrap 5            | Facilitar o desenvolvimento de interfaces responsivas e estilizadas.      |
+| jQuery 3.6.4           | Simplificar e manipulação de elementos e interação com elementos do HTML. |
+| FontAwesome 6.4.0      | Adicionar ícones vetorizados que melhoram a usabilidade da aplicação.     |
+| SASS                   | Customizar os componentes disponibilizados pelo Bootstrap.                |
+| NPM                    | Gerenciar dependências da aplicação.                                      |
+| Robohash API           | Gerar avatares padronizados para os usuários da aplicação.                |
+| OpenAI API             | Processar linguagem natural por meio de inteligência artificial.          |
+| Node.js                | Intermediar requisições dos usuários com a OpenAI API.                    |
 
 ## Arquitetura da solução
 - Páginas web (HTML, CSS e JavaScript)
