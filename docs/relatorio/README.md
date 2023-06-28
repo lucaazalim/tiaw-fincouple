@@ -148,7 +148,7 @@ As tarefas da fase de desenvolvimento foram distribuídas aos membros da equipe 
 
 As ferramentas utilizadas durante o processo de concepção e desenvolvimento estão listadas abaixo.
 
-| Plataforma                    | Finalidade                           | Link de Acesso                                                                                                                                                  |
+| Ferramenta                    | Finalidade                           | Link de Acesso                                                                                                                                                  |
 | ----------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | GitHub                        | Repositório de Código e Documentação | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple)                                                         |
 | GitHub Projects               | Gerenciamento de Tarefas (Kanban)    | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
@@ -164,7 +164,7 @@ A estratégia de Controle de Versão será definida durante a fase de desenvolvi
 
 # Projeto da Solução
 
-Aplicativo de gestão financeira compartilhada para casais, duplas de amigos e duplas de familiares que residem juntos e dividem a administração das finanças de uma casa.
+Aplicação de gestão financeira compartilhada para casais, duplas de amigos e duplas de familiares que residem juntos e dividem a administração das finanças de uma casa.
 
 ## Tecnologias Utilizadas
 
