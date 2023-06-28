@@ -35,7 +35,6 @@
 - [Metodologia](#metodologia)
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
-  - [Controle de Versão](#controle-de-versão)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
@@ -155,10 +154,6 @@ As ferramentas utilizadas durante o processo de concepção e desenvolvimento es
 | Google Docs e Google Drawings | Processo de Design Thinking          | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
 | Figma                         | Protótipos Interativos               | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
 | Replit                        | Hospedagem da Aplicação              | [Link do Replit](https://tiaw-fincouple.lucaazalim.repl.co/)                                                                                                                           |
-
-## Controle de Versão
-
-A estratégia de Controle de Versão será definida durante a fase de desenvolvimento.
 
 ---
 
