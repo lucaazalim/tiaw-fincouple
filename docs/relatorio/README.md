@@ -148,12 +148,13 @@ As tarefas da fase de desenvolvimento foram distribuídas aos membros da equipe 
 
 As ferramentas utilizadas durante o processo de concepção e desenvolvimento estão listadas abaixo.
 
-| Finalidade                           | Plataforma                    | Link de Acesso                                                                                                                                                  |
-| ------------------------------------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Repositório de Código e Documentação | GitHub                        | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple)                                                         |
-| Gerenciamento de Tarefas (Kanban)    | GitHub Projects               | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
-| Processo de Design Thinking          | Google Docs e Google Drawings | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
-| Protótipos Interativos               | Figma                         | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
+| Plataforma                    | Finalidade                           | Link de Acesso                                                                                                                                                  |
+| ----------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub                        | Repositório de Código e Documentação | [Repositório no GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple)                                                         |
+| GitHub Projects               | Gerenciamento de Tarefas (Kanban)    | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
+| Google Docs e Google Drawings | Processo de Design Thinking          | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
+| Figma                         | Protótipos Interativos               | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
+| Replit                        | Hospedagem da Aplicação              | [Link do Replit](https://tiaw-fincouple.lucaazalim.repl.co/)                                                                                                                           |
 
 ## Controle de Versão
 
