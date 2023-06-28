@@ -153,7 +153,7 @@ As ferramentas utilizadas durante o processo de concepção e desenvolvimento es
 | GitHub Projects               | Gerenciamento de Tarefas (Kanban)    | [Projeto no GitHub](https://github.com/orgs/ICEI-PUC-Minas-PPLES-TI/projects/165)                                                                               |
 | Google Docs e Google Drawings | Processo de Design Thinking          | [Diretório do Google Drive](https://drive.google.com/drive/u/0/folders/1EF158RlYOtuzogVonm-w23Om6kr79MBy)                                                       |
 | Figma                         | Protótipos Interativos               | [Projeto do Figma](https://www.figma.com/proto/vUBvqTOmmNrf4tO5YCQ9Qv/landing-page?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=43%3A56) |
-| Replit                        | Hospedagem da Aplicação              | [Link do Replit](https://tiaw-fincouple.lucaazalim.repl.co/)                                                                                                                           |
+| Replit                        | Hospedagem da Aplicação              | [Link do Replit](https://tiaw-fincouple.lucaazalim.repl.co/)                                                                                                    |
 
 ---
 
@@ -169,6 +169,7 @@ Aplicação de gestão financeira compartilhada para casais, duplas de amigos e 
 | Bootstrap 5            | Facilitar o desenvolvimento de interfaces responsivas e estilizadas.  |
 | jQuery 3.6.4           | Simplificar a manipulação e interação com elementos do HTML.          |
 | FontAwesome 6.4.0      | Adicionar ícones vetorizados que melhoram a usabilidade da aplicação. |
+| Chart.js               | Criar e personalizar gráficos em diversos formatos.                   |
 | SASS                   | Customizar os componentes disponibilizados pelo Bootstrap.            |
 | NPM                    | Gerenciar dependências da aplicação.                                  |
 | Robohash API           | Gerar avatares padronizados para os usuários da aplicação.            |
