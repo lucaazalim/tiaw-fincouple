@@ -174,7 +174,7 @@ Aplicação de gestão financeira compartilhada para casais, duplas de amigos e 
 | NPM                    | Gerenciar dependências da aplicação.                                  |
 | Robohash API           | Gerar avatares padronizados para os usuários da aplicação.            |
 | OpenAI API             | Processar linguagem natural por meio de inteligência artificial.      |
-| Node.js                | Intermediar requisições dos usuários com a OpenAI API.                |
+| Node.js e Express.js   | Intermediar requisições dos usuários com a OpenAI API.                |
 
 ## Arquitetura da solução
 - Páginas web (HTML, CSS e JavaScript)
