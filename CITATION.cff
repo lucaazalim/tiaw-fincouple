@@ -12,8 +12,8 @@ authors:
     given-names: Sidney
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Felipe Dias Ferreira da Rocha
-    given-names: Roberto
+    family-names: Dias Ferreira da Rocha
+    given-names: Roberto Felipe 
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Alves Nogueira
@@ -21,7 +21,7 @@ authors:
 keywords:
   - finance
   - management
-repository-code: 
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385200-fincouple
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2023-07-02
